@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where to</title>
+
+  <script>
+    function javascriptInHead() {
+      document.getElementById('javascript-in-head').innerHTML = 'Paragraph changed'
+    }
+  </script>
+</head>
+<body>
+  <p id="demo"></p>
+
+  <p id="javascript-in-head">Demo JavaScript in Head</p>
+  <button onclick="javascriptInHead()">Javascript in Head</button>
+
+  <p id="javascript-in-body">Demo JavaScript in Body</p>
+  <button onclick="javascriptInBody()">Javascript in body</button>
+
+  <p id="external-javascript">Demo External JavaScript</p>
+  <button onclick="externalJavascript()">External Javascript</button>
+
+  <script src="script.js"></script>
+
+  <script>
+    function javascriptInBody() {
+      document.getElementById('javascript-in-body').innerHTML = 'Paragraph changed'
+    }
+  </script>
+
+  <script>
+    document.getElementById('demo').innerHTML = 'My First JavaScript'
+  </script>
+</body>
+</html>

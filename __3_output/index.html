@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Output</title>
+</head>
+
+<body>
+  <!--  -->
+  <div>
+    <p id="innerHTML"></p>
+    <button onclick="addContentInnerHTML()">Add HTML content</button>
+    <script>
+      function addContentInnerHTML() {
+        document.getElementById('innerHTML').innerHTML = 'The innerHTML property defines the HTML content'
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <button onclick="writeInfo()">Use write method to display info</button>
+
+    <script>
+      function writeInfo() {
+        document.write('Using document.write() after an HTML document is loaded, will delete all existing HTML:')
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="window"></p>
+    <button onclick="window.alert('You can skip the window keyword.')">Alert method to display data</button>
+    <button onclick="windowObject()">You can skip the window keyword.</button>
+
+    <script>
+      function windowObject() {
+        window.document.getElementById('window').innerHTML = 'You can skip the window keyword.'
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <script>
+      console.log('window', window)
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <button onclick="window.print()">Print this page</button>
+    <button onclick="print()">Print this page 2</button>
+  </div>
+</body>
+
+</html>
