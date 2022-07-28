@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comments</title>
+</head>
+
+<body>
+  <!--  -->
+  <div>
+    <h1 id="heading1"></h1>
+    <p id="paragraph1"></p>
+
+    <script>
+      // change heading:
+      document.getElementById('heading1').innerHTML = 'JavaScript Comments';
+      // change paragraph:
+      document.getElementById('paragraph1').innerHTML = 'My first paragraph.';
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="paragraph2"></p>
+    <button onclick="explainCode()">
+      This example uses a single line comment at the end of each line to explain the code:
+    </button>
+
+    <script>
+      function explainCode() {
+        let x = 5;      // Declare x, give it the value of 5
+        let y = x + 2;  // Declare y, git it the value of x + 2
+
+        // Write y to paragraph2
+        document.getElementById('paragraph2').innerHTML = y;
+      }
+    </script>
+  </div>
+
+</body>
+
+</html>
