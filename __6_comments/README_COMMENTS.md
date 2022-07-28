@@ -40,3 +40,25 @@ This example uses a multi-line comment (a comment block) _to explain the code:_
     */
     document.getElementById("myH").innerHTML = "My First Page";
     document.getElementById("myP").innerHTML = "My first paragraph.";
+
+It is most common to use single line comments.
+Block comments are often used for formal documentation.
+
+
+__Using Comments to Prevent Execution__
+
+Using comments _to prevent execution_ of code is suitable for code testing.
+
+Adding // in front of a code line changes the code lines from an executable line to a comment.
+
+This example uses // _to prevent execution_ of one of the code lines:
+
+    //document.getElementById("myH").innerHTML = "My First Page";
+    document.getElementById("myP").innerHTML = "My first paragraph.";
+
+This example uses a comment block to prevent execution of multiple lines:
+
+    /*
+      document.getElementById("myH").innerHTML = "My First Page";
+      document.getElementById("myP").innerHTML = "My first paragraph.";
+    */

@@ -31,8 +31,8 @@
 
     <script>
       function explainCode() {
-        let x = 5;      // Declare x, give it the value of 5
-        let y = x + 2;  // Declare y, git it the value of x + 2
+        let x = 5; // Declare x, give it the value of 5
+        let y = x + 2; // Declare y, git it the value of x + 2
 
         // Write y to paragraph2
         document.getElementById('paragraph2').innerHTML = y;
@@ -40,6 +40,55 @@
     </script>
   </div>
 
+
+  <!--  -->
+  <div>
+    <h1 id="heading2"></h1>
+    <p id="paragraph3"></p>
+    <button onclick="multilineComments()">Multi-line Comments</button>
+
+    <script>
+      function multilineComments() {
+        /*
+          The code below will change the heading with id = "heading2"
+          and the paragraph with id = "paragraph2" in my web page:
+        */
+        document.getElementById('heading2').innerHTML = 'My First Page';
+        document.getElementById('paragraph3').innerHTML = 'My third paragraph';
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <h1 id="heading3"></h1>
+    <p id="paragraph4"></p>
+    <button onclick="preventExecution()">The line starting with // is not executed.</button>
+
+    <script>
+      function preventExecution() {
+        // document.getElementById('heading3').innerHTML = 'My third heading.';
+        document.getElementById('paragraph4').innerHTML = 'My fourth paragraph.';
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <h1 id="heading4"></h1>
+    <p id="paragraph5"></p>
+    <button onclick="preventExecutionOfMultilineBlock()">The comment-block is not executed.</button>
+
+    <script>
+      function preventExecutionOfMultilineBlock() {
+        /*
+          document.getElementById('heading4').innerHTML = 'Welcome to my Homepage.';
+          document.getElementById('paragraph5').innerHTML = 'This is my fifth paragraph.';
+        */
+        document.getElementById('paragraph5').innerHTML = 'The comment-block is not executed.';
+      }
+    </script>
+  </div>
 </body>
 
 </html>

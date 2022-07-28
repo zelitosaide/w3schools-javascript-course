@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+</head>
+
+<body>
+  <div>
+    <p id="demo1"></p>
+    <button onclick="variable()">
+      In this example, x, y, and z, are variables, declared with the var keyword:
+    </button>
+    <script>
+      function variable() {
+        var x = 5;
+        var y = 6;
+        var z = x + y;
+        document.getElementById('demo1').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo2"></p>
+    <button onclick="variableUsingLet()">
+      In this example, x, y, and z, are variables, declared with the let keyword:
+    </button>
+    <script>
+      function variableUsingLet() {
+        let x = 5;
+        let y = 6;
+        let z = x + y;
+        document.getElementById('demo2').innerHTML = 'The value of z is: ' + z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo3"></p>
+    <button onclick="variablesUndeclared()">In this example, x, y, and z, are undeclared variables:</button>
+    <script>
+      function variablesUndeclared() {
+        x = 5;
+        y = 6;
+        z = x + y;
+        document.getElementById('demo3').innerHTML = 'The value of z is: ' + z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo4"></p>
+    <button onclick="usingConst()">In this example, price1, price2, and total are variables.</button>
+    <script>
+      function usingConst() {
+        const price1 = 5;
+        const price2 = 6;
+        let total = price1 + price2;
+        document.getElementById('demo4').innerHTML = 'The total is: ' + total;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo5"></p>
+    <button onclick="dataTypes()">
+      Strings are written with quotes. Numbers are written without quotes.
+    </button>
+    <script>
+      function dataTypes() {
+        const pi = 3.14;
+        let person = 'Zelito Atumane Saide Abdala';
+        let answer = 'Yes I am!';
+        document.getElementById('demo5').innerHTML = pi + '<br>' + person + '<br>' + answer;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo6"></p>
+    <button onclick="declareAndAssign()">Create a variable, assign a value to it, and display it:</button>
+    <script>
+      function declareAndAssign() {
+        let carName = 'Volvo';
+        document.getElementById('demo6').innerHTML = carName;
+      }
+    </script>
+
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo7"></p>
+    <button onclick="variablesInOneStatement()">You can declare many variables in one statement.</button>
+    <script>
+      function variablesInOneStatement() {
+        let person = 'Zelito Atumane Saide',
+          carName = 'Volvo',
+          price = 200;
+        document.getElementById('demo7').innerHTML = carName;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo8"></p>
+    <button onclick="declarationCanSpanMultipleLines()">A declaration can span multiple lines: </button>
+    <script>
+      function declarationCanSpanMultipleLines() {
+        let person = 'Zelito Atumane Saide',
+          carName = 'Volvo',
+          price = 200;
+        document.getElementById('demo8').innerHTML = price;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo9"></p>
+    <button onclick="variableWithoutValue()">A variable without a value has the value of undefined</button>
+    <script>
+      function variableWithoutValue() {
+        let carName;
+        document.getElementById('demo9').innerHTML = carName;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo10"></p>
+    <button onclick="redeclare()">If you re-declare a JavaScript variable, it will not lose its value.</button>
+    <script>
+      function redeclare() {
+        var carName = 'Volvo';
+        var carName;
+        document.getElementById('demo10').innerHTML = carName;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo11"></p>
+    <button onclick="arithmetic()">The result of adding 5 + 2 + 3 is:</button>
+    <script>
+      function arithmetic() {
+        let x = 5 + 2 + 3;
+        document.getElementById('demo11').innerHTML = x;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo12"></p>
+    <button onclick="concatenat()">The result of adding "John" + " " + "Doe" is:</button>
+    <script>
+      function concatenat() {
+        let x = 'John' + ' ' + 'Doe';
+        document.getElementById('demo12').innerHTML = x;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo13"></p>
+    <button onclick="arithmetic2()">
+      If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.
+    </button>
+    <script>
+      function arithmetic2() {
+        let x = '5' + 2 + 3;
+        document.getElementById('demo13').innerHTML = x;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo14"></p>
+    <button onclick="arithmetic3()">The result of adding 2 + 3 + "5" is:</button>
+    <script>
+      function arithmetic3() {
+        let x = 2 + 3 + '5';
+        document.getElementById('demo14').innerHTML = x;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo15"></p>
+    <button onclick="dollarSign()">
+      Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names:
+    </button>
+    <script>
+      function dollarSign() {
+        let $$$ = 2;
+        let $mtMoney = 5;
+        document.getElementById('demo15').innerHTML = $$$ + $mtMoney;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo16"></p>
+    <button onclick="underscore()">
+      The underscore is treated as a letter in JavaScript names.
+    </button>
+    <script>
+      function underscore() {
+        let _x = 2;
+        let _100 = 5;
+        document.getElementById('demo16').innerHTML = _x + _100;
+      }
+    </script>
+  </div>
+</body>
+
+</html>
