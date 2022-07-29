@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arithmetic</title>
+</head>
+
+<body>
+  <div>
+    <p id="demo1"></p>
+    <button onclick="arithmetic()">
+      A typical arithmetic operation operates on two numbers. The two numbers can be literals:
+    </button>
+    <script>
+      function arithmetic() {
+        let x = 100 + 50;
+        document.getElementById('demo1').innerHTML = x;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo2"></p>
+    <button onclick="orVariable()">Or variables:</button>
+    <script>
+      function orVariable() {
+        let a = 100;
+        let b = 50;
+        let x = a + b;
+        document.getElementById('demo2').innerHTML = x;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo3"></p>
+    <button onclick="orExpressions()">or expressions:</button>
+    <script>
+      function orExpressions() {
+        let a = 3;
+        let x = (100 + 50) * a;
+        document.getElementById('demo3').innerHTML = x;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo4"></p>
+    <button onclick="addition()">The addition operator (+) adds numbers:</button>
+    <script>
+      function addition() {
+        let x = 100;
+        let y = 50;
+        let z = x + y;
+        document.getElementById('demo4').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo5"></p>
+    <button onclick="subtraction()">The subtraction operator (-) subtracts numbers.</button>
+    <script>
+      function subtraction() {
+        let x = 100;
+        let y = 50;
+        let z = x - y;
+        document.getElementById('demo5').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo6"></p>
+    <button onclick="multiplication()">The multiplication operator (*) multiplies numbers.</button>
+    <script>
+      function multiplication() {
+        let x = 100;
+        let y = 50;
+        let z = x * y;
+        document.getElementById('demo6').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo7"></p>
+    <button onclick="division()">The division operator (/) divides numbers.</button>
+    <script>
+      function division() {
+        let x = 100;
+        let y = 50;
+        let z = x / y;
+        document.getElementById('demo7').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo8"></p>
+    <button onclick="modulus()">The modulus operator (%) returns the division remainder</button>
+    <script>
+      function modulus() {
+        let x = 100;
+        let y = 50;
+        let z = x % y;
+        document.getElementById('demo8').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo9"></p>
+    <button onclick="increment()">The increment operator (++) increments numbers.</button>
+    <script>
+      function increment() {
+        let x = 100;
+        x++;
+        let z = x;
+        document.getElementById('demo9').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo10"></p>
+    <button onclick="decrement()">The decrement operator (--) decrements numbers.</button>
+    <script>
+      function decrement() {
+        let x = 100;
+        x--;
+        let z = x;
+        document.getElementById('demo10').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo11"></p>
+    <button onclick="exponentiation()">
+      The exponentiation operator (**) raises the first operand to the power of the second operand.
+    </button>
+    <script>
+      function exponentiation() {
+        let x = 2;
+        let y = 5;
+        let z = x ** y;
+        document.getElementById('demo11').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo12"></p>
+    <button onclick="mathPow()">x ** y produces the same result as Math.pow(x,y)</button>
+    <script>
+      function mathPow() {
+        let x = 2;
+        let y = 5;
+        let z = Math.pow(x, y);
+        console.log(window.Math)
+        document.getElementById('demo12').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo13"></p>
+    <button onclick="operatorPrecedence()">
+      Operator precedence describes the order in which operations are performed in an arithmetic expression (100 + 50 *
+      3).
+    </button>
+    <script>
+      function operatorPrecedence() {
+        document.getElementById('demo13').innerHTML = 100 + 50 * 3;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo14"></p>
+    <button onclick="operatorPrecedence2()">
+      And (as in school mathematics) the precedence can be changed by using parentheses ((100 + 50) * 3):
+    </button>
+    <script>
+      function operatorPrecedence2() {
+        document.getElementById('demo14').innerHTML = (100 + 50) * 3;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo15"></p>
+    <button onclick="operatorPrecedence3()">
+      When many operations have the same precedence (like addition and subtraction), they are computed from left to
+      right (100 + 50 - 3):
+    </button>
+    <script>
+      function operatorPrecedence3() {
+        document.getElementById('demo15').innerHTML = 100 + 50 - 3;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo16"></p>
+    <button onclick="operatorPrecedence4()">
+      Postfix Increment (i++), Postfix Decrement (i--), Prefix Increment(++i) and Prefix Decrement (--i): (x++ + y++ +
+      --w)
+    </button>
+    <script>
+      function operatorPrecedence4() {
+        let x = 2;
+        let y = 4;
+        let w = 6;
+        let z = x++ + y++ + --w;
+        // let z = ++x + ++y + --w;
+        document.getElementById('demo16').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo17"></p>
+    <button onclick="operatorPrecedence5()">
+      Division Remainder (%), Addition (+) and Subtraction (-): (x + y - w % 5)
+    </button>
+    <script>
+      function operatorPrecedence5() {
+        let x = 3;
+        let y = 4;
+        let w = 6;
+        let z = x + y - w % 5;
+        document.getElementById('demo17').innerHTML = z;
+      }
+    </script>
+  </div>
+</body>
+
+</html>

@@ -7,6 +7,119 @@
   <title>Operators</title>
 </head>
 <body>
-  
+  <div>
+    <p id="demo1"></p>
+    <button onclick="assignValues2variablesAndAddThenTogether()">
+      Assign values to variables and add them together
+    </button>
+    <script>
+      function assignValues2variablesAndAddThenTogether() {
+        let x = 5;
+        let y = 2;
+        let z = x + y;
+        document.getElementById('demo1').innerHTML = 'x = 5, y = 2, calculate z = x + y, and display z: ' + z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo2"></p>
+    <button onclick="assignmentOperator()">The assignment operator (=) assigns a value to a variable.</button>
+    <script>
+      function assignmentOperator() {
+        let x = 10;
+        document.getElementById('demo2').innerHTML = x;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo3"></p>
+    <button onclick="additionOperator()">The addition operator (+) adds numbers</button>
+    <script>
+      function additionOperator() {
+        let x = 3;
+        let y = 4;
+        let z = x + y;
+        document.getElementById('demo3').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo4"></p>
+    <button onclick="multiplicationOperator()">The multiplication operator (*) multiplies numbers.</button>
+    <script>
+      function multiplicationOperator() {
+        let x = 2;
+        let y = 5;
+        let z = x * y;
+        document.getElementById('demo4').innerHTML = z;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo5"></p>
+    <button onclick="additionAssignmentOperator()">
+      The addition assignment operator (+=) adds a value to a variable.
+    </button>
+    <script>
+      function additionAssignmentOperator() {
+        var x = 10;
+        x += 5;
+        document.getElementById('demo5').innerHTML = x;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo6"></p>
+    <button onclick="concatenate()">The + operator can also be used to add (concatenate) strings.</button>
+    <script>
+      function concatenate() {
+        let text1 = 'Zelito';
+        let text2 = 'Saide';
+        let text3 = text1 + ' ' + text2;
+        document.getElementById('demo6').innerHTML = text3;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo7"></p>
+    <button onclick="assignmentOperator2concatenate()">
+      The += assignment operator can also be used to add (concatenate) strings
+    </button>
+    <script>
+      function assignmentOperator2concatenate() {
+        let text1 = 'What a very ';
+        text1 += 'nice day';
+        document.getElementById('demo7').innerHTML = text1;
+      }
+    </script>
+  </div>
+
+  <!--  -->
+  <div>
+    <p id="demo8"></p>
+    <button onclick="addingNumbersAndString()">
+      Adding two numbers, will return the sum, but adding a number and a string will return a string
+    </button>
+    <script>
+      function addingNumbersAndString() {
+        let x = 5 + 5;
+        let y = '5' + 5;
+        let z = 'Hello' + 5;
+        document.getElementById('demo8').innerHTML = x + '<br>' + y + '<br>' + z;
+      }
+    </script>
+  </div>
 </body>
 </html>
