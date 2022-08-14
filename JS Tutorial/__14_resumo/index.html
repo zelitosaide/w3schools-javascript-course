@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+  <script>
+    // 1 - variables
+
+    const price1 = 5;
+    const price2 = 6;
+    let total = price1 + price2;
+
+    const $main = function () {
+      console.log('Eu sou a funcao principal');
+    };
+
+    const person = "John Doe";
+    const answer = "Yes I am";
+
+    document.getElementById("demo").innerHTML = person + "<br>" + answer;
+
+    var carName;
+    console.log('carName', carName);
+
+    /*
+      It's a good programming practice to declare all variables at the begining of a script
+    */
+
+    var pessoa = "Zelito Atumane Saide", preco = 200, cor = "Azul";
+
+    let carro = "Corola",
+      aviao = "Boing",
+      motorizada = "Quatro rodas";
+
+    // Re-Declaring JavaScript Variables
+    var firstName = "Zelito";
+    console.log('firstName: before re-declared', firstName);
+    var firstName;
+    console.log("firstName: after re-declared", firstName);
+
+    // You cannot re-declare a variable declared with let or const
+    // This will not work:
+    // let carName = "Volvo":
+    // let carName;
+
+    let x = 5 + 2 + 3;
+    var y = "John" + " " + "Doe";
+
+    let conc1 = "5" + 2 + 3; // Result: 523
+
+    const conc2 = 5 + 2 + "3"; // Result: 73
+
+    const _lastName = "Abdala";
+
+
+
+    // 2 - let
+
+    /*
+      variables defined with let cannot be Redeclared.
+      variables defined with let must be Declared before use.
+      variables defined with let have Block Scope
+    */
+
+    // 2.1 Cannot be redeclared
+
+    // let primeiroNome = "Zelito";
+    // let primeiroNome = 200;
+
+    // SyntaxError: 'x' has already been declared
+
+    // With va you can:
+    var primeiroNome = "Zelito";
+    var primeiroNome = 200;
+
+    // 2.2 Block Scope
+
+    // Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+
+    // Variables declared inside a {} block cannot be accessed from outside the block:
+    // {
+    //   let blockScope = 2;
+    // }
+    try {
+      {
+        let blockScope = 2;
+      }
+      // blockScope can not be used here
+      console.log('Block Scope', blockScope); // ReferenceError: blocScope is not defined
+    } catch (error) {
+      console.log('Block Scope error:', error)
+    }
+
+    // Variables declared with the var keyword cannot have block scope
+
+    // Variables declared inside a { } block can be accessed from outside the block
+    {
+      var globalScope = 2;
+    }
+    console.log('Global Scope', globalScope); // globalScope can be used here
+
+
+    // 2.3 Redeclaring variables
+
+    // Redeclaring a variable using the var keyword can impose problems.
+    // Redeclaring a variable inside a block will also redeclare the variable outside the block:
+
+    var redeclareVarVariable = 10;
+    console.log('redeclareVarVariable', redeclareVarVariable); // Here is 10
+
+    {
+      var redeclareVarVariable = 2;
+      console.log('redeclareVarVariable', redeclareVarVariable); // Here is 2
+    }
+
+    console.log('redeclareVarVariable', redeclareVarVariable); // Here is 2
+
+    // Redeclaring a variable using the let keyword can solve this problem.
+
+    // Redeclaring a variable inside a block will not redeclare the variable outside the block:
+
+    let redeclareLetVariable = 20;
+    console.log('redeclareLetVariable', redeclareLetVariable); // Here is 20
+
+    {
+      let redeclareLetVariable = 2;
+      console.log('redeclareLetVariable', redeclareLetVariable); // Here is 2
+    }
+
+    console.log('redeclareLetVariable', redeclareLetVariable); // Here is 20
+
+
+    // 2.4 Redeclaring
+
+    // Redeclaring a JavaScript variable with var is allowed anywhere in a program:
+    var redeclareVarVariable = 2;
+    // Now is 2
+
+    var redeclareVarVariable = 3;
+    // Now is 3
+
+    try {
+      // var redeclare = 2; // Allowed
+      // let redeclare = 3; // Not allowed
+
+      {
+        // let x = 2; // Allowed
+        // let x = 3; // Not allowed
+      }
+
+      // let x = 2; // Allowed
+      // var x = 3; // Not allowed
+    } catch (error) {
+      console.log("Redeclare:", error);
+    }
+
+    // Redeclaring a variable with let, in another block, IS allowed:
+    let allowed = 2; // Allowed
+
+    {
+      let allowed = 3; // Allowed
+    }
+
+    {
+      let allowed = 4; // Allowed
+    }
+
+
+    // 2.5 Let Hoisting
+    // Variables defined with var are hoisted to the top and can be initialized at any time
+
+    // Meaning: You can use the variable before it is declared:
+    carName = "Volvo";
+    var carName;
+
+    // Variables defined with let are also hoisted to the top of the block, but not initialized.
+
+    // Meaning: Using a let variable before it is declared will result in a ReferenceError
+
+    try {
+      userName = "zelito.saide";
+      let userName = "saide.abdala";
+    } catch (error) {
+      console.log("userName", error)
+    }
+  </script>
+</body>
+
+</html>
