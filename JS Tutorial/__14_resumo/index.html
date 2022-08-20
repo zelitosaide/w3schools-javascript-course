@@ -33,7 +33,9 @@
       It's a good programming practice to declare all variables at the begining of a script
     */
 
-    var pessoa = "Zelito Atumane Saide", preco = 200, cor = "Azul";
+    var pessoa = "Zelito Atumane Saide",
+      preco = 200,
+      cor = "Azul";
 
     let carro = "Corola",
       aviao = "Boing",
@@ -190,6 +192,312 @@
     } catch (error) {
       console.log("userName", error)
     }
+
+
+
+    // 3 - JavaScript const
+
+    // Variables defined with const cannot be Redeclared.
+
+    // Variables defined with const cannot be Reassigned.
+
+    // Variables defined with const have Block Scope.
+
+
+    // Cannot be Reassigned
+    try {
+      const PI = 3.141592653589793;
+      PI = 3.14; // This will give an error
+      PI = PI + 10; // This will also give an error
+    } catch (error) {
+      console.log('PI', error);
+    }
+
+    // Must be Assigned
+    try {
+      // const PI;
+      // PI = 3.141592653589793;
+    } catch (error) {
+      console.log('PI', error);
+    }
+
+
+    // Constant Arrays
+    {
+      // You can create a constant array:
+      const cars = ["Saab", "Volvo", "BMW"];
+
+      // You can change an element:
+      cars[0] = "Toyota";
+
+      // You can add an element:
+      cars.push("Audi");
+    }
+
+    try {
+      // But you can NOT reassign the array:
+      const cars = ["Saab", "Volvo", "BMW"];
+      cars = ["Toyota", "Volvo", "Audi"];
+    } catch (error) {
+      console.log('reassign', error);
+    }
+
+
+    // Constant Objects
+    try {
+      // You can create a const object:
+      const car = {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+      };
+
+      // You can change a property:
+      car.color = "red";
+
+      // You can add a property:
+      car.owner = "Johnson";
+
+      // But you can NOT reassign the object:
+      {
+        const car = {
+          type: "Fiat",
+          model: "500",
+          color: "white"
+        };
+
+        car = {
+          type: "Volvo",
+          model: "EX60",
+          color: "blue"
+        };
+      }
+    } catch (error) {
+      console.log("Constant Objects:", error);
+    }
+
+
+    // Block Scope
+    const delta = 10;
+    // Here delta is 10
+
+    {
+      const delta = 2;
+      // Here delta is 2
+    }
+
+    // Here delta is 10
+    console.log("Delta", delta);
+
+
+    // Redeclaring
+    var resultante = 2; // Allowed
+    var resultante = 3; // Allowed
+    resultante = 4; // Allowed
+
+    // Redeclaring an existing var or let variable to const, in the same scope, is not allowed:
+    try {
+      // var rotacional = 2;    // Allowed
+      // const rotacional = 2;  // Not allowed
+
+      {
+        // let rotacional = 2;   // Allowed
+        // const rotacional = 3; // Not allowed
+      }
+
+      {
+        // const rotacional = 2;  // Allowed
+        // const rotacional = 3;  // Not Allowed
+      }
+
+      // Reassigning an existing const variable, in the same scope, is not allowed:
+      // const rotacional = 3; 
+      // rotacional = 4;       
+      // var rotacional = 5;   
+      // let rotacional = 6;   
+      // const rotacional = 8; 
+
+      {
+        // const rotacional = 3;
+        // rotacional = 4;
+        // var rotacional = 5;
+        // let rotacional = 6;
+        // const rotacional = 8;
+      }
+
+      // Redeclaring a variable with const, in another scope, or in another block, is allowed:
+      const divergente = 3; // Allowed
+
+      {
+        const divergente = 4; // Allowed
+      }
+
+      {
+        const divergente = 5; // Allowed
+      }
+    } catch (error) {
+      console.log("Error rotacional", error);
+    }
+
+
+    // Const Hoisting
+
+    // This is OK:
+    divergente = "Volvo";
+    var divergente;
+
+    /*
+      If you want to learn more about hoisting, study the chapter JavaScript Hoisting.
+
+      Variables defined with const are also hoisted to the top, but not initialized.
+
+      Meaning: Using a const variable before it is declared will result in a ReferenceError:
+    */
+
+    try {
+      alert(derivada);
+      const derivada = "dy/dx";
+    } catch (error) {
+      console.log("Derivada", error);
+    }
+  </script>
+
+
+
+  <!-- JavaScript Operators -->
+  <script>
+    let operatorX = 5;
+    let operatorY = 2;
+    let operatorZ = operatorX + operatorY;
+
+    console.log('operatorZ', operatorZ);
+
+
+    // The assignment operator (=) assigns a value to a variable.
+    let operatorW = 10;
+    console.log("operatorW", operatorW);
+
+    // The addition operator (+) adds numbers:
+    let operatorR = 5;
+    let operatorS = 5;
+    let operatorG = operatorR + operatorS;
+    console.log("operatorG", operatorG);
+
+    // The multiplication operator (*) multiplies numbers.
+    let operatorH = 5;
+    let operatorP = 2;
+    let operatorJ = operatorH * operatorP;
+    console.log("operatorJ", operatorJ);
+
+
+    // The addition assignment operator (+=) adds a value to a variable.
+    let operatorI = 10;
+    operatorI += 5;
+    console.log("operatorI", operatorI);
+
+    let text1 = "Francisco";
+    let text2 = "Doe";
+    let text3 = text1 + " " + text2;
+    console.log("text3", text3);
+
+    // The += assignment operator can also be used to add (concatenate) strings:
+
+    let text4 = "What a very ";
+    text4 += "nice day";
+    console.log("text4", text4);
+
+
+    // Adding two numbers, will return the sum, but adding a number and a string will return a string:
+
+    let operatorK = 5 + 5;
+    let operatorN = "5" + 5;
+    let operatorL = "Hello" + 5;
+    console.log("operatorK", operatorK, typeof operatorK);
+    console.log("operatorN", operatorN, typeof operatorN);
+    console.log("operatorL", operatorL, typeof operatorL);
+    // If you add a number and a string, the result will be a string!
+  </script>
+
+
+
+  <!-- JavaScript Arithmetic -->
+  <script>
+    // A typical arithmetic operation operate s on two numbers.
+
+    // The two numbers can be literals:
+    const arithmetic1 = 100 + 50;
+
+    // or variables:
+    var arithmetic2 = 10;
+    var arithmetic3 = 10;
+    var arithmetic4 = arithmetic2 + arithmetic3;
+
+    // or expressions:
+    let arithmetic5 = (100 + 50) * arithmetic2;
+
+    // The addition operator (+) adds numbers:
+    let arithmetic6 = arithmetic1 + arithmetic2;
+
+    // The subtraction operator (-) subtracts numbers.
+    let arithmetic7 = arithmetic1 - arithmetic2;
+
+    // The multiplication operator (*) multiplies numbers.
+    let arithmetic8 = arithmetic1 * arithmetic2;
+
+    // The division operator (/) divides numbers.
+    let arithmetic9 = arithmetic1 / arithmetic2;
+
+    // The modulus operator (%) returns the division remainder.
+    let arithmetic10 = arithmetic1 % arithmetic2;
+
+    // The increment operator (++) increments numbers.
+    let arithmetic11 = 5;
+    arithmetic11++;
+    let arithmetic12 = arithmetic11;
+    console.log("arithmetic12", arithmetic12);
+
+    // The decrement operator (--) decrements numbers.
+    let arithmetic13 = 5;
+    arithmetic13--;
+    let arithmetic14 = arithmetic13;
+    console.log("arithmetic14", arithmetic14);
+
+    // The exponentiation operator (**) raises the first operand to the power of the second operand.
+    let arithmetic15 = 5;
+    let arithmetic16 = arithmetic15 ** 2;
+    console.log("arithmetic16", arithmetic16, Math.pow(arithmetic15, 2));
+
+    // Operator precedence describes the order in which operations are performed in an arithmetic expression.
+    let arithmetic17 = 100 + 50 * 3;
+
+    // And (as in school mathematics) the precedence can be changed by using parentheses:
+    let arithmetic18 = (100 + 50) * 3;
+
+    // When many operations have the same precedence (like addition and subtraction), they are computed from left to right: 
+    let arithmetic19 = 100 + 50 - 3;
+  </script>
+
+
+  <!-- JavaScript Assignment -->
+  <script>
+    const assignment1 = 10;
+
+    // The += assignment operator adds a value to a variable.
+    let assignment2 = 20;
+    assignment2 += 5;     // assignment2 = assignment2 + 5;
+
+    // The -= assignment operator subtracts a value from a variable.
+    assignment2 -= 5;     // assignment2 = assignment2 - 5;
+
+    // The *= assignment operator multiplies a variable.
+    assignment2 *= 5;     // assignment2 = assignment2 * 5;
+
+    // The /= assignment divides a variable.
+    assignment2 /= 5;     // assignment2 = assignment2 / 5;
+
+    // The %= assignment operator assigns a remainder to a variable.
+    assignment2 %= 5;     // assignment2 = assignment2 % 5;
+
   </script>
 </body>
 

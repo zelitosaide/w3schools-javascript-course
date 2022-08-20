@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numbers</title>
+</head>
+
+<body>
+
+  <script>
+    // Numbers can be written with or without decimals
+    {
+      let x = 3.14;
+      let y = 3;
+    }
+
+    // Extra large or extra small numbers can be written with scientific (exponent) notation:
+    {
+      let x = 123e5; // 123000000
+      let y = 123e-5; // 0.00123
+    }
+
+    // Integer Precision
+
+    // Integers (numbers without a period or exponent natation) are accurate up to 15 digits.
+    {
+      let x = 999999999999999; // x will be 999999999999999
+      let y = 9999999999999999; // y will be 10000000000000000
+
+      // The maximum number of decimals is 17.
+    }
+
+    // Floating Precision
+    {
+      // Floating point arithmetic is not always 100% accurate:
+      var x = 0.2 + 0.1; // x will be 0.30000000000000004
+
+      // To solve the problem above, it helps to multiply and divide:
+      var x = (0.2 * 10 + 0.1 * 10) / 10;
+    }
+
+    // Adding Numbers and Strings
+
+    // WARNING !!
+
+    // JavaScript uses the + operator for both addition and concatenation.
+
+    // Numbers are added. Strings are concatenated.
+
+    // If you add two numbers, the result will be a number:
+    {
+      let x = 10;
+      let y = 20;
+      let z = x + y; // z will be 30
+    }
+
+    // If you add two strings, the result will be a string concatenation:
+    {
+      let x = "10";
+      let y = "20";
+      let z = x + y; // z will be 1020
+    }
+
+    // If you add a number and a string, the result will be a string concatenation:
+    {
+      let x = 10;
+      let y = "20";
+      let z = x + y; // 1020
+    }
+
+    // If you add a string and a number, the result will be a string concatenation:
+
+    // A common mistake is to expect this result to be 30:
+    {
+      let x = 10;
+      let y = 20;
+      let z = "The result is: " + x + y; // 1020
+    }
+
+    // A common mistake is to expect this result to be 102030:
+    {
+      let x = 10;
+      let y = 20;
+      let z = "30";
+      let result = x + y + z; // 3030
+
+      // The JavaScript interpreter works from left to right.
+
+      // First 10 + 20 is added because x and y are both numbers.
+
+      // Then 30 + "30" is concatenated because z is a string.
+    }
+
+
+    // Numeric Strings
+    // JavaScript strings can have numeric content:
+
+    {
+      let x = 100; // x is a number
+
+      let y = "100"; // y is a string
+
+      // JavaScript will try to convert strings to numbers in all numeric operations:
+    }
+
+    // This will work:
+    {
+      let x = "100";
+      let y = "10";
+      let z = x / y;
+      console.log("x / y = ", z);
+    }
+
+    // This will also work:
+    {
+      let x = "100";
+      let y = "10";
+      let z = x * y;
+      console.log("x * y = ", z);
+      console.log(typeof z);
+    }
+
+    // And this will work:
+    {
+      let x = "100";
+      let y = "10";
+      let z = x - y;
+      console.log("x - y = ", z);
+    }
+
+    // But this will not work:
+    {
+      let x = "100";
+      let y = "10";
+      let z = x + y;
+      console.log("x + y = ", z);
+
+      // In the last example JavaScript uses the + operator to concatenate the strings.
+    }
+
+
+    // NaN - Not a Number
+
+    // NaN is a JavaScript reserved word indicating that a number is not a legal number.
+
+    // Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+    {
+      var x = 100 / "Apple";
+      console.log("100 / Apple = ", x);
+
+      // However, if the string contains a numeric value , the result will be a number:
+
+      var x = 100 / "10";
+      console.log("100 / '10' = ", x);
+    }
+
+    // You can use the global JavaScript function isNaN() to find out if a value is a not a number:
+    {
+      let x = 100 / "Apple";
+      console.log("is not a number: ", isNaN(x));
+    }
+
+    // Watch out for NaN. If you use NaN in a mathematical operation, the result will also be NaN:
+    {
+      let x = NaN;
+      let y = 5;
+      let z = x + y;
+      console.log("x + y = ", z);
+    }
+
+    // Or the result might be a concatenation like NaN5: 
+    {
+      let x = NaN;
+      let y = "5";
+      let z = x + y; // NaN5
+      console.log("x + y = ", z);
+    }
+
+    // NaN is a number: typeof NaN returns number:
+    console.log(typeof NaN);
+
+
+    // Infinity
+
+    // Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+
+    let myNumber = 2;
+    // Execute until Infinity
+    while (myNumber != Infinity) {
+      myNumber = myNumber * myNumber;
+
+      console.log("My Number", myNumber);
+    }
+
+    // Division by 0 (zero) also generates Infinity:
+    {
+      let x = 2 / 0;
+      console.log("2 / 0 = ", x);
+      let y = -2 / 0;
+      console.log("-2 / 0 = ", y);
+    }
+
+    // Infinity is a number: typeof Infinity returns number.
+    console.log(typeof Infinity);
+
+    // Hexadecimal
+
+    // JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.
+    {
+      let x = 0xFF;
+      console.log("x = ", x);
+    }
+
+    /*
+      Never write a number with a leading zero (like 07).
+      Some JavaScript versions interpret numbers as octal if they are written with a leading zero.
+    */
+
+    // By default, JavaScript displays numbers as base 10 decimals.
+
+    // But you can use toString() method to output numbers from base 2 to base 32.
+
+    // Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2
+
+    {
+      let myNumber = 32;
+      console.log("base 32: ", myNumber.toString(32));
+      console.log("base 16: ", myNumber.toString(16));
+      console.log("base 12: ", myNumber.toString(12));
+      console.log("base 10: ", myNumber.toString(10));
+      console.log("base 8: ", myNumber.toString(8));
+      console.log("base 2: ", myNumber.toString(2));
+    }
+
+    // JavaScript Numbers as Objects
+    // Normally JavaScript numbers are primitive values created from literals:
+    {
+      let x = 123;
+      console.log("x = ", x)
+    }
+
+    // But numbers can also be defined as objects with the keyword new:
+    {
+      let y = new Number(123);
+      console.log("y = ", y.toString());
+    }
+
+    {
+      let x = 123;
+      let y = new Number(123);
+
+      console.log(typeof x);
+      console.log(typeof y);
+    }
+
+    /*
+      Do not create Number objects.
+
+      The new keyword complicates the code and slows down execution speed.
+
+      Number Objects can produce unexpected results:
+    */
+    
+    // When using the == operator, x and y are equal:
+    {
+      let x = 500;
+      let y = new Number(500);
+      console.log(x == y);
+    }
+
+    // When using the === operator, x and y are not equal.
+    {
+      let x = 500;
+      let y = new Number(500);
+      console.log(x === y);
+    }
+
+    // Note the difference between (x==y) and (x===y).
+
+    // (x == y) true or false?
+    {
+      let x = new Number(500);
+      let y = new Number(500);
+      console.log(x == y);      // false
+    }
+
+    // (x === y) true or false?
+    {
+      let x = new Number(500);
+      let y = new Number(500);
+      console.log(x === y);     // false
+    }
+
+    // Comparing two JavaScript objects always returns false.
+  </script>
+</body>
+
+</html>

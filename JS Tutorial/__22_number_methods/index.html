@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numbers Methods</title>
+</head>
+
+<body>
+  <!-- JavaScript Number Methods -->
+  <script>
+    // Number methods help you work with numbers.
+
+    // Number Methods and Properties
+
+    // Primitive values (like 3.14 or 2014), cannot have properties and methods (because they are not objects).
+
+    // But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.
+
+    // The toString() Method
+
+    // The toString() method returns a number as a string.
+
+    // All number methods can be used on any type of numbers (literals, variables, or expressions):
+    {
+      let x = 123;
+      console.log(x.toString(), typeof x.toString());
+
+      console.log(123..toString(), typeof 123..toString());
+
+      console.log((123).toString(), typeof (123).toString());
+    }
+
+    // The toExponential() Method
+
+    // toExponential() returns a string, with a number rounded and written using exponential notation.
+
+    // A parameter defines the number of characters behind the decimal point:
+    {
+      let x = 9.656;
+      console.log(x.toExponential());
+      console.log(x.toExponential(1));
+      console.log(x.toExponential(2));
+      console.log(x.toExponential(3));
+      console.log(x.toExponential(6));
+      console.log(125000..toExponential(1));
+      console.log(125000..toExponential(2));
+      console.log(0.125000.toExponential());
+      console.log(0.000125.toExponential());
+      console.log((120000).toExponential());
+      console.log((0.0012).toExponential());
+      console.log((0.0555).toExponential(1));
+
+      // The parameter is optional. If you don't specify it, JavaScript will not round the number.
+    }
+
+
+    // The toFixed() Method
+
+    // toFixed() returns a string, with the number written with a specified number of decimals:
+    {
+      let x = 9.656;
+      console.log(x.toFixed(0));
+      console.log(x.toFixed(1));
+      console.log(x.toFixed(2));
+      console.log(x.toFixed(4));
+      console.log(x.toFixed(6));
+      console.log(0.0000125.toFixed(5));
+      console.log(0.0000125.toFixed(6));
+      console.log(0.0000125.toFixed(7));
+      console.log(12000.059.toFixed(1));
+      console.log(12000.059.toFixed(2));
+      console.log(12000000..toFixed());
+      console.log(12000000..toFixed(2));
+      console.log((1250000).toFixed(2));
+
+      // toFixed(2) is perfect for working with money.
+    }
+
+
+    // The toPrecision() Method
+    {
+      // toPrecision() returns a string, with a number written with a specified length:
+      let x = 9.656;
+      console.log(x.toPrecision());
+      console.log(x.toPrecision(1));
+      console.log(x.toPrecision(2));
+      console.log(x.toPrecision(3));
+      console.log(x.toPrecision(4));
+      console.log(x.toPrecision(6));
+      console.log(9.125.toPrecision(1));
+      console.log(9.125.toPrecision(2));
+      console.log(9.125.toPrecision(3));
+      console.log(1200..toPrecision(1));
+      console.log(1200..toPrecision(2));
+      console.log(120.5.toPrecision(1));
+      console.log(120.5.toPrecision(2));
+      console.log(120.5.toPrecision(3));
+      console.log(120.5.toPrecision(4));
+      console.log(120.5.toPrecision(5));
+    }
+
+    // check if is whole number
+    {
+      let x = 9.656;
+      if (x - x.toFixed(0) === 0) {
+        console.log("Integer", "Fixed", x.toFixed(0));
+      } else {
+        console.log("Not Integer", "Fixed", x.toFixed(0));
+      }
+    }
+
+
+    // The valueOf() Method
+
+    // valueOf() returns a number as a number.
+    {
+      var x = new Number(123);
+      var x = 123;
+      console.log(x.valueOf(), typeof x.valueOf());
+      console.log((123).valueOf(), typeof (123).valueOf());
+      console.log((100 + 23).valueOf(), typeof (100 + 23).valueOf());
+
+      // In JavaScript, a number can be a primitive value (typeof = number) or an object (typeof = object).
+
+      // The valueOf() method is used internally in JavaScript to convert Number objects to primitive values.
+
+      // There is no reason to use it in your code.
+
+      // All JavaScript data types have a valueOf() and a toString() method.
+    }
+
+
+    // Converting Variables to Numbers
+
+    // There are 3 JavaScript methods that can be used to convert variables to numbers:
+
+    // The Number() method
+    // The parseInt() method
+    // The parseFloat() method
+
+    // These methods are not number methods, but global JavaScript methods.
+
+
+    // The Number() Method
+
+    // Number() can be used to convert JavaScript variables to numbers:
+    {
+      let x = "123";
+      console.log(Number(x), typeof Number(x));
+      console.log(Number(true), typeof Number(true));
+      console.log(Number(false), typeof Number(false));
+      console.log(Number(""));
+      console.log(Number("10"), typeof Number("10"));
+      console.log(Number("  10"), typeof Number("  10"));
+      console.log(Number("10  "), typeof Number("10  "));
+      console.log(Number("  10  "), typeof Number("  10  "));
+      console.log(Number("10.33"));
+      console.log(Number("10,33")); // NaN
+      console.log(Number("10 33")); // NaN
+      console.log(Number("John")); // NaN
+
+      // If the number cannot be converted, NaN (Not a Number) is returned.
+    }
+
+    // The Number() Method Used on Dates
+
+    // Number() can also convert a date to a number.
+    {
+      const date = new Date("1970-01-01");
+      console.log(Number(date));
+
+      // The Number() method returns the number of milliseconds since 1.1.1970.
+
+      // The number of milliseconds between 1970-01-02 and 1970-01-01 is 86400000:
+
+      const date2 = new Date("2022-01-01");
+      console.log(Number(date2));
+
+      const date3 = new Date("2017-09-30");
+      console.log(Number(date3));
+    }
+
+    // The parseInt() Method
+
+    // parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+
+    {
+      const int = "-10";
+      console.log(parseInt(int));
+      console.log(parseInt("-10.33"));
+      console.log(parseInt("10"));
+      console.log(parseInt("10.33"));
+      console.log(parseInt("  66500.3"));
+      console.log(parseInt("10 20 30"));
+      console.log(parseInt("88889 years"));
+      console.log(parseInt("years 100"));
+
+      // If the number cannot be converted, NaN (Not a Number) is returned.
+    }
+
+
+    // The parseFloat() Method
+
+    // parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:
+    {
+      let float = "10";
+      console.log(parseFloat(float));
+      console.log(parseFloat("10.33"));
+      console.log(parseFloat("1.020e-4"));
+      console.log(parseFloat("10,12 "));
+      console.log(parseFloat("23.2 years"));
+      console.log(parseFloat("years 23.2"));
+
+      // If the number cannot be converted, NaN (Not a Number) is returned.
+    }
+
+
+    // Number Properties
+
+    // Property	              Description
+    // MAX_VALUE	            Returns the largest number possible in JavaScript
+    // MIN_VALUE	Returns     the smallest number possible in JavaScript
+    // POSITIVE_INFINITY	    Represents infinity (returned on overflow)
+    // NEGATIVE_INFINITY	    Represents negative infinity (returned on overflow)
+    // NaN	                  Represents a "Not-a-Number" value
+
+
+    // JavaScript MIN_VALUE and MAX_VALUE
+
+    // MAX_VALUE returns the largest possible number in JavaScript.
+    {
+      const x = Number.MAX_VALUE;
+      console.log(x);
+    }
+
+    // MIN_VALUE returns the lowest possible number in JavaScript.
+    {
+      const x = Number.MIN_VALUE;
+      console.log(x);
+    }
+
+    // JavaScript POSITIVE_INFINITY
+    {
+      const positiveInfinity = Number.POSITIVE_INFINITY;
+      console.log(positiveInfinity);
+
+      // POSITIVE_INFINITY is returned on overflow:
+      const x = 1 / 0;
+      console.log(x);
+    }
+
+
+    // JavaScript NEGATIVE_INFINITY
+    {
+      const negativeInfinity = Number.NEGATIVE_INFINITY;
+      console.log(negativeInfinity);
+
+      // NEGATIVE_INFINITY is returned on overflow:
+      const x = -1 / 0;
+      console.log(x);
+    }
+
+
+    // JavaScript NaN - Not a Number
+    {
+      const x = Number.NaN;
+      const y = NaN;
+      console.log(x, y, typeof x, typeof y);
+
+      // NaN is a JavaScript reserved word indicating that a number is not a legal number.
+
+      // Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+      const z = 100 / "Apple";
+      console.log(z);
+    }
+
+    // Number Properties Cannot be Used on Variables
+
+    // Number properties belongs to the JavaScript's number object wrapper called Number.
+
+    // These properties can only be accessed as Number.MAX_VALUE.
+
+    // Using myNumber.MAX_VALUE, where myNumber is a variable, expression, or value, will return undefined:
+    {
+      let x = 6;
+      console.log(x.MAX_VALUE);
+    }
+
+
+    function myFunction1(a) {
+      var count = 0;
+      for (var i = 1; i <= a; i++) {
+        if (a % i === 0) count++;
+      }
+      if (count === 2) {
+        return a;
+      }
+
+      var count = 0;
+      for (var i = a; i < Number.MAX_VALUE; i++) {
+        for (var j = 1; j <= i; j++) {
+          if (i % j === 0) count++
+        }
+        if (count === 2) {
+          return i;
+        } else {
+          count = 0;
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
+
+<!-- Implicações éticas do COVID-19 para os Comités de Bioética copia -->
+<!-- Atenção a saude e desenvolvimento da criança que reside com a mae no EPEM Ndlavela -->
+<!-- Implicações éticas do COVID-19 - Outubro2021 -->
+<!-- Equilíbrio entre o bem-estar e o dever de cuidar dos profissionais de saúde durante a pandemia COVID-19: percepção dos profissionais de saúde da linha de frente em Moçambique -->

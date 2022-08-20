@@ -8,6 +8,8 @@ https://www.jschallenger.com/javascript-fundamentals
 https://hackernoon.com/javascript-practical-coding-challenges-for-beginners-4bq3ugr
 https://javascript30.com/
 
+<!-- https://javascript.info/number -->
+
 
 
 __Exercicios Pagos__
@@ -137,7 +139,19 @@ This example uses a file path to link to myScript.js:
 
      <script src="/js/myScript.js"></script> 
 
-
 This example uses no path to link to myScript.js
 
      <script src="myScript.js"></script> 
+
+
+
+
+
+
+
+Solicitar com antecedencias
+
+  cartar, video
+
+comunicar o nem.
+

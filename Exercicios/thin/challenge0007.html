@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>challenge #0007</title>
+</head>
+<body>
+  <script>
+    // Coding challenge #7: Calculate the sum of odd numbers greater than 10 and less than 30
+
+    var sum = 0;
+    for (var i = 10; i < 30; i++) {
+      if (i % 2 !== 0) sum += i; 
+    }
+
+    console.log("sum", sum);
+
+    var sum = 0;
+    for (var i = 11; i < 30; i += 2) {
+      sum += i;
+    }
+
+    console.log("sum", sum);
+  </script>
+</body>
+</html>
