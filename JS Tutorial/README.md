@@ -10,6 +10,8 @@ https://javascript30.com/
 
 <!-- https://javascript.info/number -->
 
+<!-- https://www.adaptedmind.com/Math-Worksheets.html?campaignId=16097117425&gclid=EAIaIQobChMI2vSUiKXa-QIVkUPTCh04awcQEAEYASAAEgKmt_D_BwE#gl -->
+
 
 
 __Exercicios Pagos__

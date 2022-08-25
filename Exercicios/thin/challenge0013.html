@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>challenge #0013</title>
+</head>
+
+<body>
+  <script>
+    // Coding challenge #13: Find the maximum number in an array of numbers
+    const numbers = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+
+    function max(array) {
+      var aux = Number.MIN_VALUE;
+      for (i = 0; i < array.length; i++) {
+        if (array[i] > aux) {
+          aux = array[i];
+        }
+      }
+      return aux;
+    }
+
+    console.log("Max:", max(numbers));
+  </script>
+</body>
+
+</html>

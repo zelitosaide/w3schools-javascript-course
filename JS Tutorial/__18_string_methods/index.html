@@ -1,12 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>String Methods</title>
 </head>
+
 <body>
-  
+  <script>
+    // JavaScript String Methods
+
+    // String methods help you to work with strings.
+
+    // String Methods and Properties
+
+    // Primitive values, like "John Doe", cannot have properties or methods (because they are not objects).
+
+    // But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.
+
+    // JavaScript String Length
+    {
+      // The length property returns the length of a string:
+      const text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      console.log(text.length);
+    }
+
+    // Extracting String Parts
+
+    // There are 3 methods for extracting a part of a string:
+
+    /*
+      slice(start, end)
+      substring(start, end)
+      substr(start, length)
+    */
+
+    // JavaScript String slice()
+
+    // slice() extracts a part of a string and returns the extracted part in a new string.
+
+    // The method takes 2 parameters: the start position, and the end position (end not included).
+
+    {
+      // Slice out a portion of a string from position 7 to position 13 (13 not included):
+      const text = "Apple, Banana, Kiwi";
+      const part = text.slice(7, 13);
+      console.log(part);
+
+      // Note
+
+      // JavaScript counts positions from zero.
+
+      // First position is 0.
+
+      // Second position is 1.
+    }
+
+    // If a parameter is negative, the position is counted from the end of the string
+
+    // This example slices out a portion of a string from position -12 to position -6
+    {
+      const text = "Apple, Banana, Kiwi";
+      const part = text.slice(-12, -6);
+      console.log(part);
+    }
+
+    // If you omit the second parameter, the method will slice out the rest of the string:
+    {
+      const name = "Zelito Atumane Saide";
+      const part = name.slice(7);
+      console.log(part);
+    }
+
+    // Or, counting from the end
+    {
+      const name = "Zelito Atumane Saide";
+      const part = name.slice(-13);
+      console.log(part);
+    }
+
+
+    // JavaScript String substring()
+
+    // substring() is similar to slice()
+
+    // The difference is that start and end values less than 0 are treated as 0 in substring().
+    {
+      const name = "Zelito Atumane Saide";
+      const part = name.substring(15, 16);
+      console.log(part);
+    }
+
+    // If you omit the second parameter, substring() will slice out the rest of the string
+    {
+      const name = "Zelito Atumane Saide";
+      const part = name.substring(15);
+      console.log(part);
+    }
+
+
+    // JavaScript String substr()
+
+    // substr() is similar to slice().
+
+    // The difference is that the second parameter specifies the length of the extracted part
+
+    {
+      const name = "Apple, Banana, Kiwi";
+      const part = name.substr(7, 6);
+      console.log(part);
+    }
+
+    // If you omit the second parameter, substr() will slice out the rest of the string.
+
+    {
+      const name = "Apple, Banana, Kiwi";
+      const part = name.substr(7);
+      console.log(part);
+    }
+
+    // If the parameter is negative, the position counts from the end of the string.
+    {
+      const name = "John Doe";
+      const part = name.substr(-3);
+      console.log(part);
+    }
+
+    {
+      const name = "Apple, Banana, Kiwi";
+      const part = name.substr(-12, 6);
+      console.log(part);
+    }
+
+
+    // Replacing String Content
+
+    // The replace() method replaces a specified value with another value in a string:
+    {
+      const text = "Please visit Microsoft!";
+      const newText = text.replace("Microsoft", "W3Schools");
+      console.log(text, ":", newText);
+
+      // The replace() method does not change the string it is called on.
+
+      // The replace() method returns a new string.
+
+      // The replace() method replaces only the first match
+
+      // If you want to replace all matches, use a regular expression with the /g flag set. See examples below.
+    }
+
+    // By default, the replace() method replaces only the first match:
+    {
+      const text = "Please visit Microsoft and Microsoft!";
+      const newText = text.replace("Microsoft", "W3Schools");
+      console.log(newText);
+    }
+
+    // By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work:
+    {
+      const text = "Please visit Microsoft!";
+      const newText = text.replace("MICROSOFT", "W3Schools");
+      console.log(newText);
+    }
+
+    // To replace case insensitive, use a regular expression with /i flag (insensitive):
+    {
+      const text = "Please visit Microsoft!";
+      const newText = text.replace(/MICROSOFT/i, "W3Schools!!!");
+      console.log(newText);
+    }
+
+    // Regular expressions are weitten without quotes.
+
+    // To replace all matches, use a regular expression with a /g flag (global match):
+    {
+      const text = "Please visit Microsoft and Microsoft!";
+      const newText = text.replace(/Microsoft/g, "W3Schools");
+      console.log(newText);
+    }
+
+
+    // Converting to Upper and Lower Case
+
+    // A string is converted to upper case with toUpperCase():
+
+    // A string is converted to lower case with toLowerCase():
+
+    // JavaScript String toUpperCase()
+    {
+      const text = "Hello World!";
+      const newText = text.toLowerCase();
+      console.log(newText);
+    }
+
+    // JavaScript String toLowerCase()
+    {
+      const text = "Hello World!";
+      const newText = text.toUpperCase();
+      console.log(newText);
+    }
+
+
+    // JavaScript String concat()
+
+    // concat() joins two or more strings:
+    {
+      const text1 = "Hello";
+      const text2 = "World";
+      const text3 = text1.concat(" ", text2);
+      console.log(text3);
+    }
+
+    // The concat() method can be used instead of the plus operator. These two lines do the same:
+    {
+      const text1 = "Hello" + " " + "World!";
+      console.log(text1);
+      const text2 = "Hello".concat(" ", "World!");
+      console.log(text2);
+    }
+
+    // Note
+
+    // All string methods return a new string. They don't modify the original string.
+
+    // Formally said:
+
+    // Strings are immutable: Strings cannot be changed, only replaced.
+
+    // JavaScript String trim()
+
+    // The trim() method removes whitespace from both sides of a string:
+    {
+      const text1 = "       Hello World!        ";
+      const text2 = text1.trim();
+      console.log(text2);
+    }
+
+    // JavaScript String Padding
+
+    // ECMAScript 2017 added two String methods: padStart() and padEnd() to support padding at the beginning and at the end of a string.
+
+    // JavaScript String padStart()
+
+    // The padStart() method pads a string with another string:
+    {
+      const text = "5";
+      const padded = text.padStart(4, "x");
+      console.log(padded);
+      console.log(text.padStart(3, "xa"));
+      console.log(text.padStart(2, "xa"));
+    }
+
+
+    // Note
+
+    // The padStart() method is a string method.
+
+    // To pad a number, convert the number to a string first.
+
+    // See the example below.
+    {
+      const number = 5;
+      const text = number.toString();
+      const padded = text.padStart(4, "0");
+      console.log(padded);
+
+      // padStart() is an ECMAScript 2017 feature.
+
+      // It is supported in all modern browsers:
+
+      // padStart() is not supported in Internet Explorer.
+    }
+
+    // JavaScript String padEnd()
+
+    // The padEnd() method pads a string with another string:
+    {
+      const text = "5";
+      const padded = text.padEnd(4, "x");
+      console.log(padded);
+    }
+
+    {
+      const text = "5";
+      const padded = text.padEnd(4, "0");
+      console.log(padded);
+    }
+
+    // Note
+
+    // The padEnd() method is a string method.
+
+    // To pad a number, convert the number to a string first.
+
+    // See the example below.
+    {
+      const number = 5;
+      const text = number.toString();
+      const padded = text.padEnd(4, "0");
+      console.log(padded);
+
+      // padEnd() is an ECMAScript 2017 feature.
+
+      // It is supported in all modern browsers:
+
+      // padEnd() is not supported in Internet Explorer.
+    }
+
+
+    // Extracting String Characters
+
+    // There are 3 methods for extracting string characters:
+
+    /*
+      charAt(position)
+      charCodeAt(position)
+      Property access [ ]
+    */
+
+    // JavaScript String charAt()
+
+    // The charAt() method returns the character at a specified index (position) in a string:
+    {
+      const text = "HELLO WORLD";
+      const char = text.charAt(0);
+      console.log(char);
+    }
+
+    // JavaScript String charCodeAt()
+
+    // The charCodeAt() method returns the unicode of the character at a specified index in a string:
+
+    // The method returns a UTF-16 code (an integer between 0 and 65535).
+    {
+      const text = "HELLO WORLD";
+      const char = text.charCodeAt(0);
+      console.log(char);
+    }
+
+
+    // Property Access
+
+    // ECMAScript 5 (2009) allows property access [ ] on strings:
+    {
+      const text = "HELLO WORLD";
+      const char = text[0];
+      console.log(char);
+    }
+
+
+    // Note
+
+    // Property access might be a little unpredictable:
+
+    /*
+      It makes strings look like arrays (but they are not)
+      If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+      It is read only. str[0] = "A" gives no error (but does not work!)
+    */
+    {
+      const text = "HELLO WORLD";
+      console.log(typeof text);
+      const propertyAccess = text[100];
+      // const propertyAccess = text[-100];
+      console.log(propertyAccess);
+      const char = text.charAt(100);
+      // const char = text.charAt(-100);
+      console.log(char);
+
+      text[0] = 'A';      // Gives no error, but does not work
+      console.log(text);
+    }
+
+
+    // Converting a String to an Array
+
+    // If you want to work with a string as an array, you can convert it to an array.
+
+    // JavaScript String split()
+
+    // A string can be converted to an array with the split() method:
+    {
+      const text = "I love you Lohanna, by Zelito|Saide";
+      const text2 = text.split(","); // Split on commas
+      console.log(text2);
+      const text3 = text.split(" "); // Split on spaces
+      console.log(text3);
+      const text4 = text.split("|"); // Split on pipe
+      console.log(text4);
+    }
+
+    // If the separator is omitted, the returned array will contain the whole string in index [0].
+
+    // If the separator is "", the returned array will be an array of single characters:
+    {+
+      const text = "I love you Lohanna, by Zelito|Saide";
+      const text2 = text.split();
+      console.log(text2);
+      const text3 = text.split("");
+      console.log(text3);
+    }
+  </script>
 </body>
+
 </html>

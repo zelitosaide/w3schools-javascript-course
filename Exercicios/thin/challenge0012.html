@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>challenge #0012</title>
+</head>
+
+<body>
+  <script>
+    // Coding challenge #12: Create a function that receives an array of numbers and returns an array containing only the positive numbers
+    const array = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+
+    function positives(array) {
+      const newArray = [];
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] >= 0) {
+          newArray.push(array[i]);
+        }
+      }
+      return newArray;
+    }
+
+    // OR
+
+    function positives2(array) {
+      return array.map(value => {
+        if (value >= 0) {
+          return value;
+        }
+      }).filter(value => value !== undefined);
+    }
+
+    // OR
+    
+    function positives3(array) {
+      return array.filter(value => value >= 0);
+    }
+    
+    // OR
+
+    function positives4(array) {
+      const newArray = [];
+
+      for (var value of array) {
+        if (value >= 0) {
+          newArray.push(value);
+        }
+      }
+
+      return newArray;
+    }
+
+    console.log(positives(array));
+    console.log(positives2(array));
+    console.log(positives3(array));
+    console.log(positives4(array));
+  </script>
+</body>
+
+</html>
