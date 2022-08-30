@@ -8,6 +8,19 @@ https://www.jschallenger.com/javascript-fundamentals
 https://hackernoon.com/javascript-practical-coding-challenges-for-beginners-4bq3ugr
 https://javascript30.com/
 
+https://www.w3resource.com/javascript-exercises/javascript-string-exercises.php
+
+https://www.codewars.com/
+https://www.codechef.com/
+https://projecteuler.net/
+https://exercism.org/
+https://www.beecrowd.com.br/judge/en/register
+
+
+### Pagos
+
+https://www.sololearn.com/home
+
 <!-- https://javascript.info/number -->
 
 <!-- https://www.adaptedmind.com/Math-Worksheets.html?campaignId=16097117425&gclid=EAIaIQobChMI2vSUiKXa-QIVkUPTCh04awcQEAEYASAAEgKmt_D_BwE#gl -->

@@ -1,0 +1,15 @@
+{
+  "name": "w3schools-javascript-course",
+  "version": "1.0.0",
+  "description": "javascript course",
+  "main": "index.js",
+  "repository": "https://github.com/zelitosaide/w3schools-javascript-course.git",
+  "author": "zelitosaide <zelitosaide83@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  }
+}
