@@ -232,3 +232,51 @@ Adding elements with high indexes can create undefined "holes" in an array:
 const fruits = ["Banana", "Orange", "Apple"];
 fruits[6] = "Lemon";  // Creates undefined "holes" in fruits 
 ```
+
+## Associative Arrays
+
+Many programming languages support arrays with named indexes.
+
+Arrays with named indexes are called associative arrays (or hashes).
+
+JavaScript does **not** support arrays with named indexes.
+
+In JavaScript, **arrays** always use **numbered indexes**.
+
+```
+const person = [];
+person[0] = "John";
+person[1] = "Doe";
+person[2] = 46;
+person.length;    // Will return 3
+person[0];        // Will return "John" 
+```
+
+> **WARNING !!**
+
+If you use named indexes, JavaScript will redefine the array to an object.
+
+After that, some array methods and properties will produce **incorrect results**.
+
+```
+const person = [];
+person["firstName"] = "John";
+person["lastName"] = "Doe";
+person["age"] = 46;
+person.length;     // Will return 0
+person[0];         // Will return undefined 
+```
+
+## The Difference Between Arrays and Objects
+
+In JavaScript, **arrays** use **numbered indexes**.
+
+In JavaScript, **objects** use **named indexes**.
+
+> Arrays are a special kind of objects, with numbered indexes.
+
+## When to Use Arrays. When to use Objects.
+
+* JavaScript does not support associative arrays.
+* You should use **objects** when you want the element names to be **strings (text)**.
+* You should use **arrays** when you want the element names to be **numbers**.

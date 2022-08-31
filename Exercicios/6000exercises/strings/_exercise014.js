@@ -22,4 +22,14 @@ console.log(myFunction("We are doing some exercises", "JavaScript ", 18));
 console.log(typeof Date.now)    // function
 console.log(typeof [])          // object
 
+const person  = []
+person["firstName"] = "Zelito";
+person["lastName"] = "Saide";
+person["age"] = 25;
+
+console.log("person", JSON.stringify(person));
+console.log("person", person);
+console.log("length", person.length);
+console.log("person[0]", person[0]);
+console.log("person['age']", person['age']);
 
