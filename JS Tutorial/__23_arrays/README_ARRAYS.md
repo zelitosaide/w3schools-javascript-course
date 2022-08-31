@@ -34,4 +34,41 @@ const array_name = [item1, item2, ...];
 
 It is a common practice to declare arrays with the `const` keyword.
 
-Learn more about const with arrays in the chapter: [JS Array Const](https://www.w3schools.com/js/js_array_const.asp).
+Learn more about `const` with arrays in the chapter: [JS Array Const](https://www.w3schools.com/js/js_array_const.asp).
+
+```const cars = ["Saab", "Volvo", "BMW"];```
+
+Spaces and line breaks are not important. A declaration can span multiple lines:
+
+```
+const cars = [
+  "Saab",
+  "Volvo",
+  "BMW"
+]; 
+```
+
+You can also create an array, and then provide the elements:
+
+```
+const cars = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+```
+
+## Using the JavaScript Keyword new
+
+The following example also creates an Array, and assigns values to it:
+
+```const cars = new Array("Saab", "Volvo", "BMW");```
+
+The two examples above do exactly the same.
+
+There is no need to use `new Array()`.
+
+For simplicity, readability and execution speed, use the array literal method.
+
+## Accessing Array Elements
+
+You access an array element by referring to the *index number*:
