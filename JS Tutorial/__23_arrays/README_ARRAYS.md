@@ -21,3 +21,15 @@ However, what if you want to loop through the cars and find a specific one? And 
 The solution is an array!
 
 An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+## Creating an Array
+
+Using an array literal is the easiest way to create a JavaScript Array.
+
+Syntax: 
+
+```
+const array_name = [item1, item2, ...];     
+```
+
+It is a common practice to declare arrays with the `const` keyword.
