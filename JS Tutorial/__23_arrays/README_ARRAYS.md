@@ -32,4 +32,6 @@ Syntax:
 const array_name = [item1, item2, ...];     
 ```
 
-> It is a common practice to declare arrays with the `const` keyword.
+It is a common practice to declare arrays with the `const` keyword.
+
+Learn more about const with arrays in the chapter: [JS Array Const](https://www.w3schools.com/js/js_array_const.asp).
