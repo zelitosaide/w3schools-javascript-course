@@ -32,4 +32,4 @@ Syntax:
 const array_name = [item1, item2, ...];     
 ```
 
-It is a common practice to declare arrays with the `const` keyword.
+> It is a common practice to declare arrays with the `const` keyword.
