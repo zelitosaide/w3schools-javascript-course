@@ -19,4 +19,7 @@ console.log(myFunction("We are doing some exercises", "JavaScript ", 18));
 // console.log(insert('We are doing some exercises.','JavaScript '));      "JavaScript We are doing some exercises."
 // console.log(insert('We are doing some exercises.','JavaScript ',18));   "We are doing some JavaScript exercises."
 
+console.log(typeof Date.now)    // function
+console.log(typeof [])          // object
+
 

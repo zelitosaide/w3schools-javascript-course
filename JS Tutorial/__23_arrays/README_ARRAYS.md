@@ -84,4 +84,151 @@ let car = cars[0];
 
 **Note:** Array indexes start with 0.
 
-[0] is the first element. [1] is the second element.
+`[0]` is the first element. `[1]` is the second element.
+
+## Changing an Array Element
+
+This statement changes the value of the first element in `cars`:
+
+```
+cars[0] = "Opel";
+```
+
+Example
+
+```
+const cars = ["Saab", "Volvo", "BMW"];
+cars[0] = "Opel";
+```
+
+## Access the Full Array
+
+With JavaScript, the full array can be accessed by referring to the array name:
+
+```
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+```
+
+## Arrays are Objects
+
+Arrays are a special type of objects. The `typeof` operator in JavaScript returns "object" for arrays.
+
+But, JavaScript arrays are best described as arrays.
+
+Arrays use **numbers** to access its "elements". In this example, `person[0]` returns John:
+
+```
+const person = ["John", "Doe", 46];
+person[0]
+```
+
+Objects use **names** to access its "members". In this example, `person.firstName` returns John:
+
+```
+const person = {firstName:"John", lastName:"Doe", age:46};
+```
+
+## Array Elements Can Be Objects
+
+JavaScript variables can be objects. Arrays are special kinds of objects.
+
+Because of this, you can have variables of different types in the same Array.
+
+You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+
+```
+myArray[0] = Date.now;
+myArray[1] = myFunction;
+myArray[2] = myCars;
+```
+
+## Array Properties and Methods
+
+The real strength of JavaScript arrays are the built-in array properties and methods:
+
+```
+cars.length   // Returns the number of elements
+cars.sort()   // Sorts the array 
+```
+
+Array methods are covered in the next chapters.
+
+## The length Property
+
+The `length` property of an array returns the length of an array (the number of array elements).
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let length = fruits.length;
+```
+
+The `length` property is always one more than the highest array index.
+
+## Accessing the First Array Element
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits[0];
+```
+
+## Accessing the Last Array Element
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits[fruits.length - 1];
+```
+
+## Looping Array Elements
+
+One way to loop through an array, is using a `for` loop:
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits.length;
+
+let text = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+```
+
+You can also use the `Array.forEach()` function:
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+}
+```
+
+## Adding Array Elements
+
+The easiest way to add a new element to an array is using the `push()` method:
+
+```
+const fruits = ["Banana", "Orange", "Apple"];
+fruits.push("Lemon");  // Adds a new element (Lemon) to fruits 
+```
+
+New element can also be added to an array using the `length` property:
+
+```
+const fruits = ["Banana", "Orange", "Apple"];
+fruits[fruits.length] = "Lemon";  // Adds "Lemon" to fruits 
+```
+
+> **WARNING !**
+
+Adding elements with high indexes can create undefined "holes" in an array:
+
+```
+const fruits = ["Banana", "Orange", "Apple"];
+fruits[6] = "Lemon";  // Creates undefined "holes" in fruits 
+```
