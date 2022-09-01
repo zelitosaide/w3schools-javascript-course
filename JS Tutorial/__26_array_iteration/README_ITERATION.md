@@ -341,3 +341,166 @@ It is supported in all modern browsers:
 
 
 `find()` is not supported in Internet Explorer.
+
+## JavaScript Array findIndex()
+
+The `findIndex()` method returns the index of the first array element that passes a test function.
+
+This example finds the index of the first element that is larger than 18:
+
+```
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.findIndex(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+} 
+```
+
+Note that the function takes 3 arguments:
+
+* The item value
+* The item index
+* The array itself
+
+## Browser Support
+
+`findIndex()` is an ES6 feature (JavaScript 2015).
+
+It is supported in all modern browsers:
+
+| ![chrome](./compatible_chrome.png) | ![edge](./compatible_edge.png) | ![firefox](./compatible_firefox.png) | ![safari](./compatible_safari.png) | ![operamini](./compatible_opera.png) |
+|---------------|--------------|-------------|---------------|--------------|
+|    Chrome     |     Edge     |   Firefox   |    Safari     |    Opera     |
+|      Yes      |     Yes      |     Yes     |      Yes      |     Yes      |
+
+`findIndex()` is not supported in Internet Explorer.
+
+## JavaScript Array.from()
+
+The `Array.from()` method returns an Array object from any object with a length property or any iterable object.
+
+Create an Array from a String:
+
+```
+Array.from("ABCDEFG");
+```
+
+## Browser Support
+
+`from()` is an ES6 feature (JavaScript 2015).
+
+It is supported in all modern browsers:
+
+| ![chrome](./compatible_chrome.png) | ![edge](./compatible_edge.png) | ![firefox](./compatible_firefox.png) | ![safari](./compatible_safari.png) | ![operamini](./compatible_opera.png) |
+|---------------|--------------|-------------|---------------|--------------|
+|    Chrome     |     Edge     |   Firefox   |    Safari     |    Opera     |
+|      Yes      |     Yes      |     Yes     |      Yes      |     Yes      |
+
+`from()` is not supported in Internet Explorer.
+
+## JavaScript Array Keys()
+
+The `Array.keys()` method returns an Array Iterator object with the keys of an array.
+
+Create an Array Iterator object, containing the keys of the array:
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruits.keys();
+
+for (let x of keys) {
+  text += x + "<br>";
+}
+```
+
+## Browser Support
+
+`keys()` is an ES6 feature (JavaScript 2015).
+
+It is supported in all modern browsers:
+
+| ![chrome](./compatible_chrome.png) | ![edge](./compatible_edge.png) | ![firefox](./compatible_firefox.png) | ![safari](./compatible_safari.png) | ![operamini](./compatible_opera.png) |
+|---------------|--------------|-------------|---------------|--------------|
+|    Chrome     |     Edge     |   Firefox   |    Safari     |    Opera     |
+|      Yes      |     Yes      |     Yes     |      Yes      |     Yes      |
+
+`keys()` is not supported in Internet Explorer.
+
+## Array entries()
+
+Create an Array Iterator, and then iterate over the key/value pairs:
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruits.entries();
+
+for (let x of f) {
+  document.getElementById("demo").innerHTML += x;
+}
+```
+
+The `entries()` method returns an Array Iterator object with key/value pairs:
+
+`[0, "Banana"]`
+`[1, "Orange"]`
+`[2, "Apple"]`
+`[3, "Mango"]`
+
+The `entries()` method does not change the original array.
+
+## Browser Support
+
+`entries()` is an ES6 feature (JavaScript 2015).
+
+It is supported in all modern browsers:
+
+| ![chrome](./compatible_chrome.png) | ![edge](./compatible_edge.png) | ![firefox](./compatible_firefox.png) | ![safari](./compatible_safari.png) | ![operamini](./compatible_opera.png) |
+|---------------|--------------|-------------|---------------|--------------|
+|    Chrome     |     Edge     |   Firefox   |    Safari     |    Opera     |
+|      Yes      |     Yes      |     Yes     |      Yes      |     Yes      |
+
+`entries()` is not supported in Internet Explorer.
+
+## JavaScript Array includes()
+
+ECMAScript 2016 introduced `Array.includes()` to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits.includes("Mango"); // is true 
+```
+
+### Syntax
+
+```
+array.includes(search-item) 
+```
+
+> Array.includes() allows to check for NaN values. Unlike Array.indexOf().
+
+Array.includes() is not supported in Internet Explorer and Edge 12/13.
+
+The first browser versions with full support are:
+
+## Browser Support
+
+`includes()` is an ECMAScript 2016 feature.
+
+It is supported in all modern browsers:
+
+| ![chrome](./compatible_chrome.png) | ![edge](./compatible_edge.png) | ![firefox](./compatible_firefox.png) | ![safari](./compatible_safari.png) | ![operamini](./compatible_opera.png) |
+|---------------|--------------|-------------|---------------|--------------|
+|    Chrome     |     Edge     |   Firefox   |    Safari     |    Opera     |
+|      Yes      |     Yes      |     Yes     |      Yes      |     Yes      |
+
+`includes()` is not supported in Internet Explorer.
+
+## Complete Array Reference
+
+For a complete Array reference, go to our:
+
+[Complete JavaScript Array Reference.](https://www.w3schools.com/jsref/jsref_obj_array.asp)
+
+The reference contains descriptions and examples of all Array properties and methods.
