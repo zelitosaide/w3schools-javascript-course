@@ -280,3 +280,64 @@ array.indexOf(item, start)
 |-------|-------------------------------------|
 | item  | `Required`. The item to search for. |
 | start | `Optional`. Where to start the search. Negative values will start at the given position counting from the end, and search to the end.|
+
+`Array.indexOf()` returns -1 if the item is not found.
+
+If the item is present more than once, it returns the position of the first occurrence.
+
+## JavaScript Array lastIndexOf()
+
+`Array.lastIndexOf()` is the same as `Array.indexOf()`, but returns the position of the last occurrence of the specified element.
+
+Search an array for the item "Apple":
+
+```
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.lastIndexOf("Apple") + 1;
+```
+
+### Syntax
+
+```
+array.lastIndexOf(item, start)
+```
+
+| Parameter | Description |
+|-----------|-------------|
+|    item   | `Required`. The item to search for |
+|    start  | `Optional`. Where to start the search. Negative values will start at the given position counting from the end, and search to the beginning |
+
+## JavaScript Array find()
+
+The `find()` method returns the value of the first array element that passes a test function.
+
+This example finds (returns the value of) the first element that is larger than 18:
+
+```
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+} 
+```
+
+Note that the function takes 3 arguments:
+
+* The item value
+* The item index
+* The array itself
+
+## Browser Support
+
+`find()` is an ES6 feature (JavaScript 2015).
+
+It is supported in all modern browsers:
+
+| ![chrome](./compatible_chrome.png) | ![edge](./compatible_edge.png) | ![firefox](./compatible_firefox.png) | ![safari](./compatible_safari.png) | ![operamini](./compatible_opera.png) |
+|---------------|--------------|-------------|---------------|--------------|
+|    Chrome     |     Edge     |   Firefox   |    Safari     |    Opera     |
+|      Yes      |     Yes      |     Yes     |      Yes      |     Yes      |
+
+
+`find()` is not supported in Internet Explorer.
