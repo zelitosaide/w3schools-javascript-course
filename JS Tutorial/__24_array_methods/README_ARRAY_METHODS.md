@@ -112,8 +112,74 @@ Array elements are accessed using their **index number**:
 
 Array **indexes** start with 0:
 
-`[0]` is the first array element
+* `[0]` is the first array element
 
-`[1]` is the second
+* `[1]` is the second
 
-`[2]` is the third ...
+* `[2]` is the third ...
+
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[0] = "Kiwi";
+```
+
+## JavaScript Array length
+
+The `length` property provides an easy way to append a new element to an array:
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[fruits.length] = "Kiwi";
+```
+
+## JavaScript Array delete()
+
+> **Warning !**
+
+Array elements can be deleted using the JavaScript operator `delete`.
+
+Using `delete` leaves `undefined` holes in the array.
+
+Use `pop()` or `shift()` instead.
+
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+delete fruits[0];
+```
+
+## Merging (Concatenating) Arrays
+
+The `concat()` method creates a new array by merging (concatenating) existing arrays:
+
+Example (Merging Two Arrays)
+
+```
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+
+const myChildren = myGirls.concat(myBoys);
+```
+
+> The `concat()` method does not change the existing arrays. It always returns a new array.
+
+The `concat()` method can take any number of array arguments:
+
+Example (Merging Three Arrays)
+
+```
+const arr1 = ["Cecilie", "Lone"];
+const arr2 = ["Emil", "Tobias", "Linus"];
+const arr3 = ["Robin", "Morgan"];
+const myChildren = arr1.concat(arr2, arr3);
+```
+
+The `concat()` method can also take strings as arguments:
+
+Example (Merging an Array with Values)
+
+```
+const arr1 = ["Emil", "Tobias", "Linus"];
+const myChildren = arr1.concat("Peter");  
+```
