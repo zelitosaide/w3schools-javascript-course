@@ -19,6 +19,8 @@ console.log(myFunction("We are doing some exercises", "JavaScript ", 18));
 // console.log(insert('We are doing some exercises.','JavaScript '));      "JavaScript We are doing some exercises."
 // console.log(insert('We are doing some exercises.','JavaScript ',18));   "We are doing some JavaScript exercises."
 
+
+
 console.log(typeof Date.now)    // function
 console.log(typeof [])          // object
 
@@ -32,4 +34,10 @@ console.log("person", person);
 console.log("length", person.length);
 console.log("person[0]", person[0]);
 console.log("person['age']", person['age']);
+
+console.log("Instanceof", person instanceof Array);
+console.log("Array.isArray(person)", Array.isArray(person));
+console.log("Typeof", typeof person);
+console.log("{} instanceof Array", {} instanceof Array);
+console.log("Array.isArray({})", Array.isArray({}));
 
