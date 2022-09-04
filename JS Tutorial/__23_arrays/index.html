@@ -1,14 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arrays</title>
 </head>
+
 <body>
   <script>
+    // An array is a special variable, which can hold more than one value:
+    const cars = ["Saab", "Volvo", "BMW"];
+
+    cars.forEach((value, index) => {
+      console.log(index, typeof value);
+    });
+
+    // Why Use Arrays?
+
+    // If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+    const car1 = "Saab";
+    const car2 = "Volvo";
+    const car3 = "BMW";
+
+    // However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?
+
+    // The solution is an array!
+
+    // An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+    console.log("car1", car1);
+    console.log("car2", car2);
+    console.log("car3", car3);
+
+    // Creating an Array
+
+    // Using an array literal is the easiest way to create a JavaScript Array
+
+    // Syntax:
+    {
+      const array_name = ["item1", "item2", "..."];
+      array_name.forEach((value, index) => {
+        console.log(index, value);
+      });
+    }
+
+    {
+      const cars = ["Saab", "Volvo", "BMW"];
+      console.log(cars.join(" - "));
+    }
+
+    {
+      const cars = [
+        "Saab",
+        "Volvo",
+        "BMW"
+      ];
+
+      const cars2 = cars.map((value, index) => {
+        return value.toLowerCase();
+      });
+
+      console.log("cars", cars2);
+    }
+
+    // You can also create an array, and then provide the elements:
+    {
+      const cars = [];
+      cars[0] = "Saab";
+      cars[1] = "Volvo";
+      cars[2] = "BMW";
+    }
+
+    {
+      // Using the JavaScript Keyword new
+
+      // The following example also creates an Array, and assigns values to it:
+      const cars = new Array("Saab", "Volvo", "BMW");
+      const filter = cars.filter(value => value !== "BMW");
+      console.log("cars", filter);
+    }
+
+    // The two examples above do exactly the same.
+
+    // There is no need to use new Array().
+
+    // For simplicity, readability and execution speed, use the array literal method.
+
+    {
+      // Accessing Array Elements
+      const cars = ["Saab", "Volvo", "BMW"];
+      let car = cars[0];
+      console.log("Car", car);
+
+      let text = "";
+      cars.forEach(value => {
+        text += " " + value;
+      });
+
+      console.log(text);
+
+      // Note: Array indexes start with 0.
+
+      // [0] is the first element. [1] is the second element.
+    }
+
+    // Changing an Array Element
+    {
+      // This statement changes the value of the first element in cars:
+      const cars = ["Saab", "Volvo", "BMW"];
+      cars[0] = "Opel";
+      console.log("cars: ", cars[0]);
+    }
+
+    // Access the Full Array
+
+    // With JavaScript, the full array can be accessed by referring to the array name:
+    {
+      const cars = ["Saab", "Volvo", "BMW"];
+      console.log(cars);
+      console.log(cars.toString());
+    }
+
+    // Arrays are Objects
+
+    // Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.
+
+    // But, JavaScript arrays are best described as arrays.
+
+    // Arrays use numbers to access its "elements". In this exmple, person[0] returns John:
+    {
+      const person = ["John", "Doe", 46];
+      console.log("Person:", person[0]);
+      console.log("Person[2]:", person[2]);
+    }
+
+    // Objects use names to access its "members". In this example, person.firstName returns John:
+    {
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 46
+      };
+
+      console.log("person:", person.firstName);
+      console.log("person:", person.age);
+    }
+
+    {
+      // Array Elements Can Be Objects
+
+      // JavaScript variables can be objects. Arrays are special kinds of objects.
+
+      // Because of this, you can have variables of different types in the same Array.
+
+      // You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+
+      const array = [];
+      array[0] = Date.now;
+      array[1] = function () {
+        console.log("Hi");
+      }
+      array[2] = {
+        firstName: "Zelito",
+        lastName: "Saide"
+      };
+
+      console.log("array", array);
+    }
+
+    {
+      // Array Properties and Methods
+
+      // The real strength of JavaScript arrays are the built-in array properties and methods:
+
+      const cars = ["Saab", "Volvo", "BMW"];
+      console.log("Length", cars.length);
+      console.log("Sorted Array", cars.sort());
+
+      // Array methods are covered in the next chapters.
+    }
+
+    {
+      // The length Property
+
+      // The length property of an array returns the length of an array (the number of array elements).
+
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      let length = fruits.length;
+      console.log("Length", length);
+
+      // The length property is always one more than the highest array index
+    }
+
+
+    // Accessing the first array element
+    {
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      let fruit = fruits[0];
+      console.log("fruits[0]", fruit);
+    }
+
+    // Accessing the last array element
+    {
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      let fruit = fruits[fruits.length - 1];
+      console.log("fruits[fruits.length - 1]", fruit);
+    }
+
+    // Looping array elements
+
+    // One way to loop through an array, is using a for loop:
+    {
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      let length = fruits.length;
+
+      let text = "<ul>";
+      for (let i = 0; i < length; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+      }
+      text += "</ul>"
+
+      document.body.innerHTML = text;
+    }
+
+
+    // You can also use the Array.forEach() function:
+    {
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      let text = "<ul>";
+      fruits.forEach(myFunction);
+      text += "</ul>";
+
+      function myFunction(value) {
+        text += "<li>" + value + "</li>";
+      }
+
+      document.body.innerHTML = text;
+    }
+
+    // Adding Array Elements
+
+    // The easiest way to add a new element to an array is using the push() method:
+    {
+      const fruits = ["Banana", "Orange", "Apple"];
+      fruits.push("Lemon");
+      console.log("fruits", fruits); // Adds a new element (Lemon) to fruits
+    }
+
+    // New element can also be added to an array using the length property:
+    {
+      const fruits = ["Banana", "Orange", "Apple"];
+      fruits[fruits.length] = "Lemon"; // Adds "Lemon" to fruits
+      console.log("fruits[fruits.length]", fruits);
+    }
+
+    // WARNING !
+
+    // Adding elements with high indexes can create undefined "holes" in an array:
+    {
+      const fruits = ["Banana", "Orange", "Apple"];
+      fruits[5] = "Lemon"; // Creates undefined "holes" in fruits
+      console.log("fruits", fruits);
+
+      // To show the holes dont use the built in array functions
+      fruits.forEach(value => {
+        if (value) {
+          console.log(value);
+        } else {
+          console.log('undefined');
+        }
+      });
+
+      console.log("------");
+
+      // Instead use this:
+      for (let i = 0; i < fruits.length; i++) {
+        if (fruits[i]) {
+          console.log(fruits[i]);
+        } else {
+          console.log("undefined");
+        }
+      }
+    }
+
+
+    // Associative Arrays
+
+    // Many programming languages support arrays with named indexes.
+
+    // Arrays with named indexes are called associative arrays (or hashes).
+
+    // JavaScript does not support arrays with named indexes.
+
+    // In JavaScript, arrays always use numbered indexes.   
+    {
+      const person = [];
+      person[0] = "John";
+      person[1] = "Doe";
+      person[2] = 46;
+      console.log(person.length); // Will return 3
+      console.log(person[0]); // Will return "John"
+    }
+
+    // WARNING !
+
+    // If you use named indexes, JavaScript will redefine the array to an object.
+
+    // After that, some array methods and properties will produce incorrect results.
+    {
+      const person = [];
+      person["firstName"] = "John";
+      person["lastName"] = "Doe";
+      person["age"] = 46;
+      console.log(person.length); // Will return 0
+      console.log(person[0]); // Will return undefined
+      console.log(typeof person);
+      console.log(person instanceof Array);
+      console.log(person instanceof Object);
+    }
+
+
+    // The difference between arrays and objects
     
+    // In JavaScript, arrays use numbered indexes.
+
+    // In JavaScript, objects use named indexes.
+
+    // Arrays are a special kind of objects, with numbered indexes.
+
+    // Whe to use Arrays. When to use objects.
+
+    // JavaScript does not support associative arrays.
+
+    // You should use objects when you want the element names to be strings (text).
+
+    // You should use arrays when you want the element names to be numbers.
+
+    
+    // JavaScript has a built in array constructor new Array().
+
+    // But you cn safely use [] instead.
+
+    // These two different statements both create a new empty array named points1 and points2 repectively:
+    {
+      const points1 = new Array();
+      const points2 = [];
+      console.log("Hi", points1 == points2);
+    }
+
+    // These two different statements both create a new array containing 6 numbers:
+    {
+      const points1 = new Array(40, 100, 1, 5, 25, 10);
+      const points2 = [40, 100, 1, 5, 25, 10];
+      console.log("points1:", points1);
+      console.log("points2:", points2);
+      console.log(points1 === points2);
+      const atLeastOneNegative = points1.some(value => value < 0);
+      const allPositive = points2.every(value => value > 0);
+
+      console.log("atLeastOneNegative",atLeastOneNegative);
+      console.log("allPositive", allPositive);
+    }
+
+    // The new keyword can produce some unexpected results:
+    {
+      // Create an array with three elements:
+      const points1 = new Array(40, 100, 1);
+
+      // Create an array with two elements:
+      const points2 = new Array(40, 100);
+
+      // Create an array with one element ???
+      const points3 = new Array(40);
+      console.log(points3);
+    }
+
+    // A common Error
+    {
+      const points1 = [40]; // Crete an array with one element
+
+      // is not the same as:
+      const points2 = new Array(40);  // Create an array with 40 undefined elements
+    }
+
+    // How to recognize an array
+
+    // A common question is: How do I know if a variable is an array?
+
+    // The problem is that the JavaScript operator typeof returns "objects":
+    {
+      const fruits = ["Banana", "Orange", "Apple"];
+      let type = typeof fruits;
+      console.log("Typeof", type);
+
+      // The typeof operator returns object because a JavaScript array is an object.
+    }
+
+
+    // Solution 1:
+
+    // To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method Array.isArray().
+    {
+      const fruits = ["Banana", "Orange", "Applr"];
+      let type = Array.isArray(fruits);
+      console.log("type", type);
+    }
+
+    // Solution 2:
+
+    // The instanceof operator retuns true if an object is created by a given constructor:
+    {
+      const fruits = ["Banana", "Orange", "Apple"];
+      let type = fruits instanceof Array;
+      console.log("type", type);
+    }
   </script>
 </body>
+
 </html>

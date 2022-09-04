@@ -10,6 +10,8 @@ function myFunction(a, b) {
   return result.reverse().join(b);
 }
 
+ABCDEFG.slice(0, -3)
+
 
 // Write a function that takes two strings (a and b) as arguments
 // Beginning at the end of 'a', insert 'b' after every 3rd character of 'a'
