@@ -258,7 +258,7 @@
     // When a callback function uses the first parameter only (value), the other parameters can be omitted: 
     {
       const numbers = [45, 4, 9, 16, 25];
-      let allPositive = numbers.every(function(value) {
+      let allPositive = numbers.every(function (value) {
         return value > 0;
       });
 
@@ -292,6 +292,185 @@
       });
 
       console.log("Some Negative:", someNegative);
+    }
+
+
+    // JavaScript Array indexOf()
+
+    // The indexOf() method searches an array for an element value and returns its position.
+
+    // Note: The first item has position 0, the second item has position 1, and so on.
+
+    // Example: Search an array for the item "Apple":
+    {
+      const fruits = ["Apple", "Orange", "Apple", "Mango"];
+
+      // If the item is present more than once, it returns the position of the first occurrence.
+      let position = fruits.indexOf("Apple") + 1;
+      console.log(position);
+
+      // Start position. Where to start the search. Negative values will start at the given position counting from the end, and search to the end.
+      let position2 = fruits.indexOf("Apple", 1);
+      console.log(position2);
+
+      const position4 = fruits.indexOf("Apple", -3);
+      console.log(position4);
+
+      // Array.indexOf() returns -1 if the item is not found.
+
+      let position3 = fruits.indexOf("Zelito");
+      console.log(position3);
+    }
+
+    // JavaScript Array lastIndexOf()
+
+    // Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+
+    // Example: Search an array for the item "Apple":
+    {
+      const fruits = ["Apple", "Orange", "Apple", "Mango"];
+      let position1 = fruits.lastIndexOf("Apple");
+      console.log("position1", position1);
+
+      // Start. Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the beginning.
+      const position2 = fruits.lastIndexOf("Apple", 1);
+      console.log("Position:", position2);
+
+      const position3 = fruits.lastIndexOf("Apple", 2);
+      console.log("Position3:", position3);
+
+      const position4 = fruits.lastIndexOf("Apple", -3);
+      console.log("Position4:", position4);
+    }
+
+
+    // JavaScript Array find()
+
+    // The find() method returns the value of the first array element that passes a test function.
+
+    // This example finds (returns the value of) the first element that is larger than 18:
+    {
+      const numbers = [4, 9, 16, 25, 29];
+      let first = numbers.find(myFunction);
+
+      function myFunction(value, index, array) {
+        return value > 18;
+      }
+
+      console.log("First:", first);
+
+      // Note that the function takes 3 arguments:
+
+      // The item value
+
+      // The item index
+
+      // The array itself
+    }
+
+
+    // JavaScript Array findIndex()
+
+    // The findIndex() method returns the index of the first array element that passes a test function.
+
+    // This example finds the index of the first element that is larger than 18:
+    {
+      const numbers = [4, 9, 16, 25, 29];
+      let first = numbers.findIndex(function (value, index, array) {
+        return value > 18;
+      });
+
+      console.log("FindIndex:", first);
+
+      // Or 
+      function myFunction(value, index, array) {
+        return value > 18;
+      }
+
+      // Note that the function takes 3 arguments:
+
+      // The item value
+
+      // The item index
+
+      // The array itself
+    }
+
+
+    // JavaScript Array.from()
+
+    // The Array.from() method returns an Array object from any object with a length property or any iterable object.
+
+    // Create an Array from a String:
+    {
+      const array = Array.from("ABCDEFG");
+      console.log(array);
+
+      const object = {
+        length: 2,
+        firstName1: "Zelito",
+        firstName2: "Saide"
+      }
+
+      console.log(Array.from(object));
+    }
+
+
+    // JavaScript Array keys()
+
+    // The Array.keys() returns an Array Iterator object with the keys of an array.
+
+    // Create an Array Iterator object, containing the keys of the array:
+    {
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      const keys = fruits.keys();
+
+      for (let x of keys) {
+        console.log(x);
+      }
+    }
+
+    // Array entries()
+
+    // Create an Array Iterator, and then iterate over the key/value pairs:
+    {
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      const entries = fruits.entries();
+
+      for (let x of entries) {
+        console.log(x);
+      }
+
+      // The entries() method returns an Array Iterator object with key/value pairs:
+
+      // [0, "Banana"]
+
+      // [1, "Orange"]
+
+      // [2, "Apple"]
+
+      // [3, "Mango"]
+
+      // The entries() method does not change the original array.
+    }
+
+
+    // JavaScript Array includes()
+
+    // ECMAScript 2016 introduced Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+    {
+      const fruits = ["Banana", "Orange", "Apple", "Mango", NaN];
+      const includes = fruits.includes("Mango");
+
+      console.log("includes", includes);
+
+      const includes2 = fruits.includes(NaN);
+      console.log("includes2:", includes2);
+
+      const indexOf = fruits.indexOf(NaN);
+      console.log("indexOf:", indexOf);
+
+      // Array.includes() allows to check for NaN values. Unlike Array.indexOf().
     }
   </script>
 </body>

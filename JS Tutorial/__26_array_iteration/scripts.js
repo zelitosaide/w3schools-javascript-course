@@ -7,3 +7,14 @@ function myFunction(value, index, array) {
 }
 
 console.log("Numbers:", numbers);
+
+const sum = [12, 18, 4, 3].reduce(function(total, value, index) {
+  if (value > 18) {
+    return total + value;
+  } else {
+    return total;
+  }
+});
+
+console.log("Sum:", sum);
+
