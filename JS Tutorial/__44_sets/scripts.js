@@ -81,4 +81,109 @@ function myFunction9(arr) {
   }, {});
 }
 
-console.log(group(['Alf', 'Alice', 'Ben']));
+// console.log(group(['Alf', 'Alice', 'Ben']));
+
+function noRepetition(arg) {
+  return arg.reduce(function (accumulator, value) {
+    if (!accumulator.includes(value)) {
+      accumulator.push(value);
+    }
+    return accumulator;
+  }, []);
+}
+
+
+// version 2 (no repetition)
+function noRepetition2(arr) {
+  const newArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let exist = false;
+
+    for (let j = 0; j < newArray.length; j++) {
+      if (arr[i] === newArray[j]) {
+        exist = true;
+        break;
+      }
+    }
+
+    if (!exist) {
+      newArray.push(arr[i]);
+    }
+  }
+  return newArray;
+}
+
+function noRepetition3(arr) {
+  const newArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!exist(arr[i], newArray)) {
+      newArray.push(arr[i]);
+    }
+  }
+
+  return newArray;
+}
+
+function exist(value, array) {
+  for (let j = 0; j < array.length; j++) {
+    if (array[j] === value) {
+      return true;
+    }
+  }
+  return false;
+}
+
+
+console.log(noRepetition2([1, 1, 2, 3, 3]));
+console.log(noRepetition3([1, 1, 2, 3, 3, 4, 5, 6, 6, 3]));
+
+
+// console.log(noRepetition([1, 1, 2, 3, 3, 4, 5, 6, 6]));
+
+function myFunction8888(a, b) {
+  return [...a, ...b].filter((value, index, arr) => {
+    return arr.indexOf(value) === index;
+  });
+}
+
+// console.log(noRepetition([1, 2, 2, 3, 3]));
+
+// console.log(noRepetition([1, 1, 2, 3, 3, 4, 5, 6, 6]))
+
+// [1, 1, 2, 3, 3, 4, 5, 6, 6]
+
+
+function reduce(array) {
+  return array.reduce(function (total, value) {
+    console.log(total);
+    // total.push(value);
+    return value;
+  }, 9);
+}
+
+
+// console.log(reduce([1, 2]));
+
+function createFunction() {
+  console.log("Hello, World");
+  console.log("I like coding...");
+  console.log("Coding is amazing...");
+  const result = -(500 + 7900 * 2 + 2000 - 19523) + 8500;
+  console.log("Total: ", result);
+}
+
+createFunction();
+
+function reduce2(...args) {
+  return args.reduce(function (total, value) {
+    return total.concat(value);
+  });
+}
+
+
+
+// console.log(reduce2([0, 4], [1, 4], [3, 5]));
+
+
