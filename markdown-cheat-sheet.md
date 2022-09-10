@@ -60,10 +60,10 @@ These elements extend the basic syntax by adding additional features. Not all Ma
 
 ### Table
 
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
 
 ### Fenced Code Block
 
@@ -117,3 +117,36 @@ H~2~O
 ### Superscript
 
 X^2^
+
+
+* Item 1
+* Item 2
+
+
+| value  | Description    |
+| ------ | ------------ |
+| name 1 | this is the name |
+| name 2 | this is the name |
+
+
+```
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  language : "EN"
+};
+
+// Change a property
+Object.defineProperty(person, "language", {value : "NO"}); 
+```
+
+
+The `get()` method gets the value of a key in a Map:
+
+
+The **iterator protocol**
+
+
+Mais informations visite our [site here](https://doxample.com)
+
+![site here](./JS%20Tutorial/__1_intro/pic_bulboff.gif)
