@@ -35,7 +35,7 @@ The `next()` method must return an object with two properties:
 * value (the next value)
 * done (true or false)
 
-|           |
-| --------- |
+|           |                                                                                        |
+| --------- | -------------------------------------------------------------------------------------- |
 | **value** | The value returned by the iterator (Can be omitted if done is true)                    |
 | **done**  | *true* if the iterator has completed, *false* if the iterator has produced a new value |
