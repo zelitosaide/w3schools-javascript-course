@@ -87,7 +87,7 @@ document.getElementById("demo").innerHTML = myArray;
 
 `Object.values()` is supported in all major browsers since 2016.
 
-| ![chrome](./compatible_chrome.png) | ![edge](./compatible_edge.png) | ![firefox](./compatible_firefox.png) | ![safari](./compatible_safari.png) | ![operamini](./compatible_opera.png) |
+| ![chrome](../../JS%20Tutorial/__26_array_iteration/compatible_chrome.png) | ![edge](../../JS%20Tutorial/__26_array_iteration/compatible_edge.png) | ![firefox](../../JS%20Tutorial/__26_array_iteration/compatible_firefox.png) | ![safari](../../JS%20Tutorial/__26_array_iteration/compatible_safari.png) | ![operamini](../../JS%20Tutorial/__26_array_iteration/compatible_opera.png) |
 | ---------------------------------- | ------------------------------ | ------------------------------------ | ---------------------------------- | ------------------------------------ |
 | 54 (2016)                          | 14 (2016)                      | 47 (2016)                            | 10 (2016)                          | 41 (2016)                            |
 
