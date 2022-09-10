@@ -234,6 +234,6 @@ fruits.get("apples");   // Returns undefined
 
 JavaScript Maps are supported in all browsers, except Internet Explorer:
 
-| ![chrome](./compatible_chrome.png) | ![edge](./compatible_edge.png) | ![firefox](./compatible_firefox.png) | ![safari](./compatible_safari.png) | ![operamini](./compatible_opera.png) |
-| ---------------------------------- | ------------------------------ | ------------------------------------ | ---------------------------------- | ------------------------------------ |
-| Chrome                             | Edge                           | Firefox                              | Safari                             | Opera                                |
+| ![chrome](../../JS%20Tutorial/__26_array_iteration/compatible_chrome.png) | ![edge](../../JS%20Tutorial/__26_array_iteration/compatible_edge.png) | ![firefox](../../JS%20Tutorial/__26_array_iteration/compatible_firefox.png) | ![safari](../../JS%20Tutorial/__26_array_iteration/compatible_safari.png) | ![operamini](../../JS%20Tutorial/__26_array_iteration/compatible_opera.png) |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Chrome                                                                    | Edge                                                                  | Firefox                                                                     | Safari                                                                    | Opera                                                                       |
