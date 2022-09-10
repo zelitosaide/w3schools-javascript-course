@@ -170,3 +170,87 @@ Solicitar com antecedencias
 
 comunicar o nem.
 
+
+
+
+1. adverbios de tempo
+   1. agora
+   2. ainda
+   3. amanha
+   4. antes
+   5. depois
+   6. antigamente
+   7. breve
+   8. cedo
+   9. durante
+   10. hoje
+   11. ja
+   12. jamais
+   13. logo
+   14. nunca
+   15. ontem
+   16. sempre
+2. adverbios de modo
+   1. assim
+   2. bem
+   3. como
+   4. debalde
+   5. depressa
+   6. devagar
+   7. mal
+   8. maior
+   9. pior
+   10. muitos
+   11. outros
+   12. terminados
+   13. em-mente
+3. adverbios de lugar
+   1. abaixo
+   2. acima
+   3. acola
+   4. ai
+   5. alem
+   6. aonde
+   7. ca
+   8. em baixo
+   9. de baixo
+   10. de frente
+   11. junto
+   12. la
+   13. onde
+   14. perto
+   15. dentro
+   16. perto
+   17. aquem
+4. adverbios de intensidade
+   1. bastante
+   2. demasiado
+   3. mais
+   4. menos
+   5. quase
+5. adverbios de afiramacao
+   1. sim
+   2. certamente
+   3. concerteza
+   4. tambem
+   5. realmente
+6. adverbios de negacao
+   1. jamais
+   2. nao
+   3. nunca
+7. adverbios de inclusao
+   1. unicamente
+   2. salvo
+   3. senao
+   4. so
+   5. apenas
+   6. exclusivamente
+   7. somente
+8. adverbios de duvida
+   1. acaso
+   2. porventura
+   3. possivelmente
+   4. talves
+   5. provavelmente
+
+
