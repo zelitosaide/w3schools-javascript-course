@@ -128,3 +128,29 @@ The following table defines the first browser version with full support for Clas
 | ------------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | Chrome 49                                                                 | Edge 12                                                               | Firefox 45                                                                  | Safari 9                                                                  | Opera 36                                                                |
 | Mar, 2016                                                                 | Jul, 2015                                                             | Mar, 2016                                                                   | Oct, 2015                                                                 | Mar, 2016                                                               |
+
+
+## "use strict"
+
+The syntax in classes must be written in "strict mode".
+
+You will get an error if you do not follow the "strict mode" rules.
+
+In "strict mode" you will get an error if you use a variable without declaring it:
+
+```
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+
+  age() {
+    // date = new Date();   // This will not work
+    let date = new Date();  // This will work
+    return date.getFullYear() - this.year;
+  }
+}
+```
+
+Learn more about "strict mode" in: [JS Strict Mode.](https://www.w3schools.com/js/js_strict.asp)
