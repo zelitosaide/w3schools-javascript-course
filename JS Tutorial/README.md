@@ -15,6 +15,12 @@ https://www.codechef.com/
 https://projecteuler.net/
 https://exercism.org/
 https://www.beecrowd.com.br/judge/en/register
+https://edabit.com/
+
+https://codemirror.net/
+
+
+<!-- '.\Exercicios\6000exercises\objects\exercise0001.js' -->
 
 
 ### Pagos

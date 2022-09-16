@@ -4,7 +4,7 @@ Static class methods are defined on the class itself.
 
 You cannot call a `static` method on an object, only on object class.
 
-```
+```javascript
 class Car {
   constructor(name) {
     this.name = name;
@@ -26,7 +26,7 @@ document.getElementById("demo").innerHTML = Car.hello();
 
 If you want to use the myCar object inside the `static` method, you can send it as a parameter:
 
-```
+```javascript
 class Car {
   constructor(name) {
     this.name = name;
