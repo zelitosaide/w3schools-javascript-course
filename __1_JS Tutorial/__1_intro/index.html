@@ -1,44 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <body>
+    <!-- JavaScript Can Change HTML Content -->
+    <p id="demo1"></p>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Intro</title>
+    <!-- JavaScript Can Change HTML Attribute Values -->
+    <button id="btn1" type="button">
+      Turn on the light
+    </button>
 
-</head>
+    <img
+      id="myImage"
+      src="./assets/pic_bulboff.gif"
+      width="100px"
+      alt="Bulb"
+    >
 
-<body>
-  <p id="demo">JavaScript can change HTML content.</p>
-  <button onclick="changeElementContent()">click me</button>
+    <button id="btn2" type="button">
+      Turn off the light
+    </button>
 
-  <!-- OR -->
-  <button onclick="document.getElementById('demo').innerHTML='JavaScript can change HTML content.'">
-    Reverse changes
-  </button>
+    <p id="demo2">JavaScript can change the style of an HTML element.</p>
 
-  <button onclick='document.getElementById("demo").innerHTML="JavaScript accepts both double and single quotes:"'>
-    single quote
-  </button>
-  
-  <div>
-    <button onclick="turnOnLight()">Turn o the light</button>   
-    <img id="light" src="pic_bulboff.gif" alt=""> 
-    <button onclick="turnOffLight()">Turn off the light</button>
-  </div>
+    <button id="btn3" type="button">
+      CLick Me!
+    </button>
 
-  <div>
-    <p id="change-font-size">JavaScript can change the style of an HTML element.</p>
-    <button onclick="changeFontSize()">change font size</button>
-  </div>
+    <p id="demo3">JavaScript can hide HTML elements.</p>
 
-  <div>
-    <p id="hiding-element">JavaScript can hide HTML elements.</p>
-    <button onclick="hideElement()">hide element</button>
-    <button onclick="showElement()">show element</button>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <button id="btn4" type="button">
+      Click Me!
+    </button>
 
+    <p id="demo4" style="display:none">Hello JavaScript!</p>
+
+    <button id="btn5" type="button">
+      Click Me!
+    </button>
+
+    <script src="./intro.js"></script>
+  </body>
 </html>

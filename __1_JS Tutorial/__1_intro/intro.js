@@ -1,27 +1,31 @@
-const paragraph = document.getElementById('demo')
-const light = document.getElementById('light')
+// JavaScript Can Change HTML Content
+document.getElementById("demo1").innerHTML = "Hello, JavaScript!";
 
-const changeElementContent = function () {
-  paragraph.innerHTML = 'Hello JavaScript!'
-}
+// JavaScript accepts both double and single quotes:
+document.getElementById('demo1').innerHTML = 'Hello, JavaScript!';
 
-const turnOnLight = function () {
-  light.src = 'pic_bulbon.gif'
-}
+// JavaScript Can Change HTML Attribute Values
+const image = document.getElementById("myImage");
 
-const turnOffLight = function () {
-  light.src = 'pic_bulboff.gif'
-}
+document.getElementById("btn1").addEventListener("click", function () {
+  image.src = "./assets/pic_bulbon.gif";
+});
 
-const changeFontSize = function () {
-  const paragraph = document.getElementById('change-font-size')
-  paragraph.style.fontSize = '20px'
-}
+document.getElementById("btn2").addEventListener("click", function () {
+  image.src = "./assets/pic_bulboff.gif";
+});
 
-const hideElement = function () {
-  document.getElementById('hiding-element').style.display = 'none'
-}
+// JavaScript Can Change HTML Styles (CSS)
+document.getElementById("btn3").addEventListener("click", function () {
+  document.getElementById("demo2").style.fontSize = "35px";
+});
 
-const showElement = function () {
-  document.getElementById('hiding-element').style.display = 'block'
-}
+// JavaScript Can Hide HTML Elements
+document.getElementById("btn4").addEventListener("click", function () {
+  document.getElementById("demo3").style.display = "none";
+});
+
+// JavaScript Can Show HTML Elements
+document.getElementById("btn5").addEventListener("click", function () {
+  document.getElementById("demo4").style.display = "block";
+});
