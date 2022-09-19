@@ -19,6 +19,8 @@ https://edabit.com/
 
 https://codemirror.net/
 
+<!-- JavaScript Debugger -->
+
 
 <!-- '.\Exercicios\6000exercises\objects\exercise0001.js' -->
 
