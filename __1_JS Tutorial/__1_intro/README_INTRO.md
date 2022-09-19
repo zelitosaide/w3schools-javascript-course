@@ -61,7 +61,7 @@ In this example JavaScript changes the value of the `src` (source) attribute of 
     <p>In this case JavaScript changes the value of the src (source) attribute of an image</p>
 
     <button
-      onclick="document.getElementById('myImage').src = 'pic_bulbon.gif'"
+      onclick="document.getElementById('myImage').src = './assets/pic_bulbon.gif'"
     >
       Turn on the light
     </button>
@@ -73,7 +73,7 @@ In this example JavaScript changes the value of the `src` (source) attribute of 
     >
 
     <button
-      onclick="document.getElementById('myImage').src = 'pic_bulboff.gif'"
+      onclick="document.getElementById('myImage').src = './assets/pic_bulboff.gif'"
     >
       Turn off the light
     </button>
