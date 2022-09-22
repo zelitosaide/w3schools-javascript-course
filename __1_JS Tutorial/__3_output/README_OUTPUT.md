@@ -139,3 +139,5 @@ The only exception is that you can call the `window.print()` method in the brows
   </body>
 </html>
 ```
+
+> `window.document.write("Hello");`

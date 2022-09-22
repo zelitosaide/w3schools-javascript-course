@@ -1,61 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <body>
+    <h1>JavaScript Output</h1>
+    
+    <!-- Writing into an HTML element, using innerHTML -->
+    <h2>Writing into an HTML element, using innerHTML</h2>
+    <p id="demo1"></p>
+    <button type="button" onclick="myFunction1()">
+      Writing into an HTML element, using innerHTML
+    </button>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Output</title>
-</head>
+    <!-- Writing into the HTML output using document.write() -->
+    <h2>Writing into the HTML output using document.write()</h2>
+    <button type="button" onclick="myFunction2()">
+      Writing into the HTML output using document.write()
+    </button>
 
-<body>
-  <!--  -->
-  <div>
-    <p id="innerHTML"></p>
-    <button onclick="addContentInnerHTML()">Add HTML content</button>
-    <script>
-      function addContentInnerHTML() {
-        document.getElementById('innerHTML').innerHTML = 'The innerHTML property defines the HTML content'
-      }
-    </script>
-  </div>
+    <!-- Writing into an alert box, using window.alert() -->
+    <h2>Writing into an alert box, using window.alert()</h2>
+    <button type="button" onclick="myFunction3()">
+      Writing into an alert box, using window.alert()
+    </button>
 
-  <!--  -->
-  <div>
-    <button onclick="writeInfo()">Use write method to display info</button>
+    <!-- Writing into the browser console, using console.log() -->
+    <h2>Writing into the browser console, using console.log()</h2>
+    <button type="button" onclick="myFunction4()">
+      Writing into the browser console, using console.log()
+    </button>
 
-    <script>
-      function writeInfo() {
-        document.write('Using document.write() after an HTML document is loaded, will delete all existing HTML:')
-      }
-    </script>
-  </div>
-
-  <!--  -->
-  <div>
-    <p id="window"></p>
-    <button onclick="window.alert('You can skip the window keyword.')">Alert method to display data</button>
-    <button onclick="windowObject()">You can skip the window keyword.</button>
-
-    <script>
-      function windowObject() {
-        window.document.getElementById('window').innerHTML = 'You can skip the window keyword.'
-      }
-    </script>
-  </div>
-
-  <!--  -->
-  <div>
-    <script>
-      console.log('window', window)
-    </script>
-  </div>
-
-  <!--  -->
-  <div>
-    <button onclick="window.print()">Print this page</button>
-    <button onclick="print()">Print this page 2</button>
-  </div>
-</body>
-
+    <!-- JavaScript Print -->
+    <h2>JavaScript Print</h2>
+    <button type="button" onclick="myFunction5()">
+      JavaScript Print
+    </button>
+    <script src="output.js"></script>
+  </body>
 </html>
