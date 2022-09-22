@@ -1,3 +1,6 @@
+<!-- Ate Dates -->
+
+
 ### JavaScript Strings
 
 JavaScript strings are for storing and manipulating text.

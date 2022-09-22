@@ -1,39 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Where to</title>
+<html>
+  <head>
+    <script>
+      // JavaScript in <head>
+      function myFunction1() {
+        document.getElementById("demo2").innerHTML = "Paragraph changed.";
+      }
 
-  <script>
-    function javascriptInHead() {
-      document.getElementById('javascript-in-head').innerHTML = 'Paragraph changed'
-    }
-  </script>
-</head>
-<body>
-  <p id="demo"></p>
+    </script>
+  </head>
+  <body>
+    <h1>Where To</h1>
 
-  <p id="javascript-in-head">Demo JavaScript in Head</p>
-  <button onclick="javascriptInHead()">Javascript in Head</button>
+    <!-- The <script> Tag -->
+    <h2>JavaScript in Body</h2>
 
-  <p id="javascript-in-body">Demo JavaScript in Body</p>
-  <button onclick="javascriptInBody()">Javascript in body</button>
+    <p id="demo1"></p>
 
-  <p id="external-javascript">Demo External JavaScript</p>
-  <button onclick="externalJavascript()">External Javascript</button>
+    <script>
+      document.getElementById("demo1").innerHTML = "My First JavaScript";
+    </script>
 
-  <script src="script.js"></script>
+    <!-- 
+      Old JavaScript: <script type="text/javascript">
+    -->
 
-  <script>
-    function javascriptInBody() {
-      document.getElementById('javascript-in-body').innerHTML = 'Paragraph changed'
-    }
-  </script>
 
-  <script>
-    document.getElementById('demo').innerHTML = 'My First JavaScript'
-  </script>
-</body>
+
+    <!-- JavaScript in <head> -->
+    <h2>JavaScript in &lt;head&gt;</h2>
+
+    <p id="demo2">JavaScript in &lt;head&gt;</p>
+
+    <button type="button" onclick="myFunction1()">
+      JavaScript in &lt;head&gt;
+    </button>
+
+    <!-- JavaScript in <body> -->
+    <h2>JavaScript in &lt;body&gt;</h2>
+
+    <p id="demo3">JavaScript in &lt;body&gt;</p>
+
+    <button type="button" onclick="myFunction2()">
+      JavaScript in &lt;body&gt;
+    </button>
+
+    <script>
+      function myFunction2() {
+        document.getElementById("demo3").innerHTML = "Paragraph changed.";
+      }
+    </script>
+
+    <!-- 
+      Placing scripts at the bottom of the <body> element 
+      improves the display speed, because script 
+      interpretation slows down the display.
+    -->
+
+    
+    <!-- External JavaScript -->
+    <h2>External JavaScript</h2>
+
+    <p id="demo4">External JavaScript</p>
+
+    <button type="button" onclick="myFunction3()">
+      External JavaScript
+    </button>
+
+    <script src="where_to.js"></script>
+
+
+    <!-- External Reference with a full URL (a full web address) -->
+
+    <h2>External Reference with a full URL (a full web address)</h2>
+
+    <p id="demo">External Reference with a full URL (a full web address)</p>
+
+    <button type="button" onclick="myFunction()">
+      External Reference with a full URL (a full web address)
+    </button>
+
+    <script src="https://www.w3schools.com/js/myScript.js"></script>
+
+
+    <!-- External Reference with a file path (like /js/) -->
+
+    <h2>External Reference with a file path (like /js/)</h2>
+
+    <p id="demo5">External Reference with a file path (like /js/)</p>
+
+    <button type="button" onclick="myFunction4()">
+      External Reference with a file path (like /js/)
+    </button>
+
+    <script src="./where_to.js"></script>
+
+
+    <!-- External Reference without any path -->
+
+    <h2>External Reference without any path</h2>
+
+    <p id="demo6">External Reference without any path</p>
+
+    <button type="button" onclick="myFunction5()">
+      External Reference without any path
+    </button>
+
+    <script src="where_to.js"></script>
+  </body>
 </html>
+
