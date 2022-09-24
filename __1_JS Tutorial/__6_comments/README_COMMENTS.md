@@ -1,64 +1,73 @@
-### JavaScript Comments
+# JavaScript Comments
 
-JavaScript comments can be used _to explain JavaScript code_, and _to make it more readable_.
+JavaScript comments can be used to explain JavaScript code, and to make it more readable.
 
-JavaScript comments can also be used _to prevent execution_, when testing alternative code.
+JavaScript comments can also be used to prevent execution, when testing alternative code.
 
-__Single Line Comments__
+## Single Line Comments
 
-Single line comments start with //.
+Single line comments start with `//`.
 
-Any text between // and the end of the line will be ignored by JavaScript (will not be executed).
+Any text between `//` and the end of the line will be ignored by JavaScript (will not be executed).
 
 This example uses a single-line comment before each code line:
 
-    // Change heading:
-    document.getElementById("myH").innerHTML = "My First Page";
+```javascript
+// Change heading:
+document.getElementById("myH").innerHTML = "My First Page";
 
-    // Change paragraph:
-    document.getElementById("myP").innerHTML = "My first paragraph.";
+// Change paragraph:
+document.getElementById("myP").innnerHTML = "My first paragraph.";
+```
 
-This example uses a single line comment at the end of each line _to explain_ the code:
+This example uses a single line comment at the end of each line to explain the code:
 
-    let x = 5;      // Declare x, give it the value of 5
-    let y = x + 2;  // Declare y, give it the value of x + 2 
+```javascript
+let x = 5;        // Declare x, give it the value of 5
 
+let y = x + 2;    // Declare y, give it the value of x + 2
+```
 
-__Multi-line Comments__
+## Multi-line Comments
 
-Multi-line comments start with /* and end with */.
+Multi-line comments start with `/*` and end with `*/`.
 
-Any text between /* and */ will be ignored by JavaScript.
+Any text between `/*` and `*/` will be ignored by JavaScript.
 
-This example uses a multi-line comment (a comment block) _to explain the code:_
+This example uses a multi-line comment (a comment block) to explain the code:
 
-    /*
-      The code below will change
-      the heading with id = "myH"
-      and the paragraph with id = "myP"
-      in my web page:
-    */
-    document.getElementById("myH").innerHTML = "My First Page";
-    document.getElementById("myP").innerHTML = "My first paragraph.";
+```javascript
+/*
+  The code below will change
+  the heading with id="myH"
+  and the paragraph with id="myP"
+  in my web page:
+*/
+document.getElementById("myH").innerHTML = "My First Page";
+document.getElementById("myP").innerHTML = "My first paragraph";
+```
 
-It is most common to use single line comments.
-Block comments are often used for formal documentation.
+> It is most common to use single line comments.
+> Block comments are often used for formal documentation.
 
+## Using Comments to Prevent Execution
 
-__Using Comments to Prevent Execution__
+Using comments to prevent execution of code is suitable for code testing.
 
-Using comments _to prevent execution_ of code is suitable for code testing.
+Adding `//` in front of a code line changes the code lines from an executable line to a comment.
 
-Adding // in front of a code line changes the code lines from an executable line to a comment.
+This example uses `//` to prevent execution of one of the code lines:
 
-This example uses // _to prevent execution_ of one of the code lines:
-
-    //document.getElementById("myH").innerHTML = "My First Page";
-    document.getElementById("myP").innerHTML = "My first paragraph.";
+```javascript
+// document.getElementById("myH").innerHTML = "My First Page";
+document.getElementById("myP").innerHTML = "My first paragraph.";
+```
 
 This example uses a comment block to prevent execution of multiple lines:
 
-    /*
-      document.getElementById("myH").innerHTML = "My First Page";
-      document.getElementById("myP").innerHTML = "My first paragraph.";
-    */
+```javascript
+/*
+document.getElementById("myH").innerHTML = "My First Page";
+document.getElementById("myP").innerHTML = "My first paragraph.";
+*/
+```

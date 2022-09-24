@@ -1,1 +1,0 @@
-document.getElementById('demo').innerHTML = 'In HTML, JavaScript statements are executed by the browser.'
