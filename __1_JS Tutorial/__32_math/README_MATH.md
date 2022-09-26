@@ -250,8 +250,35 @@ Math.log10(1000);         // returns 3
 
 ## JavaScript Math Methods
 
-| Method | Description |
-| ------ | ----------- |
+| Method                 | Description                                                                   |
+| ---------------------- | ----------------------------------------------------------------------------- |
+| [`abs(x)`](https://www.w3schools.com/jsref/jsref_abs.asp)               | Returns the absolute value of x                                               |
+| [`acos(x)`](https://www.w3schools.com/jsref/jsref_acos.asp)             | Returns the arccosine of x, in readians                                       |
+| [`acosh(x)`](https://www.w3schools.com/jsref/jsref_acosh.asp)            | Returns the hyperbolic arccosine of x                                         |
+| [`asin(x)`](https://www.w3schools.com/jsref/jsref_asin.asp)             | Returns the arcsine of x, in radians                                          |
+| [`asinh(x)`](https://www.w3schools.com/jsref/jsref_asinh.asp)             | Returns the hyperbolic arcsine of x                                           |
+| [`atan(x)`](https://www.w3schools.com/jsref/jsref_atan.asp)              | Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians |
+| [`atan2(y, x)`](https://www.w3schools.com/jsref/jsref_atan2.asp)          | Returns the arctangent of the quotient of its arguments                       |
+| [`atanh(x)`](https://www.w3schools.com/jsref/jsref_atanh.asp)             | Returns the hyperbolic arctangent of x                                        |
+| [`cbrt(x)`](https://www.w3schools.com/jsref/jsref_cbrt.asp)              | Returns the cubic root of x                                                   |
+| [`ceil(x)`](https://www.w3schools.com/jsref/jsref_ceil.asp)              | Returns x, rounded upwards to the nearest integer                             |
+| [`cos(x)`](https://www.w3schools.com/jsref/jsref_cos.asp)               | Returns the cosine of x (x is in radians)                                     |
+| [`cosh(x)`](https://www.w3schools.com/jsref/jsref_cosh.asp)              | Returns the hyperbolic cosine of x                                            |
+| [`exp(x)`](https://www.w3schools.com/jsref/jsref_exp.asp)               | Returns the value of `Math.pow(Math.E, x)`                                    |
+| [`floor(x)`](https://www.w3schools.com/jsref/jsref_floor.asp)             | Returns x, rounded downwards to the nearest integer                           |
+| [`log(x)`](https://www.w3schools.com/jsref/jsref_log.asp)               | Returns the natural logarithm (base E) of x                                   |
+| [`max(x, y, z, ..., n)`](https://www.w3schools.com/jsref/jsref_max.asp) | Returns the number with the highest value                                     |
+| [`min(x, y, z, ..., n)`](https://www.w3schools.com/jsref/jsref_min.asp) | Returns the number with the lowest value                                      |
+| [`pow(x, y)`](https://www.w3schools.com/jsref/jsref_pow.asp)            | Returns the value of x to the power of y                                      |
+| [`random()`](https://www.w3schools.com/jsref/jsref_random.asp)             | Returns a random number between 0 and 1 (1 exclusive)                         |
+| [`round(x)`](https://www.w3schools.com/jsref/jsref_round.asp)             | Rounds x to the nearest integer                                               |
+| [`sign(x)`](https://www.w3schools.com/jsref/jsref_sign.asp)              | Returns if x is negative, null or positive (-1, 0, 1)                         |
+| [`sin(x)`](https://www.w3schools.com/jsref/jsref_sin.asp)               | Returns the sine of x (x is in radians)                                       |
+| [`sinh(x)`](https://www.w3schools.com/jsref/jsref_sinh.asp)              | Returns the hyperbolic sine of x                                              |
+| [`sqrt(x)`](https://www.w3schools.com/jsref/jsref_sqrt.asp)              | Returns the square root of x                                                  |
+| [`tan(x)`](https://www.w3schools.com/jsref/jsref_tan.asp)               | Returns the tangent of an angle                                               |
+| [`tanh(x)`](https://www.w3schools.com/jsref/jsref_tanh.asp)              | Returns the hyperbolic tangent of a number                                    |
+| [`trunc(x)`](https://www.w3schools.com/jsref/jsref_trunc.asp)             | Returns the integer part of a number (x)                                      |
 
 ## Complete Math Reference
 
