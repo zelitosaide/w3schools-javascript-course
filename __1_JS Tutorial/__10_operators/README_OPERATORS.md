@@ -141,3 +141,25 @@ let z = "Hello" + 5;          // The result will be: Hello5
 | `&&`     | logical and |
 | `\|\|`   | logical or  |
 | `!`      | logical not |
+
+> Logical operators are fully described in the [JS Comparisons](https://www.w3schools.com/js/js_comparisons.asp) chapter.
+
+## JavaScript Type Operators
+
+| Operator     | Description                                                |
+| ------------ | ---------------------------------------------------------- |
+| `typeof`     | Returns the type of a variable                             |
+| `instanceof` | Returns true if an object is an instance of an object type |
+
+> Type operators are fully described in the [JS Type Conversion](https://www.w3schools.com/js/js_type_conversion.asp) chapter.
+
+## JavaScript Bitwise Operators
+
+Bit operators word on 32 bits numbers.
+
+Any numeric operand in the operation is converted into a 32 bit number. The result is converted back to a JavaScript number.
+
+| Operator | Description | Example | Same as     | Result | Decimal |
+| -------- | ----------- | ------- | ----------- | ------ | ------- |
+| `&`      | AND         | 5 & 1   | 0101 & 0001 | 0001   | 1       |
+| `\|`     | OR          | 5 \| 1  | 0101 \|0001 | 0101   | 5       |
