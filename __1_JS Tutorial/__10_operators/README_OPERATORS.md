@@ -139,5 +139,5 @@ let z = "Hello" + 5;          // The result will be: Hello5
 | Operator | Description |
 | -------- | ----------- |
 |`&&`|logical and|
-|`||`|logical or|
+|`\||\`|logical or|
 |`!`|logical not|
