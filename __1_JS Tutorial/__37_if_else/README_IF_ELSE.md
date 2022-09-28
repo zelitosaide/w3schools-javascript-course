@@ -54,7 +54,7 @@ if (condition) {
 If the hour is less than 18, create a "Good day" greeting, otherwise "Good evening":
 
 ```javascript
-if (hour < 18>) {
+if (hour < 18) {
   greeting = "Good day";
 } else {
   greeting = "Good evening";
