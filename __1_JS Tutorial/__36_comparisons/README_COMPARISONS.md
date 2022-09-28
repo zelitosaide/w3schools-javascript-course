@@ -143,10 +143,10 @@ result = NaN || "missing";          // returns missing
 
 The nullish operator is supported in all browsers since March 2020:
 
-|     ![Chrome](../assets/compatible_chrome.png)      |  ![Edge](../assets/compatible_edge.png)        | ![Firefox](../assets/compatible_firefox.png)           | ![Safari](../assets/compatible_safari.png)            | ![Opera](../assets/compatible_opera.png)         |
-| --------- | -------- | ---------- | ----------- | -------- |
-| Chrome 80 | Edge 80  | Firefox 72 | Safari 13.1 | Opera 67 |
-| Feb 2020  | Feb 2020 | Jan 2020   | Mar 2020    | Mar 2020 |
+| ![Chrome](../assets/compatible_chrome.png) | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
+| ------------------------------------------ | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| Chrome 80                                  | Edge 80                                | Firefox 72                                   | Safari 13.1                                | Opera 67                                 |
+| Feb 2020                                   | Feb 2020                               | Jan 2020                                     | Mar 2020                                   | Mar 2020                                 |
 
 ## The Optional Chaining Operator (?.)
 
@@ -163,3 +163,10 @@ const car = {
 // Ask for car name:
 document.getElementById("demo").innerHTML = car?.name;
 ```
+
+The optional chaining operator is supported in all browsers since March 2020:
+
+| ![Chrome](../assets/compatible_chrome.png) | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
+| ------------------------------------------ | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| Chrome 80                                  | Edge 80                                | Firefox 72                                   | Safari 13.1                                | Opera 67                                 |
+| Feb 2020                                   | Feb 2020                               | Jan 2020                                     | Mar 2020                                   | Mar 2020                                 |
