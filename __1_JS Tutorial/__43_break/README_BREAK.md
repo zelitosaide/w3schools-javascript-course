@@ -68,3 +68,26 @@ list: {
 
 > A code block is a block of code between { and }.
 
+```javascript
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+loop: {
+  for (let i = 0; i < cars.length; i++) {
+    if (i === 2) {
+      break loop;
+    } 
+    console.log(cars[i]);
+  }
+}
+```
+
+OR
+
+```javascript
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+loop: for(let i = 0; i < cars.length; i++) {
+  if (i === 2) break loop;
+  console.log(cars[i]); 
+}
+```
