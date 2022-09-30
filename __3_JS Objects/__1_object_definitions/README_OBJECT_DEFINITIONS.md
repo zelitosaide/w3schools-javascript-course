@@ -65,7 +65,7 @@ Objects are variables too. But objects can contain many values.
 
 Object values are written as name:value pairs (name and value separated by a colon).
 
-```
+```javascript
 let person = {
   firstName: "John",
   lastName: "Doe",
@@ -149,13 +149,13 @@ An object literal is a list of name:value pairs (like age:50) inside curly brace
 
 The following example creates a new JavaScript object with four properties:
 
-```
+```javascript
 const person = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue"};
 ```
 
 Spaces and line breaks are not important. An object definition can span multiple lines:
 
-```
+```javascript
 const person = {
   firstName: "John",
   lastName: "Doe",

@@ -6,6 +6,10 @@ function myFunction(object) {
   return keys;
 }
 
-const output = myFunction("John");
+const output = myFunction([
+  { name: "John Doe", age: 20 },
+  { name: "Doe Iris", age: 12 },
+  { name: "Dalton Lee", age: 27 },
+]);
 
 console.log(output);  // What's output??

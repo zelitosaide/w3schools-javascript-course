@@ -1,11 +1,11 @@
-function myFunction(object) {
-  const keys = [];
-  for (const key in object) {
-    keys.push(key);
+function myFunction(arg) {
+  let sum = 0;
+  for (let i = 0; arg[i]; i++) {
+    sum = sum + arg[i];
   }
-  return keys;
+  return sum;
 }
 
-const output = myFunction("John");
+const output = myFunction([1, null, 1, 0, 1]);
 
 console.log(output);  // What's output??
