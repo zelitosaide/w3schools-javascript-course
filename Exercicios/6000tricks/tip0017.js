@@ -1,11 +1,11 @@
-function myFunction(object) {
+function myFunction(arg) {
   const keys = [];
-  for (const key in object) {
+  for (const key of arg) {
     keys.push(key);
   }
   return keys;
 }
 
-const output = myFunction("John");
+const output = myFunction("JavaScript");
 
 console.log(output);  // What's output??

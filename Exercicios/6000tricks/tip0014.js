@@ -1,6 +1,6 @@
 function myFunction(object) {
-  let keys = [];
-  for (let key in object) {
+  const keys = [];
+  for (const key in object) {
     keys.push(key);
   }
   return keys;
