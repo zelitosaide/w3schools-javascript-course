@@ -68,7 +68,7 @@ label8: {
     [age]: 50
   };
 
-  console.log(person);
+  console.table(person);
 }
 
 label9: {
