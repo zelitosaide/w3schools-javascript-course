@@ -43,7 +43,7 @@ let x = 100 + 50 - 3;
 
 ### Increment Operators
 
-Posfix increments are executed **before** prefix increments
+Posfix increments are executed **After** prefix increments
 
 | Val | Operator | Description                                                                           | Example |
 | --- | -------- | ------------------------------------------------------------------------------------- | ------- |
