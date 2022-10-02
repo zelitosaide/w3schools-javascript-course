@@ -135,3 +135,31 @@ Multiplications and divisions are executed **before** additions and subtractions
 | Val | Operator | Description                                                                   | Example        |
 | --- | -------- | ----------------------------------------------------------------------------- | -------------- |
 | 2   | `?.`     | [Condition](https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison) | ? "yes" : "no" |
+
+### Assignment Operators
+
+Assignments are executed **after** other operations
+
+| Val | Operator | Description                                                                                               | Example   |
+| --- | -------- | --------------------------------------------------------------------------------------------------------- | --------- |
+| 2   | `=`      | [Simple Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_equal)                   | x = y     |
+| 2   | `:`      | [Colon Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_colon)                    | x: 5      |
+| 2   | `+=`     | [Addition Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_plusequal)             | x += y    |
+| 2   | `-=`     | [Subtraction Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_minequal)           | x -= y    |
+| 2   | `*=`     | [Multiplication Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_multequal)       | x *= y    |
+| 2   | `**=`    | [Exponentiation Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_exponential)     | x **= y   |
+| 2   | `/=`     | [Division Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_divequal)              | x /= y    |
+| 2   | `%=`     | [Remainder Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_modequal)             | x %= y    |
+| 2   | `<<=`    | [Left Shift Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_left_shift)          | x <<= y   |
+| 2   | `>>=`    | [Right Shift Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_right_shift)        | x >>= y   |
+| 2   | `>>>=`   | [Unsigned Right Shift](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_unsigned_right_shift) | x >>>= y  |
+| 2   | `&=`     | [Bitwise AND Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_bitwise_and)        | x &= y    |
+| 2   | `\|=`    | [Bitwise OR Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_bitwise_or)          | x \|= y   |
+| 2   | `^=`     | [Bitwise XOR Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_bitwise_xor)        | x ^= y    |
+| 2   | `&&=`    | [Logical AND Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_logical_and)        | x &&= y   |
+| 2   | `\|\|=`  | [Logical OR Assignment](https://www.w3schools.com/js/tryit.asp?filename=tryjs_assign_logical_or)          | x \|\|= y |
+| 2   | `=>`     | [Arrow](https://www.w3schools.com/js/tryit.asp?filename=tryjs_arrow_function4)                            | x => y    |
+| 2   | `yield`  | Pause / Resume                                                                                            | yield x   |
+| 2   | `yield*` | Delegate                                                                                                  | yield* x  |
+| 2   | `...`    | Spreed                                                                                                    | ... x     |
+| 1   | `,`      | Comma                                                                                                     | x, y      |
