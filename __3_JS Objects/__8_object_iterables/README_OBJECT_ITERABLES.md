@@ -8,7 +8,7 @@ Technically, iterables must implement the `Symbol.iterator` method.
 
 You can use a `for..of` loop to iterate over the elements of a string:
 
-```
+```javascript
 for (const x of "W3Schools") {
   // code block to be executed
 }
@@ -18,7 +18,7 @@ for (const x of "W3Schools") {
 
 You can use a `for..of` loop to iterate over the elements of an Array:
 
-```
+```javascript
 for (const x of [1, 2, 3, 4, 5]) {
   // code block to be executed
 }
@@ -46,7 +46,7 @@ The `next()` method must return an object with two properties:
 This iterable returns never ending: 10, 20, 30, 40,.... Everytime `next()` is called:
 
 
-```
+```javascript
 // Home Made Iterable
 function myNumbers () {
   let n = 0;
