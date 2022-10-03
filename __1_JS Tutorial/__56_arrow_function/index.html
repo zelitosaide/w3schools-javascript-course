@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arrow Function</title>
-</head>
+<html>
+
 <body>
-  
+  <h1>JavaScript "this"</h1>
+  <p id="demo"></p>
+
+  <!-- <button type="button" onclick="hello()"> -->
+  <button id="button" type="button">
+    Click Me!
+  </button>
+
+  <script>
+    const hello = function () {
+      document.getElementById("demo").innerHTML += this;
+      console.log(this);
+    }
+
+    // The window object calls the function:
+    window.onload = hello;
+
+    // A button object calls the function:
+    document.getElementById("button").onclick = hello;
+  </script>
 </body>
+
 </html>
