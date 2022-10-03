@@ -47,3 +47,21 @@ label04: {
 
   console.log(person.fullName(), person.getId());
 }
+
+label05: {
+  const person = {
+    firstName: "John",
+    lastName: "Doe",
+    fullName() {
+      return this.firstName + " " + this.lastName;
+    }
+  };
+
+  const member = {
+    firstName: "Zelito Atumane Saide",
+    lastName: "Abdala",
+  };
+
+  const fullName = person.fullName.bind(member);
+  console.log(fullName());
+}
