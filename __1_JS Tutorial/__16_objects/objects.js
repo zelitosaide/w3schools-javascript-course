@@ -65,3 +65,21 @@ label05: {
   const fullName = person.fullName.bind(member);
   console.log(fullName());
 }
+
+label06: {
+  const person = {
+    name: "Zelito Atumane Saide Abdala",
+    getPerson: function () {
+      return this;
+    },
+    address: {
+      street: "Av. Angola",
+      getAddress: function () {
+        return this;
+      }
+    },
+  };
+
+  console.log(person.getPerson());
+  console.log(person.address.getAddress());
+}
