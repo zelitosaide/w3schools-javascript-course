@@ -2,7 +2,7 @@ const fruits = ["Banana", "Orange", "Apple"];
 fruits[6] = "Lemon";
 
 
-for(let i = 0; i < fruits.length; i++) {
+for (let i = 0; i < fruits.length; i++) {
   if (!fruits[i]) {
     console.log("undefined");
   } else {
