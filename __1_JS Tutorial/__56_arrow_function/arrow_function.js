@@ -40,3 +40,14 @@ label4: {
   console.log(person.fullName());
 }
 
+
+// (function () {
+//   console.log(this);
+// })();
+
+
+function println() {
+  // console.log(this);
+}
+
+println();

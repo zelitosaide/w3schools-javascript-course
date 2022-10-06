@@ -83,3 +83,12 @@ label06: {
   console.log(person.getPerson());
   console.log(person.address.getAddress());
 }
+
+
+function fn1() {
+  return function fn2() {
+    return this;
+  }
+}
+
+console.log(fn1()());
