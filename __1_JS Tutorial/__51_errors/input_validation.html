@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>Input Validation</h1>
+
+  <p>Please input a number between 5 and 10:</p>
+
+  <input type="text" id="input" placeholder="Enter input" />
+  <button type="button" onclick="myFunction()">
+    Test Input
+  </button>
+  <p id="message"></p>
+
+  <script>
+    function myFunction() {
+      const input = document.getElementById("input").value;
+      let message = document.getElementById("message");
+      message.innerHTML = "";
+
+      try {
+        if (input === "") {
+          throw "empty";
+        }
+        if (isNaN(input)) {
+          throw "not a number";
+        }
+        if (Number(input) < 5) {
+          throw "too low";
+        }
+        if (Number(input) > 10) {
+          throw "too big";
+        }
+      } catch (error) {
+        message.innerHTML = "Input is " + error;
+      } finally {
+        document.getElementById("input").value = "";
+      }
+    }
+  </script>
+</body>
+
+</html>
