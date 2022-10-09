@@ -124,3 +124,16 @@ label11: {
   }
   console.log("Finished");
 }
+
+label12: {
+  function throwError() {
+    throw new Error("oh dang!");
+    console.log("oh dang!!!!");
+  }
+
+  try {
+    console.log(throwError());
+  } catch ({ message }) {
+    console.log(message);
+  }
+}
