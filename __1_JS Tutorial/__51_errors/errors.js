@@ -109,3 +109,18 @@ label10: {
     console.log(error);
   }
 }
+
+label11: {
+  function throwError() {
+    // return new Error("From a function");
+    throw new Error("From a function");
+  }
+
+  try {
+    console.log(throwError());
+  } catch (error) {
+    // console.log(error.message, "ola");
+    console.log(error.message);
+  }
+  console.log("Finished");
+}
