@@ -1,6 +1,8 @@
 const name = "Jesse";
 const age = 40;
 
+export { name, age };
+
 const person = {
   firstName: "John",
   lastName: "Doe",
@@ -9,12 +11,10 @@ const person = {
   }
 };
 
-export default function welcome() {
-  return "Welcome to person.js!!";
-}
+export { person };
 
 export const fullName = person.fullName.bind(person);
 
-export { person };
-
-export { name, age };
+export default function welcome() {
+  return "Welcome to person.js!!";
+}
