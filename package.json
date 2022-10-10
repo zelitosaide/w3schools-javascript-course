@@ -9,6 +9,7 @@
   "dependencies": {
     "nodemon": "^2.0.19"
   },
+  "type": "module",
   "scripts": {
     "start": "nodemon index.js"
   }
