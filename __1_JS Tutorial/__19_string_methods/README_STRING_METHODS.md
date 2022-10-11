@@ -183,3 +183,226 @@ let text2 = text1.toLowerCase();
 ```
 
 ## JavaScript String concat()
+
+`concat()` join two or more strings:
+
+```javascript
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" ", text2);
+```
+
+The `concat()` method can be used intead of the plus operator. These two lines do the same:
+
+```javascript
+text = "Hello" + " " + "World!";
+text = "Hello".concat(" ", "World!");
+```
+
+## Note
+
+> All string methods return a new string. They don't modify the original string.
+> Formally said:
+> Strings are immutable: Strings cannot be changed, only replaced.
+
+## JavaScript String trim()
+
+The `trim()` method removes whitespace from both sides of a string:
+
+```javascript
+let text1 = "       Hello World!        ";
+let text2 = text1.trim();
+```
+
+## JavaScript String trimStart()
+
+ECMAScript 2019 added the String method `trimStart()` to JavaScript.
+
+The `trimStart()` method works like `trim()`, but removes whitespace only from the start of a string.
+
+```javascript
+let text1 = "       Hello World!        ";
+let text2 = text1.trimStart();
+```
+
+JavaScript String `trimStart()` is supported in all browsers since January 2020:
+
+| ![chrome](../assets/compatible_chrome.png) | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
+| ------------------------------------------ | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| Chrome 66                                  | Edge 79                                | Firefox 61                                   | Safari 12                                  | Opera 50                                 |
+| Apr 2018                                   | Jan 2020                               | Jun 2018                                     | Sep 2018                                   | May 2018                                 |
+
+## JavaScript String trimEnd()
+
+ECMAScript 2019 added the String method `trimEnd()` to JavaScript.
+
+The `trimEnd()` method works like `trim()`, but removes whitespace only from the end of a string.
+
+```javascript
+let text1 = "       Hello Word!       ";
+let text2 = text1.trimEnd();
+```
+
+JavaScript String `trimEnd()` is supported in all browsers since January 2020:
+
+| ![Chrome](../assets/compatible_chrome.png) | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
+| ------------------------------------------ | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| Chrome 66                                  | Edge 79                                | Firefox 61                                   | Safari 12                                  | Opera 50                                 |
+| Apr 2018                                   | Jan 2020                               | Jun 2018                                     | Sep 2018                                   | May 2018                                 |
+
+## JavaScript String Padding
+
+ECMAScript 2017 added two String methods: `padStart()` and `padEnd()` to support padding at the beginning and at the end of a string.
+
+## JavaScript String padStart()
+
+The `padStart()` method pads a string with another string:
+
+```javascript
+let text = "5";
+let padded = text.padStart(4, "x");
+```
+
+```javascript
+let text = "5";
+let padded = text.padStart(4, "0");
+```
+
+## Note
+
+> The `padStart()` method is a string method.
+> To pad a number, convert the number to a string first.
+> See the example below.
+
+```javascript
+let numb = 5;
+let text = numb.toString();
+let padded = text.padStart(4, "0");
+```
+
+## Browser Support
+
+`padStart()` is an ECMAScript 2017 feature.
+
+It is supported in all modern browsers.
+
+| ![Chrome](../assets/compatible_chrome.png) | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
+| ------------------------------------------ | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| Chrome                                     | Edge                                   | Firefox                                      | Safari                                     | Opera                                    |
+| Yes                                        | Yes                                    | Yes                                          | Yes                                        | Yes                                      |
+
+`padStart()` is not supported in Internet Explorer.
+
+## JavaScript String padEnd()
+
+The `padEnd()` method pads a string with another string:
+
+```javascript
+let text = "5";
+let padded = text.padEnd(4, "x");
+```
+
+```javascript
+let text = "5";
+let padded = text.padEnd(4, "0");
+```
+
+## Note
+
+> The `padEnd()` method is a string method.
+> To pad a number, convert the number to a string first.
+> See the example below.
+
+```javascript
+let numb = 5;
+let text = numb.toString();
+let padded = text.padEnd(4, "0");
+```
+
+## Browser Support
+
+`padEnd()` is an ECMAScript 2017 feature.
+
+It is supported in all modern browsers:
+
+| ![Chrome](../assets/compatible_chrome.png) | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
+| ------------------------------------------ | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| Chrome                                     | Edge                                   | Firefox                                      | Safari                                     | Opera                                    |
+| Yes                                        | Yes                                    | Yes                                          | Yes                                        | Yes                                      |
+
+`padEnd()` is not supported in Internet Explorer.
+
+## Extracting String Characters
+
+There are 3 methods for extracting string characters:
+
+* `charAt(position)`
+* `charCodeAt(position)`
+* Property access [ ]
+
+## JavaScript String charAt()
+
+The `charAt()` method returns the character at a specifed index (position) in a string:
+
+```javascript
+let text = "HELLO WORD";
+let char = text.charAt(0);
+```
+
+## JavaScript String charCodeAt()
+
+The `charCodeAt()` method returns the unicode of the character at a specified index in a string:
+
+The method returns a UTF-16 code (an integer between 0 and 65535).
+
+```javascript
+let text = "HELLO WORLD";
+let char = text.charCodeAt(0);
+```
+
+## Property Access
+
+ECMAScript 5 (2009) allows property access [ ] on strings:
+
+```javascript
+let text = "HELLO WORLD";
+let char = text[0];
+```
+
+## Note
+
+> Property access might be a litter **unpredictable:**
+> * It makes strings look like arrays (but they are not)
+> * If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+> * It is read only. str[0] = "A" gives no error (but does not work!)
+
+```javascript
+let text = "HELLO WORLD";
+text[0] = "A";    // Gives no error, but does not work
+```
+
+## JavaScript String split()
+
+A string can be converted to an array with the `split()` method:
+
+```javascript
+text.split(",");    // Split on commas
+text.split(" ");    // Split on spaces
+text.split("|");    // Split on pipe
+```
+
+If the separator is ommited, the returned array will contain the whole string in index [0].
+
+If the separator is `""`, the returned array will be an array of single characters:
+
+```javascript
+text.split("");
+```
+
+## Complete String Reference
+
+For a complete String reference, go to our:
+
+[Complete JavaScript String Reference](https://www.w3schools.com/jsref/jsref_obj_string.asp).
+
+The reference contains descriptions and examples of all string properties and methods.
