@@ -325,10 +325,10 @@ let padded = text.padEnd(4, "0");
 
 It is supported in all modern browsers:
 
-| ![Chrome]("../assets/compatible_chrome.png") | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
-| -------------------------------------------- | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
-| Chrome                                       | Edge                                   | Firefox                                      | Safari                                     | Opera                                    |
-| Yes                                          | Yes                                    | Yes                                          | Yes                                        | Yes                                      |
+| ![Chrome](../assets/compatible_chrome.png) | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
+| ------------------------------------------ | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| Chrome                                     | Edge                                   | Firefox                                      | Safari                                     | Opera                                    |
+| Yes                                        | Yes                                    | Yes                                          | Yes                                        | Yes                                      |
 
 `padEnd()` is not supported in Internet Explorer.
 
