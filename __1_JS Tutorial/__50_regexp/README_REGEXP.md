@@ -82,3 +82,13 @@ let result = text.replace(/microsoft/i, "W3Schools");   // Visit W3Schools!
 
 > Regular expression arguments (instead of string arguments) can be used in the methods above.
 > Regular expressions can make your search much more powerful (case insensitive for example).
+
+## Regular Expression Patterns
+
+**Brackets** are used to find a range of characters:
+
+| Expression | Description                                     | Try it                                                                         |
+| ---------- | ----------------------------------------------- | ------------------------------------------------------------------------------ |
+| [abc]      | Find any of the characters between the brackets | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_abc) |
+| [0-9]      | Find any of the digits between the brackets     | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_0-9) |
+| (x\|y)     | Find any of the alternatives separated with \|  | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_xy)  |
