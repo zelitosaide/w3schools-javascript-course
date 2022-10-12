@@ -6,4 +6,4 @@
 
 ## Where I stopped?
 
-* [x] [JS String Search](https://www.w3schools.com/js/js_string_search.asp)
+* [ ] [JS String Search](https://www.w3schools.com/js/js_string_search.asp)
