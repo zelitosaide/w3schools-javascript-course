@@ -111,3 +111,54 @@ let result = text.replace(/microsoft/i, "W3Schools");   // Visit W3Schools!
 | `\s`          | Find a whitespace character                                                                          | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_s)                                                                                    |
 | `\b`          | Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_b) <br> [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_b2) |
 | `\uxxxx`      | Find the unicode character specified by the hexadecimal number xxxx                                  | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_ux)                                                                                   |
+
+**Quantifiers** define quantities:
+
+| Quantifier | Description                                                    | Try it                                                                        |
+| ---------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| n+         | Matches any string that contains at least one n                | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_n1) |
+| n*         | Matches any string that contains zero or more occurrences of n | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_n2) |
+| n?         | Matches any string that contains zero or one occurrences of n  | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_n3) |
+
+## Using the RegExp Object
+
+In JavaScript, the RegExp object is a regular expression object with predefined properties and methods.
+
+## Using test()
+
+The `test()` method is a RegExp expression method.
+
+It searches a string for a pattern, and returns true or false, depending on the result.
+
+The following example searches a string for the character "e".
+
+```javascript
+const pattern = /e/;
+const result = pattern.test("The best things in life are free!");  // returns true
+```
+
+You don't have to put the regular expression in a variable first. The two lines above can be shortened to one:
+
+```javascript
+const result = /e/.test("The best things in life are free!");      // returns true
+```
+
+## Using exec()
+
+The `exec()` method is a RegExp expression method.
+
+It searches a string for a specified pattern, and returns the found text as an object.
+
+If no match is found, it returns an empty (null) object.
+
+The following example searches a string for the character "e".
+
+```javascript
+const result = /e/.exec("The best things in life are free!");
+```
+
+## Complete RegExp Reference
+
+For a complete reference, go to our [Complete JavaScript RegExp Reference](https://www.w3schools.com/jsref/jsref_obj_regexp.asp).
+
+The reference contains descriptions and examples of all RegExp properties and methods.

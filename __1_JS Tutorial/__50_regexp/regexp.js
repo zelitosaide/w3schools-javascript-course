@@ -67,3 +67,19 @@ label11: {
   const result = text.match(/\u0057/g);
   console.log(result, "W".charCodeAt(0).toString(16));
 }
+
+label12: {
+  const pattern = /e/;
+  const result = pattern.test("The best things in life are free!");
+  console.log(result);
+}
+
+label13: {
+  const result = /e/.test("The best things in life are free!");
+  console.log(result);
+}
+
+label14: {
+  const result = /e/.exec("The best things in life are free!");
+  console.log(result);
+}
