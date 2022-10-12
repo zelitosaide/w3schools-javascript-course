@@ -83,6 +83,16 @@ let result = text.replace(/microsoft/i, "W3Schools");   // Visit W3Schools!
 > Regular expression arguments (instead of string arguments) can be used in the methods above.
 > Regular expressions can make your search much more powerful (case insensitive for example).
 
+## Regular Expression Modifiers
+
+**Modifiers** can be used to perform case-insensitive more global searches:
+
+| Modifier | Description                                                                          | Try it                                                                       |
+| -------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| i        | Perform case-insensitive matching                                                    | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_i) |
+| g        | Perform a global match (find all matches rather than stopping after the first match) | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_g) |
+| m        | Perform multiline matching                                                           | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_m) |
+
 ## Regular Expression Patterns
 
 **Brackets** are used to find a range of characters:
@@ -92,3 +102,12 @@ let result = text.replace(/microsoft/i, "W3Schools");   // Visit W3Schools!
 | [abc]      | Find any of the characters between the brackets | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_abc) |
 | [0-9]      | Find any of the digits between the brackets     | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_0-9) |
 | (x\|y)     | Find any of the alternatives separated with \|  | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_xy)  |
+
+**Metacharacters** are characters with a special meaning:
+
+| Metacharacter | Description                                                                                          | Try it                                                                                                                                                     |
+| ------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `\d`          | Find a digit                                                                                         | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_d)                                                                               |
+| `\s`          | Find a whitespace character                                                                          | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_s)                                                                               |
+| `\b`          | Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_b) [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_b2) |
+| `\uxxxx`      | Find the unicode character specified by the hexadecimal number xxxx                                  | [`Try it »`](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_ux)                                                                              |
