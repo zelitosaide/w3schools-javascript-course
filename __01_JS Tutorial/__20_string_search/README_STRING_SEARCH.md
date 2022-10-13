@@ -250,5 +250,7 @@ It is supported in all modern browsers:
 ## Complete String Reference
 
 > For a complete String reference, go to our:
+> 
 > [Complete JavaScript String Reference](https://www.w3schools.com/jsref/jsref_obj_string.asp).
+> 
 > The reference contains descriptions and examples of all string properties and methods.
