@@ -95,3 +95,57 @@ Read more about regular expressions in the chapter [JS RegExp](https://www.w3sch
 ```javascript
 string.match(regexp);
 ```
+
+|          |                                                                                           |
+| -------- | ----------------------------------------------------------------------------------------- |
+| *regexp* | required. The value to search for, as a regular expression.                               |
+| Returns  | An Array, containing the matches, one item for each match, or *null* if no match is found |
+
+Perform a global, case-insensitive search for "ain":
+
+```javascript
+let text = "The rain in SPAIN stays mainly in the plain";
+text.match(/ain/gi);
+```
+
+## JavaScript String includes()
+
+The `includes()` method returns true if a string contains a specified value.
+
+```javascript
+let text = "Hello word, welcome to the universe.";
+text.includes("world");
+```
+
+## Syntax
+
+```javascript
+string.includes(searchValue, start);
+```
+
+|               |                                                                    |
+| ------------- | ------------------------------------------------------------------ |
+| *searchValue* | Required. The string to search for                                 |
+| *start*       | Optional. Default 0. Position to start the search                  |
+| Returns       | Returns `true` if the string contains the value, otherwise `false` |
+| JS Version    | ES6 (2015)                                                         |
+
+Check if a string includes "world", starting the search at position 12:
+
+```javascript
+let text = "Hello world, welcome to the universe.";
+text.includes("world", 12);
+```
+
+## Browser Support
+
+`includes()` is an ES6 feature (JavaScript 2015).
+
+It is supported in all modern browsers:
+
+| ![chrome](../assets/compatible_chrome.png) | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
+| ------------------------------------------ | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| Chrome                                     | Edge                                   | Firefox                                      | Safari                                     | Opera                                    |
+| Yes                                        | Yes                                    | Yes                                          | Yes                                        | Yes                                      |
+
+`includes()` is not supported in Internet Explorer.

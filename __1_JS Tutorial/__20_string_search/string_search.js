@@ -39,3 +39,21 @@ label07: {
   const result = string.match(/ain/g);
   console.log(result);
 }
+
+label08: {
+  let string = "The rain in SPAIN stays mainly in the plain";
+  const result = string.match(/ain/gi);
+  console.log(result);
+}
+
+label09: {
+  let string = "The rain in SPAIN stays mainly in the plain";
+  const result = string.includes("rain");
+  console.log(result);
+}
+
+label10: {
+  let string = "Hello world, welcome to the universe.";
+  const result = string.includes("world", 12);
+  console.log(result);
+}
