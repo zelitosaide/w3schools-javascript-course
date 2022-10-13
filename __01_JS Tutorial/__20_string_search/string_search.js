@@ -57,3 +57,22 @@ label10: {
   const result = string.includes("world", 12);
   console.log(result);
 }
+
+
+label11: {
+  let string = "Hello world, welcome to the universe.";
+  const result = string.startsWith("Hello");
+  console.log(result, "starts with");
+}
+
+label12: {
+  let string = "John Doe";
+  const result = string.endsWith("Doe");
+  console.log(result);
+}
+
+label13: {
+  let string = "Hello world, welcome to the universe.";
+  const result = string.endsWith("world", 11);
+  console.log(result, "finished");
+}

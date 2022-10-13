@@ -149,3 +149,106 @@ It is supported in all modern browsers:
 | Yes                                        | Yes                                    | Yes                                          | Yes                                        | Yes                                      |
 
 `includes()` is not supported in Internet Explorer.
+
+## JavaScript String startsWith()
+
+The `startsWith()` method returns `true` if a string begins with a specified value, otherwise `false`:
+
+```javascript
+let text = "Hello word, welcome to the universe.";
+text.startsWith("Hello");
+```
+
+## Syntax
+
+```javascript
+string.startsWith(searchValue, start);
+```
+
+## Parameters Values
+
+| Parameter     | Description                                            |
+| ------------- | ------------------------------------------------------ |
+| *searchValue* | Required. The value to search for.                     |
+| *start*       | Optional. Default 0. The position to start the search. |
+
+```javascript
+let text = "Hello world, welcome to the universe.";
+
+text.startsWith("world");   // Returns false
+
+text.startsWith("world", 5);    // Returns false
+
+text.startsWith("world", 6);    // Returns true
+```
+
+## Note
+
+> The `startsWith()` method is case sensitive.
+
+## Browser Support
+
+`startsWith()` is an ES6 feature (JavaScript 2015).
+
+It is supported in all modern browsers:
+
+| ![chrome](../assets/compatible_chrome.png) | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
+| ------------------------------------------ | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| Chrome                                     | Edge                                   | Firefox                                      | Safari                                     | Opera                                    |
+| Yes                                        | Yes                                    | Yes                                          | Yes                                        | Yes                                      |
+
+`startsWith()` is not supported in Internet Explorer.
+
+## JavaScript String endsWith()
+
+The `endsWith()` method returns `true` if a string ends with a specified value, otherwise `false`:
+
+Check if a string ends with "John Doe":
+
+```javascript
+let text = "John Doe";
+text.endsWith("Doe");
+```
+
+## Syntax
+
+```javascript
+string.endsWith(searchValue, length);
+```
+
+## Parameter Values
+
+| Parameter     | Description                        |
+| ------------- | ---------------------------------- |
+| *searchValue* | Required. The value to search for. |
+| *length*      | Optional. The length to search.    |
+
+Check if the 11 first characters of a string ends with "world":
+
+```javascript
+let text = "Hello world, welcome to the universe.";
+text.endsWith("world", 11);
+```
+
+## Note
+
+> The `endsWith()` method is case sensitive.
+
+## Browser Support
+
+`endsWith()` is an ES6 feature (JavaScript 2015).
+
+It is supported in all modern browsers:
+
+| ![chrome](../assets/compatible_chrome.png) | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
+| ------------------------------------------ | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| Chrome                                     | Edge                                   | Firefox                                      | Safari                                     | Opera                                    |
+| Yes                                        | Yes                                    | Yes                                          | Yes                                        | Yes                                      |
+
+`endsWith()` is not supported in Internet Explorer.
+
+## Complete String Reference
+
+> For a complete String reference, go to our:
+> [Complete JavaScript String Reference](https://www.w3schools.com/jsref/jsref_obj_string.asp).
+> The reference contains descriptions and examples of all string properties and methods.
