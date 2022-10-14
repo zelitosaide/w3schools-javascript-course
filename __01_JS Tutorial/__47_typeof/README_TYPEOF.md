@@ -88,3 +88,23 @@ typeof function myFunc() {};        // Returns "function"
 ```
 
 > The `typeof` operator returns "`object`" for arrays because in JavaScript arrays are objects.
+
+## The Data Type of typeof
+
+The `typeof` operator is not a variable. It is an operator. Operators ( + - * / ) do not have any data type.
+
+But, the `typeof` operator always **returns a string** (containing the type of the operand).
+
+## The contructor Property
+
+The `constructor` property returns the constructor function for all JavaScript variables.
+
+```javascript
+"John".constructor;                       // Returns function String() {[native code]}
+(3.14).constructor;                       // Returns function Number() {[native code]}
+false.constructor;                        // Returns function Boolean() {[native code]}
+[1, 2, 3, 4].constructor;                 // Returns function Array() {[native code]}
+{ name: "John", age: 34 }.constructor;    // Returns function Object() {[native code]}
+new Date().constructor;                   // Returns function Date() {[native code]}
+function () {}.constructor;               // Returns function Function() {[native code]}
+```
