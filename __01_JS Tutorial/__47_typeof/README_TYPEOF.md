@@ -108,3 +108,37 @@ false.constructor;                        // Returns function Boolean() {[native
 new Date().constructor;                   // Returns function Date() {[native code]}
 function () {}.constructor;               // Returns function Function() {[native code]}
 ```
+
+You can check the constructor property to find out if an object is an `Array` (contains the word "Array"):
+
+```javascript
+function isArray(myArray) {
+  return myArray.constructor.toString().indexOf("Array") > -1;
+}
+```
+
+Or even simpler, you can check if the object is an **Array function:**
+
+```javascript
+function isArray(myArray) {
+  return myArray.constructor === Array;
+}
+```
+
+You can check the constructor property to find out if an object is a `Date` (contains the word "Date"):
+
+```javascript
+function isDate(myDate) {
+  return myDate.constructor.toString().indexOf("Date") > -1;
+}
+```
+
+Or even simpler, you can check if the object is a **Date function:**
+
+```javascript
+function isDate(myDate) {
+  return myDate.constructor === Date;
+}
+```
+
+## Undefined
