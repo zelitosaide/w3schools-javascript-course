@@ -38,3 +38,49 @@ label06: {
     console.log(error.message);
   }
 }
+
+label07: {
+  function myFunction() {
+    var carName = "Volvo";    // Function Scope
+  }
+  try {
+    console.log(carName);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+label08: {
+  function myFunction() {
+    let carName = "Volvo";    // Function Scope
+  }
+  try {
+    console.log(carName);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+label09: {
+  function myFunction() {
+    const carName = "Volvo";  // Function Scope
+  }
+  try {
+    console.log(carName);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+label10: {
+  // myFunction();
+
+  // console.log(carName);
+
+  // function myFunction() {
+  //   carName = "Volvo";
+  // }
+}    ///////////// ........NOT WORKING (use node cli to work)......../////////////
+
+
+
