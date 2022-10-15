@@ -142,3 +142,88 @@ function isDate(myDate) {
 ```
 
 ## Undefined
+
+In JavaScript, a variable without a value, has the value `undefined`. The type is also `undefined`.
+
+```javascript
+let car;    // Value is undefined, type is undefined
+```
+
+Any variable can be emptied, by setting the value to `udefined`. The type will also be `undefined`.
+
+```javascript
+car = undefined;    // Value is undefined, type is undefined
+```
+
+## Empty Values
+
+Any empty value has nothing to do with `undefined`.
+
+An empty string has both a legal value and type.
+
+```javascript
+let car = "";   // the value is "", the typeof is "string"
+```
+
+## Null
+
+In JavaScript `null` is "nothing". It is supposed to be something that doesn't exist.
+
+Unfortunately, in JavaScript, the data type of `null` is an object.
+
+> You can consider it a bug in JavaScript that `typeof null` is an object. It should be `null`.
+
+You can empty an object by setting it to `null`:
+
+```javascript
+let person = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" };
+person = null;    // Now value is null, but type is still an object
+```
+
+You can also empty an object by setting it to `undefined`:
+
+```javascript
+let person = {firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" };
+person = undefined;     // Now both value and type is undefined
+```
+
+## Difference Between Undefined and Null
+
+`undefined` and `null` are equal in value but different in type:
+
+```javascript
+typeof undefined;           // undefined
+typeof null;                // object
+
+null === undefined;         // false
+null == undefined;          // true
+```
+
+## The instanceof Operator
+
+The `instanceof` operator returns `true` if an object is an instance of the specified object:
+
+```javascript
+const cars = ["Saab", "Volvo", "BWM"];
+
+(cars instanceof Array);      // Returns true
+(cars instanceof Object);     // Returns true
+(cars instanceof String);     // Returns false
+(cars instanceof Number);     // Returns false
+```
+
+## The void Operator
+
+The **void** operator evaluates an expression and returns **undefined**. This operator is often used to obtain the undefined primitive value, using "`void(0)`" (useful when evaluating an expression without using the return value).
+
+```html
+<a href="javascript:void(0);">
+  Useless link
+</a>
+
+<a
+  href="javascript:void(document.body.style.backgroundColor='red');"
+> 
+  Click me to change the background color of body to red
+</a>
+```
