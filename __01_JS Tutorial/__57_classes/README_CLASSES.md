@@ -124,3 +124,14 @@ let myCar = new Car("Ford", 2014);
 document.getElementById("demo").innerHTML = 
   "My car is " + myCar.age(year) + " years old.";
 ```
+
+## Browser Support
+
+The following table defines the first browser version with full support for Classes in JavaScript:
+
+| ![Chrome](../assets/compatible_chrome.png) | ![Edge](../assets/compatible_edge.png) | ![Firefox](../assets/compatible_firefox.png) | ![Safari](../assets/compatible_safari.png) | ![Opera](../assets/compatible_opera.png) |
+| ------------------------------------------ | -------------------------------------- | -------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| Chrome 49                                  | Edge 12                                | Firefox 45                                   | Safari 9                                   | Opera 36                                 |
+| Mar, 2016                                  | Jul, 2015                              | Mar, 2016                                    | Oct, 2015                                  | Mar, 2016                                |
+
+> You will learn a lot more about JavaScript Classes later in this tutorial.
