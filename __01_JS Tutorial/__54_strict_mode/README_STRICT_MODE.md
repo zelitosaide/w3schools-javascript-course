@@ -225,3 +225,28 @@ function myFunction() {
 }
 myFunction();
 ```
+
+## Future Proof!
+
+Keywords reserved for future JavaScript versions can NOT be used as variable names in strict mode.
+
+There are:
+
+* implements
+* interface
+* let
+* package
+* private
+* protected
+* public
+* static
+* yield
+
+```javascript
+"use strict";
+let public = 1500;      // This will cause an error
+```
+
+> ## Watch Out!
+> 
+> The "use strict" directive is only recognized at the **beginning** of a script or a function.
