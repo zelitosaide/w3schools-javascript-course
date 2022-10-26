@@ -75,3 +75,84 @@ As an example, in normal JavaScript, mistyping a variable name creates a new glo
 In normal JavaScript, a developer will not receive any error feedback assigning values to non-writable properties.
 
 In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object, will throw an error.
+
+## Not Allowed in Strict Mode
+
+Using a variable, without declaring it, is not allowed:
+
+```javascript
+"use strict";
+x = 3.14;     // This will cause an error
+```
+
+> Objects are variables too.
+
+Using an object, without declaring it, is not allowed:
+
+```javascript
+"use strict";
+x = { p1: 10, p2: 20 };     // This will cause an error
+```
+
+Deleting a variable (or object) is not allowed.
+
+```javascript
+"use strict";
+let x = 3.14;
+delete x;     // This will cause an error
+```
+
+Deleting a function is not allowed.
+
+```javascript
+"use strict";
+function x(p1, p2) {};
+delete x;     // This will cause an error
+```
+
+Duplicating a parameter name is not allowed:
+
+```javascript
+"use strict";
+function x(p1, p1) {};    // This will cause an error
+```
+
+Octal numeric literals are not allowed:
+
+```javascript
+"use strict";
+let x = 010;      // This will cause an error
+```
+
+Octal escape characters are not allowed:
+
+```javascript
+"use strict";
+let x = "\010";       // This will cause an error
+```
+
+Writing to a read-only property is not allowed:
+
+```javascript
+"use strict";
+const obj = {};
+Object.defineProperty(obj, "x", {
+  value: 10,
+  writable: false
+});
+
+obj.x = 3.14;       // This will cause an error
+```
+
+Writing to a get-only property is not allowed:
+
+```javascript
+"use strict";
+const obj = {
+  get x() {
+    return 0;
+  }
+};
+
+obj.x = 3.14;       // This will cause an error
+```
