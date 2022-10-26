@@ -246,6 +246,7 @@ There are:
 "use strict";
 let public = 1500;      // This will cause an error
 ```
+<br />
 
 > ## Watch Out!
 > 
