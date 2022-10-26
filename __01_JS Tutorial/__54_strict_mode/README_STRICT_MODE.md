@@ -156,3 +156,72 @@ const obj = {
 
 obj.x = 3.14;       // This will cause an error
 ```
+
+Deleting an undeletable property is not allowed:
+
+```javascript
+"use strict";
+delete Object.prototype;      // This will cause an error
+```
+
+The word `eval` cannot be used as a variable:
+
+```javascript
+"use strict";
+let eval = 3.14;        // This will cause an error
+```
+
+The word `arguments` cannot be used as a variable:
+
+```javascript
+"use strict";
+let arguments = 3.14;     // This will cause an error
+```
+
+The `with` statement is not allowed:
+
+```javascript
+"use strict";
+with (Math) {
+  x = cos(0);
+};      // This will cause an error
+```
+
+For security reasons, `eval()` is not allowed to create variables in the scope from whiich it was called.
+
+In strict mode, a variable can not be used before it is declared:
+
+```javascript
+"use strict";
+eval("x = 2;");
+alert(x);     // This will cause an error
+```
+
+In strict mode, `eval()` can not declare a variable using the `var` keyword:
+
+```javascript
+"use strict";
+eval("var x = 2;");
+alert(x);       // This will cause an error
+```
+
+`eval()` can not declare a variable using the `let` keyword:
+
+```javascript
+eval("let x = 2;");
+alert(x);       // This will cause an error
+```
+
+The `this` keyword in functions behaves differently in strict mode.
+
+The `this` keyword refers to the object that called the function.
+
+If the object is not specified, functions in strict mode will return `undefined` and functions in normal mode will return global object (window):
+
+```javascript
+"use strict";
+function myFunction() {
+  alert(this);  // will alert "undefined"
+}
+myFunction();
+```
