@@ -19,4 +19,4 @@
 
 * [egghead.io](https://egghead.io/lessons/react-a-beginners-guide-to-react-introduction)
 * [remix.run](https://remix.run/docs/en/v1/tutorials/jokes)
-
+* [Syncfusion](https://www.syncfusion.com/javascript-ui-controls?gclid=EAIaIQobChMIqoPMkqz9-gIV0EPTCh1vcgt1EAEYASAAEgKhMvD_BwE)
