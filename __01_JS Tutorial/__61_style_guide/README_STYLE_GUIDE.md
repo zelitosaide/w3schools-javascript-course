@@ -182,3 +182,25 @@ PascalCase is often preferred by C programmers.
 camelCase is used by JavaScript itself, by jQuery, and other JavaScript libraries.
 
 > Do not start names with a $ sign. It will put you in conflit with many JavaScript library names.
+
+## Loading JavaScript in HTML
+
+Use simple syntax for loading external scripts (the type attribute is not necessary):
+
+```html
+<script src="myscript.js"></script>
+```
+
+## Accessing HTML Elements
+
+A consequence of using "untidy" HTML styles, might result in JavaScript errors.
+
+These two JavaScript statements will produce different results:
+
+```javascript
+const obj = getElementById("Demo");
+
+const obj = getElementById("demo");
+```
+
+If possible, use the same naming convention (as JavaScript) in HTML [Visit the HTML Style Guide](https://www.w3schools.com/html/html5_syntax.asp).
