@@ -22,3 +22,19 @@ Coding conventions can be documented rules for teams to follow, or just be your 
 > You should also read the next chapter "Best Practices", and learn how to avoid coding pitfalls.
 
 ## Variable Names
+
+At W3Schools we use **camelCase** for identifier names (variables and functions).
+
+All names starts with a **latter**.
+
+At the bottom of this page, you will find a wider discussion about naming rules.
+
+```javascript
+firstName = "John";
+lastName = "Doe";
+
+price = 19.90;
+tax = 0.20;
+
+fullPrice = price + (price * tax);
+```
