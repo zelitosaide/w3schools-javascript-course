@@ -13,3 +13,10 @@ Often, when programming code contains errors, nothing will happen. There are no 
 Searching for (and fixing) errors in programming code is called debugging.
 
 ## JavaScript Debuggers
+
+
+
+
+## References
+
+* [MozHacks](https://www.youtube.com/user/mozhacks)
