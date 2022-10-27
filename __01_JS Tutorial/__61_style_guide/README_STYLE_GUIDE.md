@@ -204,3 +204,13 @@ const obj = getElementById("demo");
 ```
 
 If possible, use the same naming convention (as JavaScript) in HTML [Visit the HTML Style Guide](https://www.w3schools.com/html/html5_syntax.asp).
+
+## File Extensions
+
+HTML files should have a **.html** extension (**.htm** is allowed).
+
+CSS files should have a **.css** extension.
+
+JavaScript files should have a **.js** extension.
+
+## Use Lower Case File Names
