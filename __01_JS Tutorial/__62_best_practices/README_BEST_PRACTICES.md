@@ -75,3 +75,17 @@ const myObject = {};
 ```
 
 > Initializing variables provides an idea of the intended use (and intended data type).
+
+## Declare Objects with **const**
+
+Declaring objects with `const` will prevent any accidental change of type:
+
+```javascript
+let car = { type: "Fiat", model: "500", color: "white" };
+car = "Fiat";   // Changes object to string
+```
+
+```javascript
+const car = { type: "Fiat", model: "500", color: "white" };
+car = "Fiat";   // Not possible
+```
