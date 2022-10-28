@@ -52,3 +52,26 @@ for(let i = 0; i < 5; i++) {
 
 }
 ```
+
+## Initialize Variables
+
+It is a good practice to initialize variables when you declare them.
+
+This will:
+
+* Give cleaner code
+* Provide a single place to initialize variables
+* Avoid undefined values
+
+```javascript
+// Declare and initiate at the beginning
+let firstName = "";
+let lastName = "";
+let price = 0;
+let discount = 0;
+let fullPrice = 0;
+const myArray = [];
+const myObject = {};
+```
+
+> Initializing variables provides an idea of the intended use (and intended data type).
