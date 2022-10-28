@@ -51,3 +51,26 @@ This will always improve page loading, and speed up rendering (page display), es
 
 Every attempt to search the DOM (like getElementsByTagName) will benefit from a smaller DOM.
 
+## Avoid Unnecessary Variables
+
+Don't create new variables if you don't plan to save values.
+
+Often you can replace code like this:
+
+```javascript
+let fullName = firstName + " " + lastName;
+document.getElementById("demo").innerHTML = fullName;
+```
+
+With this:
+
+```javascript
+document.getElementById("demo").innerHTML = firstName + " " + lastName;
+```
+
+## Delay JavaScript Loading
+
+Putting your scripts at the bottom of the page lets the browser load the page first.
+
+W
+
