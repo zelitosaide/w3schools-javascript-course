@@ -123,3 +123,76 @@ const x5 = [];                  // new array object
 const x6 = /()/;                // new regexp object
 const x7 = function() {};       // new function object
 ```
+
+## Beware of Automatic Type Conversions
+
+JavaScript is loosely typed.
+
+A variable can contain all data types.
+
+A variable can change its data types:
+
+```javascript
+let x = "Hello";      // typeof x is a string
+x = 5;                // changes typeof x to a number
+```
+
+Beware that numbers can accidentally be converted to strings or `NaN` (Not a Number).
+
+When doing mathematical operations, JavaScript can convert numbers to strings:
+
+```javascript
+let x = 5 + 7;        // x.valueOf() is 12, typeof x is a number
+let x = 5 + "7";      // x.valueOf() is 57, typeof x is a string
+let x = "5" + 7;      // x.valueOf() is 57, typeof x is a string
+let x = 5 - 7;        // x.valueOf() is -2, typeof x is a number
+let x = 5 - "7";      // x.valueOf() is -2, typeof x is a number
+let x = "5" - 7;      // x.valueOf() is -2, typeof x is a number
+let x = 5 - "x";      // x.valueOf() is NaN, typeof x is a number
+```
+
+Subtracting a string from a string, does not generate an error but return `NaN` (Not a Number):
+
+```javascript
+"Hello" - "Dolly";    // returns NaN
+```
+
+## Use === Comparison
+
+The `==` comparison operator always converts (to matching types) before comparison.
+
+The `===` operator forces comparison of values and type:
+
+```javascript
+0 == "";          // true
+1 == "1";         // true
+1 == false;       // true
+
+0 === "";         // false
+1 === "1";        // false
+1 === true;       // false
+```
+
+## Use Parameter Defaults
+
+If a function is called with a missing argument, the value of the missing argument is set to `undefined`.
+
+Undefined values can break your code. It is a good habit to assign default values to arguments.
+
+```javascript
+function myFunction(x, y) {
+  if (y === undefined) {
+    y = 0;
+  }
+}
+```
+
+[ECMAScript 2015](https://www.w3schools.com/js/js_es6.asp) allows default parameters in the function definition:
+
+```javascript
+function myFunction(a = 1, b = 1) {
+  /* function code */
+}
+```
+
+Read more about function parameters and arguments at [Function Parameters](https://www.w3schools.com/js/js_function_parameters.asp)
