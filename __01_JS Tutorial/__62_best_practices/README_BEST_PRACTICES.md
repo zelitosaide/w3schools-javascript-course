@@ -89,3 +89,17 @@ car = "Fiat";   // Changes object to string
 const car = { type: "Fiat", model: "500", color: "white" };
 car = "Fiat";   // Not possible
 ```
+
+## Declare Arrays with **const**
+
+Declaring arrays with const will prevent any accidential change of type:
+
+```javascript
+let cars = ["Saab", "Volvo", "BMW"];
+cars = 3;   // Changes array to number
+```
+
+```javascript
+const cars = ["Saab", "Volvo", "BMW"];
+cars = 3;   // Not possible
+```
