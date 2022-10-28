@@ -103,3 +103,23 @@ cars = 3;   // Changes array to number
 const cars = ["Saab", "Volvo", "BMW"];
 cars = 3;   // Not possible
 ```
+
+## Don't Use new Object()
+
+* Use `""` instead of `new String()`
+* Use `0` instead of `new Number()`
+* Use `false` instead of `new Boolean()`
+* Use `{}` instead of `new Object()`
+* Use `[]` instead of `new Array()`
+* Use `/()/` instead of `new RegExp()`
+* Use `function() {}` instead of `new Function()`
+
+```javascript
+let x1 = "";                    // new primitive string
+let x2 = 0;                     // new primitive number
+let x3 = false;                 // new primitive boolean
+const x4 = {};                  // new object
+const x5 = [];                  // new array object
+const x6 = /()/;                // new regexp object
+const x7 = function() {};       // new function object
+```
