@@ -214,3 +214,15 @@ CSS files should have a **.css** extension.
 JavaScript files should have a **.js** extension.
 
 ## Use Lower Case File Names
+
+Most web servers (Apache, Unix) are case sensitive about file names:
+
+london.jpg cannot be accessed as London.jpg.
+
+Other web servers (Microsoft, IIS) are not case sensitive:
+
+london.jpg can be accessed as London.jpg or london.jpg.
+
+If you move from a case insensitive, to a case sensitive server, even small errors can break your web site.
+
+To avoid these problems, always use lower case file names (if possible).
