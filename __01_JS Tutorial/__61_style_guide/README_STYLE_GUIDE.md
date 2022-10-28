@@ -226,3 +226,11 @@ london.jpg can be accessed as London.jpg or london.jpg.
 If you move from a case insensitive, to a case sensitive server, even small errors can break your web site.
 
 To avoid these problems, always use lower case file names (if possible).
+
+## Performance
+
+Coding conventions are not used by computers. Most rules have little impact on the execution of programs.
+
+Indentation and extra spaces are not significant in small scripts.
+
+For code in development, readability should be preferred. Larger production scripts should be minimized.
