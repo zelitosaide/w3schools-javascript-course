@@ -228,3 +228,29 @@ switch(new Date().getDay()) {
     day = "Unknown";
 }
 ```
+
+## Avoid Number, String, and Boolean as Objects
+
+Always treat numbers, strings, or booleans as primitive values. Not as objects.
+
+Declaring these types as objects, slows down execution speed, and produces nasty side effects:
+
+```javascript
+let x = "John";
+let y = new String("John");
+(x === y)   // is false because x is a string and y is an object.
+```
+
+Or even worse:
+
+```javascript
+let x = new String("John");
+let y = new String("John");
+(x == y)  // is false because you cannot compare objects.
+```
+
+## Avoid Using eval()
+
+The `eval()` function is used to run text as code. In almost all cases, it should not be necessary to use it.
+
+Because it allows arbitrary code to be run, it also represents a security problem.
