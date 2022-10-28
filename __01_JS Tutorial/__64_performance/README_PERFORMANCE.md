@@ -89,3 +89,9 @@ If possible, you can add your script to the page by code, after the page has loa
   }
 </script>
 ```
+
+## Avoid Using with
+
+Avoid using the `with` keyword. It has a negative effect on speed. It also clutters up JavaScript scopes.
+
+The `with` keyword is **not allowed** in strict mode.
