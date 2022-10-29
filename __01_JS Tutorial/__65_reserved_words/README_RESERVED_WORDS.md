@@ -83,4 +83,13 @@ You should also avoid using the name of HTML and Window objects and properties:
 | textarea    | top                | unescape           | untaint           |
 | window      |                    |                    |                   |
 
+## HTML Event Handlers
+
+In addition you should avoid using the name of all HTML event handlers.
+
+| onblur    | onclick    | onerror     | onfocus     |
+| --------- | ---------- | ----------- | ----------- |
+| onkeydown | onkeypress | onkeyup     | onmouseover |
+| onload    | onmouseup  | onmousedown | onsubmit    |
+
 [^*]: Words marked with `*` are new in ECMAScript 5 and 6.
