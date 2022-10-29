@@ -133,3 +133,17 @@ let z = (x * 10 + y * 10) / 10;     // z will be 0.3
 ```
 
 ## Breaking a JavaScript String
+
+JavaScript will allow you to break a statement into two lines:
+
+```javascript
+let x =
+  "Hello, world";
+```
+
+But, breaking a statement in the middle of a string will not work:
+
+```javascript
+let x = "Hello
+World";
+```
