@@ -262,3 +262,77 @@ JavaScript will close the return statement at the end of the line, because it is
 > Never break a return statement.
 
 ## Accessing Arrays with Named Indexes
+
+Many programming languages support arrays with named indexes.
+
+Arrays with named indexes are called associative arrays (or hashes).
+
+JavaScript does **not** support arrays with named indexes.
+
+In JavaScript, **arrays** use **numbered indexes**:
+
+```javascript
+const person = [];
+person[0] = "John";
+person[1] = "Doe";
+person[2] = 46;
+person.length;        // person.length will return 3
+person[0];            // person[0] will return "John"
+```
+
+In JavaScript, **objects** use **named indexes**.
+
+If you use a named index, when accessing an array, JavaScript will redefine the array to a standart object.
+
+After the automatic redefinition, array methods and properties will produce undefined or incorrect results:
+
+```javascript
+const person = [];
+person["firstName"] = "John";
+person["lastName"] = "Doe";
+person["age"] = 46;
+person.length;          // person.length will return 0
+person[0];              // person[0] will return undefined
+```
+
+## Ending Definitions with a Comma
+
+Trailing commas in object and array definitions are legal in ECMAScript 5.
+
+### Object Example:
+
+```javascript
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 46,
+};
+```
+
+### Array Example:
+
+```javascript
+const points = [40, 100, 1, 5, 25, 10,];
+```
+
+> WARNING !!
+> 
+> Internet Explorer 8 will crash.
+> 
+> JSON does not allow trailing commas.
+
+### JSON:
+
+```javascript
+person = {
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 46
+}
+```
+
+### JSON:
+
+```javascript
+points = [40, 100, 1, 5, 25, 10]
+```
