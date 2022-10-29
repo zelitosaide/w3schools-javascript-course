@@ -83,3 +83,35 @@ switch(x) {
   case "10": alert("Hello");
 }
 ```
+
+## Confusing Addition & Concatenation
+
+**Addition** is about adding **numbers**.
+
+**Concatenation** is about adding **strings**.
+
+In JavaScript both operations use the same `+` operator.
+
+Because of this, adding a number as a number will produce a different result from adding a number as a string:
+
+```javascript
+let x = 10;
+x = 10 + 5;     // Now x is 15
+
+let y = 10;
+y += "5";       // Now y is "105"
+```
+
+When adding two variables, it can be difficult to anticipate the result:
+
+```javascript
+let x = 10;
+let y = 5;
+let z = x + y;        // Now z is 15
+
+let x = 10;
+let y = "5";
+let z = x + y;        // Now z is "105"
+```
+
+## Misunderstanding Floats
