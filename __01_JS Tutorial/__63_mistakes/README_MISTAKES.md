@@ -115,3 +115,21 @@ let z = x + y;        // Now z is "105"
 ```
 
 ## Misunderstanding Floats
+
+All numbers in JavaScript are stored as 64-bits **Floating point numbers** (Floats).
+
+All programming languages, including JavaScript, have difficulties with precise floating point values:
+
+```javascript
+let x = 0.1;
+let y = 0.2;
+let z = x + y;        // the result in z will not be 0.3
+```
+
+To solve the problem above, it helps to multiply and divide:
+
+```javascript
+let z = (x * 10 + y * 10) / 10;     // z will be 0.3
+```
+
+## Breaking a JavaScript String
