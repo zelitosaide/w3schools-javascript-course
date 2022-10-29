@@ -384,3 +384,16 @@ if (typeof obj !== "undefined" && obj !== null) {
   // some code here
 }
 ```
+
+### My understanding
+
+If you want to test if an object is not null, you must test if it not undefined first.
+
+```javascript
+const obj = undefined;
+if (obj !== null && typeof obj !== "undefined") {
+  console.log("nao eh nulo");
+} else {
+  console.log("nulo");
+}
+```
