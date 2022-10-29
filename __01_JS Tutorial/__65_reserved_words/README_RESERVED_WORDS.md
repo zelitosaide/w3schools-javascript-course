@@ -22,4 +22,16 @@ In JavaScript you cannot use these reserved words as variables, labels, or funct
 
 > You can read more about the different JavaScript versions in the chapter [JS Versions](https://www.w3schools.com/js/js_versions.asp).
 
+## Removed Reserved Words
+
+The following reserved words have been removed from the ECMAScript 5/6 standard:
+
+| abstract     | boolean | byte      | char     |
+| ------------ | ------- | --------- | -------- |
+| double       | final   | float     | goto     |
+| int          | long    | native    | short    |
+| synchronized | throws  | transient | volatile |
+
+> Do not use these words as variables. ECMAScript 5/6 does not have full support in all browsers.
+
 [^*]: Words marked with `*` are new in ECMAScript 5 and 6.
