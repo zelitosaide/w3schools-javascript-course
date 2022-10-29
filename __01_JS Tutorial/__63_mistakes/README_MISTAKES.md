@@ -39,3 +39,47 @@ if (x = 0) {
 > An assignment always returns the value of the assignment.
 
 ## Expecting Loose Comparison
+
+In regular comparison, data type does not matter. This `if` statement returns `true`:
+
+```javascript
+let x = 10;
+let y = "10";
+
+if (x == y) {
+  // some code here
+}
+```
+
+In strict comparison, data type does matter. This `if` statement returns `false`:
+
+```javascript
+let x = 10;
+let y = "10";
+
+if (x === y) {
+  // some code here
+}
+```
+
+It is a common mistake to forget that `switch` statements use strict comparison:
+
+This `case switch` will display an alert:
+
+```javascript
+let x = 10;
+
+switch(x) {
+  case 10: alert("Hello");
+}
+```
+
+This `case switch` will not display an alert:
+
+```javascript
+let x = 10;
+
+switch(x) {
+  case "10": alert("Hello");
+}
+```
