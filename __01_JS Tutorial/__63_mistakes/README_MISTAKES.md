@@ -228,3 +228,37 @@ function myFunction(a) {
   a * power;
 }
 ```
+
+## Explanation
+
+If a statement is incomplete like:
+
+```javascript
+let
+```
+
+JavaScript will try to complete the statement by reading the next line:
+
+```javascript
+power = 10;
+```
+
+But since this statement is complete:
+
+```javascript
+return
+```
+
+JavaScript will automatically close it like this:
+
+```javascript
+return;
+```
+
+This happens because closing (ending) statements with semicolon is optional in JavaScript.
+
+JavaScript will close the return statement at the end of the line, because it is a complete statement.
+
+> Never break a return statement.
+
+## Accessing Arrays with Named Indexes
