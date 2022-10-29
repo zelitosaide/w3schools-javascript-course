@@ -156,3 +156,11 @@ World";
 ```
 
 ## Misplacing Semicolon
+
+Because of a misplaced semicolon, this code block will execute regardless of the value of x:
+
+```javascript
+if (x == 19); {
+  // code block
+}
+```
