@@ -34,4 +34,18 @@ The following reserved words have been removed from the ECMAScript 5/6 standard:
 
 > Do not use these words as variables. ECMAScript 5/6 does not have full support in all browsers.
 
+## JavaScript Objects, Properties, and Methods
+
+You should also avoid using the name of JavaScript built-in objects, properties, and methods:
+
+| Array          | Date     | eval      | function  |
+| -------------- | -------- | --------- | --------- |
+| hasOwnProperty | Infinity | isFinite  | isNaN     |
+| isPrototypeOf  | length   | Math      | NaN       |
+| name           | Number   | Object    | prototype |
+| String         | toString | undefined | valueOf   |
+
+## Java Reserved Words
+
+
 [^*]: Words marked with `*` are new in ECMAScript 5 and 6.
