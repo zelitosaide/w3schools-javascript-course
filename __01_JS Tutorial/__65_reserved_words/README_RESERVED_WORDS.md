@@ -47,5 +47,10 @@ You should also avoid using the name of JavaScript built-in objects, properties,
 
 ## Java Reserved Words
 
+JavaScript is often used together with Java. You should avoid using some Java objects and properties as JavaScript identifiers:
+
+| getClass   | java        | JavaArray | javaClass |
+| ---------- | ----------- | --------- | --------- |
+| JavaObject | JavaPackage |           |           |
 
 [^*]: Words marked with `*` are new in ECMAScript 5 and 6.
