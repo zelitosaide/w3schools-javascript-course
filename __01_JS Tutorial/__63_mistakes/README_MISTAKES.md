@@ -164,3 +164,67 @@ if (x == 19); {
   // code block
 }
 ```
+
+## Breaking a Return Statement
+
+It is a default JavaScript behavior to close a statement automatically at the end of a line.
+
+Because of this, these two examples will return the same result:
+
+### Example 1
+
+```javascript
+function myFunction(a) {
+  let power = 10
+  return a * power
+}
+```
+
+### Example 2
+
+```javascript
+function myFunction(a) {
+  let power = 10;
+  return a * power;
+}
+```
+
+JavaScript will also allow you to break a statement into two lines.
+
+Because of this, example 3 will also return the same result:
+
+### Example 3
+
+```javascript
+function myFunction(a) {
+  let
+  power = 10;
+  return a * power;
+}
+```
+
+But, what will happen if you break the return statement in two lines like this:
+
+### Example 4
+
+```javascript
+function myFunction(a) { 
+  let power = 10;
+  return
+  a * power;
+}
+```
+
+The function will return `undefined`!
+
+Why? Because JavaScript thought you meant:
+
+### Example 5
+
+```javascript
+function myFunction(a) {
+  let power = 10;
+  return;
+  a * power;
+}
+```
