@@ -336,3 +336,51 @@ person = {
 ```javascript
 points = [40, 100, 1, 5, 25, 10]
 ```
+
+## Undefined is Not Null
+
+JavaScript objects, variables, properties, and methods can be `undefined`,
+
+In addition, empty JavaScript object can have the value `null`.
+
+This can make it a little bit difficult to test if an object is empty.
+
+You can test if an object exists by testing if the type is `undefined`:
+
+```javascript
+if (typeof obj === "undefined") {
+  // some code here
+}
+```
+
+But you cannot test if an object is `null`, because this will throw an error if the object is `undefined`:
+
+### Incorrect:
+
+```javascript
+if (obj === null) {
+  // some code here
+}
+```
+
+To solve this problem, you must test if an object is not `null`, and not `undefined`.
+
+But this can still throw an error:
+
+### Incorrect:
+
+```javascript
+if (obj !== null && typeof obj !== "undefined") {
+  // some code here
+}
+```
+
+Because of this, you must test for not `undefined` before you can test for not `null`:
+
+### Correct:
+
+```javascript
+if (typeof obj !== "undefined" && obj !== null) {
+  // some code here
+}
+```
