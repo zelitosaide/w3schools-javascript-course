@@ -147,3 +147,12 @@ But, breaking a statement in the middle of a string will not work:
 let x = "Hello
 World";
 ```
+
+You must use a "backslash" if you must break a statement in a string:
+
+```javascript
+let x = "Hello \
+World";
+```
+
+## Misplacing Semicolon
