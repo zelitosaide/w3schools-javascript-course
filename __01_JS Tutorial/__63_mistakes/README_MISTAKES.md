@@ -355,7 +355,7 @@ if (typeof obj === "undefined") {
 
 But you cannot test if an object is `null`, because this will throw an error if the object is `undefined`:
 
-### Incorrect:
+### Incorrect: -> (I doubt)
 
 ```javascript
 if (obj === null) {
@@ -367,7 +367,7 @@ To solve this problem, you must test if an object is not `null`, and not `undefi
 
 But this can still throw an error:
 
-### Incorrect:
+### Incorrect: -> (I doubt)
 
 ```javascript
 if (obj !== null && typeof obj !== "undefined") {
