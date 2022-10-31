@@ -157,3 +157,29 @@ getFile(function(some) {
   document.getElementById("demo").innerHTML = some;
 });
 ```
+
+### Example using Promise
+
+```javascript
+const myPromise = new Promise(function(myResolve, myReject) {
+  const request = new XMLHttpRequest();
+  request.open("GET", "mycar.html");
+  request.onload = function() {
+    if (request.status === 200) {
+      myResolve(request.responseText);
+    } else {
+      myReject("File not Found");
+    }
+  }
+  request.send();
+});
+
+myPromise.then(
+  function(value) { 
+    document.getElementById("demo").innerHTML = value;
+  },
+  function(error) {
+    document.getElementById("demo").innerHTML = error;
+  }
+);
+```
