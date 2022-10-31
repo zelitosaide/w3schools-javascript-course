@@ -78,3 +78,24 @@ function myFunction(value) {
 In the example above, `function() { myFunction("I love You!!"); }` is used as a callback. It is a complete function. The complete function is passed to setTimeout() as an argument.
 
 3000 is the number of milliseconds before time-out, so `myFunction()` will be called after 3 seconds.
+
+## Waiting for Intervals:
+
+When using the JavaSctipt function `setInterval()`, you can specify a callback function to be executed for each interval:
+
+```javascript
+const { log: print } = console;
+
+setInterval(myFunction, 1000);
+
+function myFunction() {
+  let d = new Date();
+  print(d.getHours() + ":" + d.geMinutes() + ":" + d.getSeconds());
+}
+```
+
+In the example above, `myFunction` is used as a callback.
+
+`myFunction` is passed to `setInterval()` as an argument.
+
+1000 is the number of milliseconds between intervals, so `myFunction()` will be called every second.
