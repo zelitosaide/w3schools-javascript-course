@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+  <div id="demo"></div>
+
+  <script>
+    const promise = new Promise(function (resolve, reject) {
+      const request = new XMLHttpRequest();
+      request.open("GET", "./mycar.html");
+      request.onload = function () {
+        if (request.status === 200) {
+          resolve(request.response);
+        } else {
+          reject("<h1>File not Found</h1>");
+        }
+      }
+      request.send();
+    });
+
+    promise.then(
+      function (value) {
+        document.getElementById("demo").innerHTML = value;
+      },
+      function (error) {
+        document.getElementById("demo").innerHTML = error;
+      }
+    );
+  </script>
+</body>
+
+</html>

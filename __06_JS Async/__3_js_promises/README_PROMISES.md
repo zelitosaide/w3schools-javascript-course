@@ -166,7 +166,7 @@ const myPromise = new Promise(function(myResolve, myReject) {
   request.open("GET", "mycar.html");
   request.onload = function() {
     if (request.status === 200) {
-      myResolve(request.responseText);
+      myResolve(request.response);
     } else {
       myReject("File not Found");
     }
