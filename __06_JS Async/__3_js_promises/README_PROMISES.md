@@ -61,3 +61,76 @@ When a Promise object is "rejected", the result is an error object.
 > You cannot access the Promise properties **state** and **result**.
 > 
 > You must use a Promise method to handle promises.
+
+## Promise How To
+
+Here is how to use a Promise:
+
+```javascript
+myPromise.then(
+  function(value) { /* code if successful */ },
+  function(error) { /* code if some error */ }
+);
+```
+
+> Promise.the() takes two arguments, a callback for success and another for failure.
+> 
+> Both are optional, so you can add a callback for success or failure only.
+
+```javascript
+const { log } = console;
+
+function myFunction(some) {
+  log(some);
+}
+
+const myPromise = new Promise(function(myResolve, myReject) {
+  let x = 0;
+
+  // The producing code (this may take some time)
+
+  if (x === 0) {
+    myResolve("OK");
+  } else {
+    myReject("Error");
+  }
+});
+
+myPromise.then(
+  function(value) { myDisplayer(value); },
+  function(error) { myDisplayer(error); }
+);
+```
+
+## JavaScript Promise Examples
+
+To demonstrate the use of promises, we will use the callback examples from the previous chapter:
+
+* Waiting for a Timeout
+* Waiting for a File
+
+## Waiting for a Timeout
+
+### Example Using Callback
+
+```javascript
+const { log } = console;
+
+setTimeout(function() { myFunction("I love You!!!"); }, 3000);
+
+function myFunction(value) { log(value); }
+```
+
+### Example Using Promise
+
+```javascript
+const { log } = console;
+
+const myPromise = new Promise(function(myResolve, myReject) {
+  setTimeout(function() {
+    myResolve("I love You!!!");
+  }, 3000);
+});
+
+myPromise.then(function(value) { log(value); });
+```
