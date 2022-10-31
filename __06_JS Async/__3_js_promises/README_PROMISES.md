@@ -134,3 +134,6 @@ const myPromise = new Promise(function(myResolve, myReject) {
 
 myPromise.then(function(value) { log(value); });
 ```
+
+## Waiting for a file
+
