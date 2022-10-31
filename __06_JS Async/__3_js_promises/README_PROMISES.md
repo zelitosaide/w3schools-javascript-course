@@ -35,3 +35,29 @@ When the producing code obtains the result, it should call one of the two callba
 | ------- | ----------------------- |
 | Success | myResolve(result value) |
 | Error   | myReject(error object)  |
+
+## Promise Object Properties
+
+A JavaScript Promise object can be:
+
+* Pending
+* Fulfilled
+* Rejected
+
+The Promise object supports two properties: **state** and **result**.
+
+While a Promise object is "pending" (working), the result is undefined.
+
+When a Promise object is "fulfilled", the result is a value.
+
+When a Promise object is "rejected", the result is an error object.
+
+| myPromise.state | myPromise.result |
+| --------------- | ---------------- |
+| "pending"       | undefined        |
+| "fulfilled"     | a result value   |
+| "rejected"      | an error object  |
+
+> You cannot access the Promise properties **state** and **result**.
+> 
+> You must use a Promise method to handle promises.
