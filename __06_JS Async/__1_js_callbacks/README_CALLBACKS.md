@@ -91,3 +91,34 @@ The problem with the first example above, is that you have to call two functions
 The problem with the second example, is that you cannot prevent the calculator function from displaying the result.
 
 Now it is time to bring in a callback.
+
+## JavaScript Callbacks
+
+> A callback is a function passed as an argument to another function.
+
+Using a callback, you could call the calculator function (`myCalculator`) with a callback, and let the calculator function run the callback after the calculation is finished:
+
+```javascript
+const { log } = console;
+
+function myDisplayer(some) {
+  log(some);
+}
+
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer);
+```
+
+In the example above, `myDisplayer` is the name of a function.
+
+It is passed to `myCalculator()` as an argument.
+
+> When you pass a function as an argumentm remember not to use parenthesis.
+> 
+> Right: myCalculator(5, 5, myDisplayer);
+> 
+> Wrong: ~~myCalculator(5, 5, myDisplayer)~~;
