@@ -137,3 +137,23 @@ myPromise.then(function(value) { log(value); });
 
 ## Waiting for a file
 
+### Example using Callback
+
+```javascript
+function getFile(myCallback) {
+  let request = new XMLHttpRequest();
+  request.open("GET", "mycar.html");
+  request.onload = function() {
+    if (request.status === 200) {
+      myCallback(request.responseText);
+    } else {
+      myCallback("Error: " + request.status);
+    }
+  }
+  request.send();
+}
+
+getFile(function(some) {
+  document.getElementById("demo").innerHTML = some;
+});
+```
