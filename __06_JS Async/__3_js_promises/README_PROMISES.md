@@ -183,3 +183,14 @@ myPromise.then(
   }
 );
 ```
+
+## Browser Support
+
+ECMAScript 2015, also known as ES6, introduced the JavaScript Promise object.
+
+The following table defines the first browser version with full support for Promise objects:
+
+| ![Chrome](../../__01_JS%20Tutorial/assets/compatible_chrome.png) | ![Edge](../../__01_JS%20Tutorial/assets/compatible_edge.png) | ![Firefox](../../__01_JS%20Tutorial/assets/compatible_firefox.png) | ![Safari](../../__01_JS%20Tutorial/assets/compatible_safari.png) | ![Opera](../../__01_JS%20Tutorial/assets/compatible_opera.png) |
+| ---------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------ | ---------------------------------------------------------------- | -------------------------------------------------------------- |
+| Chrome 33                                                        | Edge 12                                                      | Firefox 29                                                         | Safari 7.1                                                       | Opera 20                                                       |
+| Feb, 2014                                                        | Jul, 2015                                                    | Apr, 2014                                                          | Sep, 2014                                                        | Mar, 2014                                                      |
