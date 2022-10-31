@@ -99,3 +99,53 @@ In the example above, `myFunction` is used as a callback.
 `myFunction` is passed to `setInterval()` as an argument.
 
 1000 is the number of milliseconds between intervals, so `myFunction()` will be called every second.
+
+## Waiting for Files
+
+If you create a function to load an external resource (like s script or a file), you cannot use the content before it is fully loaded.
+
+This is the perfect time to use a callback.
+
+This example loads an HTML file (`mycar.html`), and displays the HTML file in a web page, after the file is fully loaded:
+
+### Waiting for a File:
+
+```javascript
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+function getFile(myCallback) {
+  let request = new XMLHttpRequest();
+  request.open("GET", "mycar.html");
+  request.onload = function() {
+    if (request.status === 200) {
+      myCallback(this.responseText);
+    } else {
+      myCallback("Error: " + request.status);
+    }
+  }
+  request.send();
+}
+
+getFile(myDisplayer);
+```
+
+In the example above, `myDisplayer` is used as a callback.
+
+`myDisplayer` is passed to `getFile()` as an argument.
+
+Below is a copy of `mycar.html`:
+
+### mycar.html
+
+```html
+<img src="img_car.jpg" alt="Nice car" style="width: 100%">
+
+<p>
+  A car is a wheeled, self-powered motor vehicle used for transportation.
+  Most definitions of the term specify that cars are designed to run primarily on roads, to have seating for one to eight people, to typically have four wheels.
+</p>
+
+<P>(Wikipedia)</P>
+```
