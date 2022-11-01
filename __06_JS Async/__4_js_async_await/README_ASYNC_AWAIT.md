@@ -122,3 +122,9 @@ myDisplay();
 ```
 
 ### Waiting for a File
+
+```javascript
+async function myDisplay() {
+  
+}
+```
