@@ -88,3 +88,35 @@ const myDisplay = async function () {
 
 myDisplay();
 ```
+
+> The two arguments (resolve and reject) are pre-defined by JavaScript.
+> 
+> We will not create them, but call one of them when the executor function is ready.
+> 
+> Very often we will not need a reject function.
+
+### Example without reject
+
+```javascript
+async function myDisplay() {
+  const myPromise = new Promise(function(resolve) {
+    resolve("I love You!!!");
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+```
+
+### Waiting for a Timeout
+
+```javascript
+async function myDisplay() {
+  const myPromise = new Promise(function(resolve) {
+    setTimeout(function() { resolve("I love You!!!"); }, 3000);
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+```
