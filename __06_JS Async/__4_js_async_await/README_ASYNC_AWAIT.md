@@ -61,3 +61,30 @@ myFunction().then(
   function(value) { print(value); }
 );
 ```
+
+## Await Syntax
+
+The `await` keyword `~~can only be~~` used inside an async function.
+
+The `await` keyword makes the function pause the execution and wait for a resolved promise before it continues:
+
+```javascript
+let value = await promise;
+```
+
+### Example
+
+Let's go slowly and learn how to use it.
+
+Basic Syntax
+
+```javascript
+const myDisplay = async function () {
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("I love You!!");
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+```
