@@ -142,3 +142,14 @@ async function myDisplay() {
 
 getFile();
 ```
+
+## Browser Support
+
+ECMAScript 2017 introduced the JavaScript keywords `async` and `await`.
+
+The following table defines the first browser version with full support for both:
+
+| ![Chrome](../../__01_JS%20Tutorial/assets/compatible_chrome.png) | ![Edge](../../__01_JS%20Tutorial/assets/compatible_edge.png) | ![Firefox](../../__01_JS%20Tutorial/assets/compatible_firefox.png) | ![Safari](../../__01_JS%20Tutorial/assets/compatible_safari.png) | ![Opera](../../__01_JS%20Tutorial/assets/compatible_opera.png) |
+| ---------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------ | ---------------------------------------------------------------- | -------------------------------------------------------------- |
+| Chrome 55                                                        | Edge 15                                                      | Firefox 52                                                         | Safari 11                                                        | Opera 42                                                       |
+| Dec, 2016                                                        | Apr, 2017                                                    | Mar, 2017                                                          | Sep, 2017                                                        | Dec, 2016                                                      |
