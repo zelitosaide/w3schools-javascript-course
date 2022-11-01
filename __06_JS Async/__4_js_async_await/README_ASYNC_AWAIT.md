@@ -5,3 +5,6 @@
 > **async** makes a function return a Promise
 > 
 > **await** makes a function wait for a Promise
+
+## Async Syntax
+
