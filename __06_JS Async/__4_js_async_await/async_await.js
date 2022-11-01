@@ -139,6 +139,6 @@ label10: {
   const promise = async function () {
     return "Hello";
   }
-
+  print(await promise());
   print(promise());
 }
