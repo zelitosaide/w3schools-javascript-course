@@ -135,10 +135,36 @@ const { log: print } = console;
 //   print("+");
 // }
 
-label10: {
-  const promise = async function () {
-    return "Hello";
+// label10: {
+//   const promise = async function () {
+//     return "Hello";
+//   }
+//   print(await promise());
+//   print(promise());
+// }
+
+// label11: {
+//   const myFunction = async function () {
+//     const promise = new Promise(function (resolve) {
+//       setTimeout(function () { resolve("I love"); }, 5000);
+//     });
+//     const msg = await promise;
+//     print("1. ");
+//     console.log(msg);
+//   }
+
+//   myFunction();
+// }
+
+label12: {
+  const myFunction = async function () {
+    const promise = new Promise(function (resolve) {
+      setTimeout(function () { resolve("I love You!!!"); }, 5000);
+    });
+    print(await promise);
   }
-  print(await promise());
-  print(promise());
+
+  myFunction().then(function () { print("status code: 200"); });
+
+  print("Goodbye");
 }
