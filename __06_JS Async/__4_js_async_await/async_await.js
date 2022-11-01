@@ -65,8 +65,6 @@ const { log: print } = console;
 // }
 
 // label05: {
-//   const { log: print } = console;
-
 //   const myDisplay = function () {
 //     const promise = new Promise(function (resolve, reject) {
 //       resolve("1. I love");
@@ -82,8 +80,6 @@ const { log: print } = console;
 // }
 
 // label06: {
-//   const { log: print } = console;
-
 //   const myDisplay = async function () {
 //     const promise = new Promise(function (resolve, reject) {
 //       resolve("1. I love");
@@ -100,8 +96,6 @@ const { log: print } = console;
 // }
 
 // label07: {
-//   const { log: print } = console;
-
 //   const myDisplay = async function () {
 //     const promise = new Promise(function (resolve, reject) {
 //       resolve("1. I love");
@@ -116,8 +110,6 @@ const { log: print } = console;
 
 
 // label08: {
-//   const { log: print } = console;
-
 //   const myDisplay = async function () {
 //     const promise = new Promise(function (resolve, reject) {
 //       resolve("1. I love");
@@ -131,16 +123,22 @@ const { log: print } = console;
 //   myDisplay();
 // }
 
-label09: {
-  const { log: print } = console;
+// label09: {
+//   const myDisplay = async function () {
+//     const promise = new Promise(function (resolve, reject) {
+//       resolve("1. I love");
+//     });
+//     return await promise;
+//   }
 
-  const myDisplay = async function () {
-    const promise = new Promise(function (resolve, reject) {
-      resolve("1. I love");
-    });
-    return await promise;
+//   print(await myDisplay());
+//   print("+");
+// }
+
+label10: {
+  const promise = async function () {
+    return "Hello";
   }
 
-  print(await myDisplay());
-  print("+");
+  print(promise());
 }
