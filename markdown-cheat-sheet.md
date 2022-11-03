@@ -110,6 +110,16 @@ That is so funny! :joy:
 
 I need to highlight these ==very important words==.
 
+### Collapse
+
+<details> 
+
+<summary>SVG code</summary>
+  
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam impedit quis sapiente suscipit quas repellendus accusamus obcaecati, aliquid expedita, amet provident, harum dolorem. Voluptatibus exercitationem omnis itaque alias quod voluptatum!
+  
+</details> 
+
 ### Subscript
 
 H~2~O
