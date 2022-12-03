@@ -31,7 +31,6 @@ const { log: print } = console;
 //     .catch(function (error) { print(error) });
 // }
 
-
 // label03: {
 //   const promise = new Promise(function (resolve, reject) {
 //     let x = 0;
@@ -108,7 +107,6 @@ const { log: print } = console;
 //   myDisplay().then(function (value) { print(value); });
 // }
 
-
 // label08: {
 //   const myDisplay = async function () {
 //     const promise = new Promise(function (resolve, reject) {
@@ -159,12 +157,16 @@ const { log: print } = console;
 label12: {
   const myFunction = async function () {
     const promise = new Promise(function (resolve) {
-      setTimeout(function () { resolve("I love You!!!"); }, 5000);
+      setTimeout(function () {
+        resolve("I love You!!!");
+      }, 5000);
     });
     print(await promise);
-  }
+  };
 
-  myFunction().then(function () { print("status code: 200"); });
+  myFunction().then(function () {
+    print("status code: 200");
+  });
 
-  print("Goodbye");
+  print("Goodbye", "...");
 }
